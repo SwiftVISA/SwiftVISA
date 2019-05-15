@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1037FC0228C8A1A00239BD6 /* ConnectionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FBF228C8A1A00239BD6 /* ConnectionTest.swift */; };
+		E1037FC0228C8A1A00239BD6 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FBF228C8A1A00239BD6 /* Instrument.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445A228BABC90057934D /* SwiftVISATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904459228BABC90057934D /* SwiftVISATests.swift */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1037FBF228C8A1A00239BD6 /* ConnectionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTest.swift; sourceTree = "<group>"; };
+		E1037FBF228C8A1A00239BD6 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		E190444B228BABC90057934D /* SwiftVISA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVISA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E190444E228BABC90057934D /* SwiftVISA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVISA.h; sourceTree = "<group>"; };
 		E190444F228BABC90057934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */,
 				E190444F228BABC90057934D /* Info.plist */,
 				E1904468228BAC630057934D /* Test.swift */,
-				E1037FBF228C8A1A00239BD6 /* ConnectionTest.swift */,
+				E1037FBF228C8A1A00239BD6 /* Instrument.swift */,
 				E1904466228BABF20057934D /* SwiftVISA */,
 			);
 			path = SwiftVISA;
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1904469228BAC630057934D /* Test.swift in Sources */,
-				E1037FC0228C8A1A00239BD6 /* ConnectionTest.swift in Sources */,
+				E1037FC0228C8A1A00239BD6 /* Instrument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
