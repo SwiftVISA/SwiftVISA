@@ -16,20 +16,21 @@ public struct Session {
 	fileprivate var viSession: ViSession
 }
 
+
 // This is an example of how the C functions can be grouped into namespaces
 public enum ResourceManager {
 	// This is an example of how a C function can be adapted to be more "swifty" by eliminating the need for pointers, returning a swift type, and using error handling.
 	public static func openDefault() throws -> Session {
 		var session = ViSession()
 		let status = viOpenDefaultRM(&session)
-		
+
 		if status < VI_SUCCESS {
 			throw Error.couldNotOpenResourceManager
 		}
-		
+
 		return Session(viSession: session)
 	}
-	
+
 	enum Error: Swift.Error {
 		case couldNotOpenResourceManager
 	}
