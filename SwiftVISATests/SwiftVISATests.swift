@@ -28,15 +28,14 @@ class SwiftVISATests: XCTestCase {
 	}
 	
 	func testIdentification() {
-		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")
+		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")!
 		let identification = instrument.identification
 		print(identification ?? "nil")
 	}
 	
 	func testVoltage() {
-		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")
-		let identification = instrument.identification
-		setVoltage(to: instrument, voltage: <#T##Double#>)
+		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")!
+		setVoltage(to: instrument.session, voltage: 0.0)
 	}
 	
 	func testPerformanceExample() {

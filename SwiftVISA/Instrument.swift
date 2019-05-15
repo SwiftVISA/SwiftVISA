@@ -10,15 +10,12 @@ import CVISA
 
 public struct Instrument {
 	public var name: String
-	public init(named name: String) {
+	public var session: ViSession
+	public init?(named name: String) {
 		self.name = name
-	}
-}
-
-extension Instrument {
-	public var identification: String? {
+		
 		var resourceManager = ViSession()
-		var instrumentSession = ViSession()
+		session = ViSession()
 		guard viOpenDefaultRM(&resourceManager) >= VI_SUCCESS else {
 			return nil
 		}
@@ -27,26 +24,32 @@ extension Instrument {
 			viClose(resourceManager)
 		}
 		
-		guard viOpen(resourceManager, name, ViAccessMode(VI_NULL), ViAccessMode(VI_NULL), &instrumentSession) >= VI_SUCCESS else {
+		guard viOpen(resourceManager, name, ViAccessMode(VI_NULL), ViAccessMode(VI_NULL), &session) >= VI_SUCCESS else {
 			return nil
 		}
 		
 		defer {
-			viClose(instrumentSession)
+			viClose(session)
 		}
 		
-		guard viSetAttribute(instrumentSession, ViAttr(VI_ATTR_TMO_VALUE), 5000) >= VI_SUCCESS else {
+		guard viSetAttribute(session, ViAttr(VI_ATTR_TMO_VALUE), 5000) >= VI_SUCCESS else {
 			return nil
 		}
 		
+	}
+}
+
+extension Instrument {
+	public var identification: String? {
+		
 		var returnCount = ViUInt32()
-		guard viWrite(instrumentSession, "*IDN?\n", 6, &returnCount) >= VI_SUCCESS else {
+		guard viWrite(session, "*IDN?\n", 6, &returnCount) >= VI_SUCCESS else {
 			return nil
 		}
 		
 		let capacity = 200
 		let buffer = ViPBuf.allocate(capacity: capacity)
-		guard viRead(instrumentSession, buffer, ViUInt32(capacity), &returnCount) >= VI_SUCCESS else {
+		guard viRead(session, buffer, ViUInt32(capacity), &returnCount) >= VI_SUCCESS else {
 			return nil
 		}
 		
