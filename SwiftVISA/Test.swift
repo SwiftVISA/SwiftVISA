@@ -21,3 +21,24 @@ private func example() {
 		print("Successfully opened the default resource manager.")
 	}
 }
+
+public struct Session {
+	fileprivate var viSession: ViSession
+}
+
+public enum ResourceManager {
+	public static func openDefault() throws -> Session {
+		var session = ViSession()
+		let status = viOpenDefaultRM(&session)
+		
+		if status < VI_SUCCESS {
+			throw Error.couldNotOpenResourceManager
+		}
+		
+		return Session(viSession: session)
+	}
+	
+	enum Error: Swift.Error {
+		case couldNotOpenResourceManager
+	}
+}

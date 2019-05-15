@@ -11,6 +11,7 @@
 		E190445A228BABC90057934D /* SwiftVISATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904459228BABC90057934D /* SwiftVISATests.swift */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1904469228BAC630057934D /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904468228BAC630057934D /* Test.swift */; };
+		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = SwiftVISA.private.modulemap; sourceTree = "<group>"; };
 		E1904467228BAC000057934D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		E1904468228BAC630057934D /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		E190446B228BB33A0057934D /* VISA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VISA.framework; path = ../../../../../../Library/Frameworks/VISA.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E190446C228BB33A0057934D /* VISA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 				E190444D228BABC90057934D /* SwiftVISA */,
 				E1904458228BABC90057934D /* SwiftVISATests */,
 				E190444C228BABC90057934D /* Products */,
+				E190446A228BB33A0057934D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +103,14 @@
 				E1904467228BAC000057934D /* module.modulemap */,
 			);
 			path = SwiftVISA;
+			sourceTree = "<group>";
+		};
+		E190446A228BB33A0057934D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E190446B228BB33A0057934D /* VISA.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +377,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftVISA/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -394,6 +410,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftVISA/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
