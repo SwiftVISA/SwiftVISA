@@ -40,6 +40,12 @@ class SwiftVISATests: XCTestCase {
 		XCTAssert(result >= 0)
 	}
 	
+	func testReadVoltage() {
+		let instrument = Instrument(named: "USB0::0x0957::0x1A07::MY53205040::0::INSTR")!
+		let voltage = readVoltage(from: instrument.session)
+		XCTAssertNotNil(voltage)
+	}
+	
 	func testPerformanceExample() {
 		// This is an example of a performance test case.
 		self.measure {
