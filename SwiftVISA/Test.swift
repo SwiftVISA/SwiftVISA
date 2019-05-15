@@ -11,22 +11,14 @@
 // This import provides access to all types and functions of the C implementation of NI-VISA.
 import CVISA
 
-/// This is an example function to show how the C types and functions are imported
-private func example() {
-	var session = ViSession()
-	let status = viOpenDefaultRM(&session)
-	if status < VI_SUCCESS {
-		print("Could not open the default resource manager.")
-	} else {
-		print("Successfully opened the default resource manager.")
-	}
-}
-
+// This is an example swift wrapper around a VISA type.
 public struct Session {
 	fileprivate var viSession: ViSession
 }
 
+// This is an example of how the C functions can be grouped into namespaces
 public enum ResourceManager {
+	// This is an example of how a C function can be adapted to be more "swifty" by eliminating the need for pointers, returning a swift type, and using error handling.
 	public static func openDefault() throws -> Session {
 		var session = ViSession()
 		let status = viOpenDefaultRM(&session)
