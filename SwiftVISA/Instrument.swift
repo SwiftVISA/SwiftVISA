@@ -1,5 +1,5 @@
 //
-//  ConnectionTest.swift
+//  Instrument.swift
 //  SwiftVISA
 //
 //  Created by Avinash on 5/15/19.
