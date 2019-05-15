@@ -1,0 +1,5 @@
+module CVISA {
+	header "/Library/Frameworks/VISA.framework/Headers/visa.h"
+	header "/Library/Frameworks/VISA.framework/Headers/visatype.h"
+	export *
+}

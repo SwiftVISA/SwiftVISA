@@ -10,6 +10,7 @@
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445A228BABC90057934D /* SwiftVISATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904459228BABC90057934D /* SwiftVISATests.swift */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1904469228BAC630057934D /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904468228BAC630057934D /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,9 @@
 		E1904454228BABC90057934D /* SwiftVISATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVISATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1904459228BABC90057934D /* SwiftVISATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVISATests.swift; sourceTree = "<group>"; };
 		E190445B228BABC90057934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = SwiftVISA.private.modulemap; sourceTree = "<group>"; };
+		E1904467228BAC000057934D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E1904468228BAC630057934D /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				E190444E228BABC90057934D /* SwiftVISA.h */,
+				E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */,
 				E190444F228BABC90057934D /* Info.plist */,
+				E1904468228BAC630057934D /* Test.swift */,
+				E1904466228BABF20057934D /* SwiftVISA */,
 			);
 			path = SwiftVISA;
 			sourceTree = "<group>";
@@ -84,6 +91,14 @@
 				E190445B228BABC90057934D /* Info.plist */,
 			);
 			path = SwiftVISATests;
+			sourceTree = "<group>";
+		};
+		E1904466228BABF20057934D /* SwiftVISA */ = {
+			isa = PBXGroup;
+			children = (
+				E1904467228BAC000057934D /* module.modulemap */,
+			);
+			path = SwiftVISA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +163,7 @@
 				TargetAttributes = {
 					E190444A228BABC90057934D = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					E1904453228BABC90057934D = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1904469228BAC630057934D /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		E1904460228BABC90057934D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -355,9 +373,12 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/SwiftVISA/SwiftVISA.private.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftVISA.SwiftVISA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwiftVISA";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -365,6 +386,7 @@
 		E1904461228BABC90057934D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -380,9 +402,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/SwiftVISA/SwiftVISA.private.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftVISA.SwiftVISA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwiftVISA";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -390,6 +414,7 @@
 		E1904463228BABC90057934D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftVISATests/Info.plist;
@@ -407,6 +432,7 @@
 		E1904464228BABC90057934D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftVISATests/Info.plist;
