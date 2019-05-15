@@ -9,5 +9,5 @@
 import CVISA
 
 public func setVoltage(to session: ViSession, voltage: Double) -> ViStatus{
-	return visaWrite(to: session, "SOURCE1:FUNCTION SQU:VOLTAGE \(voltage)")
+	return visaWrite(to: session, "SOURCE1:FUNCTION SIN:VOLTAGE \(voltage)")
 }
