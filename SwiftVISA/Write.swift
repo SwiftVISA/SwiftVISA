@@ -9,5 +9,5 @@ import CVISA
 
 func visaWrite(to session: ViSession, _ string: String) -> ViStatus {
 	var returnCount = ViUInt32()
-	return viWrite(ViSession(session), string, ViUInt32(string.count), &returnCount)
+	return viWrite(session, string, ViUInt32(string.count), &returnCount)
 }

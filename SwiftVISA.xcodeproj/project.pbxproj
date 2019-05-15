@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E1037FC2228CA85300239BD6 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC1228CA85300239BD6 /* Read.swift */; };
 		E1037FC4228CA85900239BD6 /* Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC3228CA85900239BD6 /* Write.swift */; };
+		E1037FC6228CAD9E00239BD6 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC5228CAD9E00239BD6 /* Instrument.swift */; };
+		E1037FC9228CAE7B00239BD6 /* Voltage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC7228CAE6100239BD6 /* Voltage.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445A228BABC90057934D /* SwiftVISATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904459228BABC90057934D /* SwiftVISATests.swift */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		E1037FC1228CA85300239BD6 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 		E1037FC3228CA85900239BD6 /* Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Write.swift; sourceTree = "<group>"; };
+		E1037FC5228CAD9E00239BD6 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		E1037FC7228CAE6100239BD6 /* Voltage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voltage.swift; sourceTree = "<group>"; };
 		E190444B228BABC90057934D /* SwiftVISA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVISA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E190444E228BABC90057934D /* SwiftVISA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVISA.h; sourceTree = "<group>"; };
 		E190444F228BABC90057934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,12 +87,14 @@
 		E190444D228BABC90057934D /* SwiftVISA */ = {
 			isa = PBXGroup;
 			children = (
+				E1037FC7228CAE6100239BD6 /* Voltage.swift */,
 				E190444E228BABC90057934D /* SwiftVISA.h */,
 				E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */,
 				E190444F228BABC90057934D /* Info.plist */,
 				E1904468228BAC630057934D /* Test.swift */,
 				E1037FC1228CA85300239BD6 /* Read.swift */,
 				E1037FC3228CA85900239BD6 /* Write.swift */,
+				E1037FC5228CAD9E00239BD6 /* Instrument.swift */,
 				E1904466228BABF20057934D /* SwiftVISA */,
 			);
 			path = SwiftVISA;
@@ -228,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1037FC6228CAD9E00239BD6 /* Instrument.swift in Sources */,
 				E1904469228BAC630057934D /* Test.swift in Sources */,
 				E1037FC4228CA85900239BD6 /* Write.swift in Sources */,
 				E1037FC2228CA85300239BD6 /* Read.swift in Sources */,
+				E1037FC9228CAE7B00239BD6 /* Voltage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

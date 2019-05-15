@@ -33,6 +33,12 @@ class SwiftVISATests: XCTestCase {
 		print(identification ?? "nil")
 	}
 	
+	func testVoltage() {
+		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")
+		let identification = instrument.identification
+		setVoltage(to: instrument, voltage: <#T##Double#>)
+	}
+	
 	func testPerformanceExample() {
 		// This is an example of a performance test case.
 		self.measure {
