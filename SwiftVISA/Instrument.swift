@@ -28,10 +28,6 @@ public struct Instrument {
 			return nil
 		}
 		
-		defer {
-			viClose(session)
-		}
-		
 		guard viSetAttribute(session, ViAttr(VI_ATTR_TMO_VALUE), 5000) >= VI_SUCCESS else {
 			return nil
 		}
