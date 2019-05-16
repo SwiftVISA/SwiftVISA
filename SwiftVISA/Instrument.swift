@@ -11,7 +11,7 @@ import CVISA
 /// An object that represents an instrument that can be communicated with.
 public class Instrument {
 	/// The name of the instrument.
-	public var name: String
+	public let name: String
 	/// The `ViSession` that represents the instrument.
 	var session: ViSession
 	
