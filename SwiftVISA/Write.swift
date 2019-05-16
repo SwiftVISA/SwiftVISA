@@ -7,7 +7,17 @@
 
 import CVISA
 
-func visaWrite(to session: ViSession, _ string: String) -> ViStatus {
+/// Writes the given string to the instrument.
+///
+/// - Parameters:
+///   - instrument: The instrument to write to.
+///   - string: The string to write.
+/// - Throws: If the data could not be properly written.
+func visaWrite(to instrument: Instrument, _ string: String) throws {
 	var returnCount = ViUInt32()
-	return viWrite(session, string, ViUInt32(string.count), &returnCount)
+	let status = viWrite(instrument.session, string, ViUInt32(string.count), &returnCount)
+	
+	if status < VI_SUCCESS {
+		throw WriteError(status) ?? UnknownError()
+	}
 }

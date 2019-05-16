@@ -8,18 +8,13 @@
 
 import CVISA
 
-public func setVoltage(to session: ViSession, voltage: Double) -> ViStatus{
-	return visaWrite(to: session, "SOURCE1:FUNCTION SQU:VOLTAGE \(voltage)")
+public func setVoltage(to instrument: Instrument, voltage: Double) throws {
+	try visaWrite(to: instrument, "SOURCE1:FUNCTION SQU:VOLTAGE \(voltage)")
 }
 
-public func readVoltage(from session: ViSession) -> Double? {
-	visaWrite(to: session, "MEASURE:VOLTAGE:DC?")
-	let result = visaRead(to: session, bufferSize: 200)
-	switch result {
-	case .success(let string):
-		guard let double = Double(string) else { return nil }
-		return double
-	case .error(_):
-		return nil
-	}
+public func readVoltage(from instrument: Instrument) throws -> Double {
+	try visaWrite(to: instrument, "MEASURE:VOLTAGE:DC?")
+	let voltageString = try visaRead(from: instrument, bufferSize: 200)
+	guard let voltage = Double(voltageString) else { throw ReadError.wrongType }
+	return voltage
 }

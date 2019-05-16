@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A75B39A228CD925007ADB39 /* ReadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B399228CD925007ADB39 /* ReadError.swift */; };
+		5A75B39C228CDA40007ADB39 /* UnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B39B228CDA40007ADB39 /* UnknownError.swift */; };
+		5A75B3A0228DC1B7007ADB39 /* CVISAErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B39F228DC1B7007ADB39 /* CVISAErrorCodes.swift */; };
+		5AFF1630228DD0C300545130 /* WriteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF162F228DD0C300545130 /* WriteError.swift */; };
+		5AFF1632228DD44800545130 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF1631228DD44800545130 /* ResourceManager.swift */; };
 		E1037FC2228CA85300239BD6 /* Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC1228CA85300239BD6 /* Read.swift */; };
 		E1037FC4228CA85900239BD6 /* Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC3228CA85900239BD6 /* Write.swift */; };
 		E1037FC6228CAD9E00239BD6 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC5228CAD9E00239BD6 /* Instrument.swift */; };
@@ -14,7 +19,6 @@
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445A228BABC90057934D /* SwiftVISATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904459228BABC90057934D /* SwiftVISATests.swift */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1904469228BAC630057934D /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1904468228BAC630057934D /* Test.swift */; };
 		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A75B399228CD925007ADB39 /* ReadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadError.swift; sourceTree = "<group>"; };
+		5A75B39B228CDA40007ADB39 /* UnknownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownError.swift; sourceTree = "<group>"; };
+		5A75B39F228DC1B7007ADB39 /* CVISAErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVISAErrorCodes.swift; sourceTree = "<group>"; };
+		5AFF162F228DD0C300545130 /* WriteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteError.swift; sourceTree = "<group>"; };
+		5AFF1631228DD44800545130 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		E1037FC1228CA85300239BD6 /* Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Read.swift; sourceTree = "<group>"; };
 		E1037FC3228CA85900239BD6 /* Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Write.swift; sourceTree = "<group>"; };
 		E1037FC5228CAD9E00239BD6 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
@@ -41,7 +50,6 @@
 		E190445B228BABC90057934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = SwiftVISA.private.modulemap; sourceTree = "<group>"; };
 		E1904467228BAC000057934D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		E1904468228BAC630057934D /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		E190446B228BB33A0057934D /* VISA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VISA.framework; path = ../../../../../../Library/Frameworks/VISA.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AFF162E228DCEE400545130 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				5A75B39F228DC1B7007ADB39 /* CVISAErrorCodes.swift */,
+				5A75B399228CD925007ADB39 /* ReadError.swift */,
+				5AFF162F228DD0C300545130 /* WriteError.swift */,
+				5A75B39B228CDA40007ADB39 /* UnknownError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		E1904441228BABC90057934D = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +106,15 @@
 		E190444D228BABC90057934D /* SwiftVISA */ = {
 			isa = PBXGroup;
 			children = (
-				E1037FC7228CAE6100239BD6 /* Voltage.swift */,
+				5AFF162E228DCEE400545130 /* Errors */,
 				E190444E228BABC90057934D /* SwiftVISA.h */,
 				E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */,
 				E190444F228BABC90057934D /* Info.plist */,
-				E1904468228BAC630057934D /* Test.swift */,
 				E1037FC1228CA85300239BD6 /* Read.swift */,
 				E1037FC3228CA85900239BD6 /* Write.swift */,
 				E1037FC5228CAD9E00239BD6 /* Instrument.swift */,
+				E1037FC7228CAE6100239BD6 /* Voltage.swift */,
+				5AFF1631228DD44800545130 /* ResourceManager.swift */,
 				E1904466228BABF20057934D /* SwiftVISA */,
 			);
 			path = SwiftVISA;
@@ -235,9 +255,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1037FC6228CAD9E00239BD6 /* Instrument.swift in Sources */,
-				E1904469228BAC630057934D /* Test.swift in Sources */,
+				5AFF1630228DD0C300545130 /* WriteError.swift in Sources */,
+				5A75B39A228CD925007ADB39 /* ReadError.swift in Sources */,
 				E1037FC4228CA85900239BD6 /* Write.swift in Sources */,
+				5A75B39C228CDA40007ADB39 /* UnknownError.swift in Sources */,
 				E1037FC2228CA85300239BD6 /* Read.swift in Sources */,
+				5A75B3A0228DC1B7007ADB39 /* CVISAErrorCodes.swift in Sources */,
+				5AFF1632228DD44800545130 /* ResourceManager.swift in Sources */,
 				E1037FC9228CAE7B00239BD6 /* Voltage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

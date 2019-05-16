@@ -8,58 +8,51 @@
 
 import CVISA
 
-public struct Instrument {
+/// An object that represents an instrument that can be communicated with.
+public class Instrument {
+	/// The name of the instrument.
 	public var name: String
-	public var session: ViSession
-	public init?(named name: String) {
+	/// The `ViSession` that represents the instrument.
+	var session: ViSession
+	
+	/// Tries to create an instrument from a name.
+	///
+	/// - Parameters:
+	///   - name: The name of the instrument.
+	///   - timeout: The amount of time to wait for read and write operations before timing out.
+	public init?(named name: String, timeout: TimeInterval = 5.0) {
 		self.name = name
-		
-		var resourceManager = ViSession()
 		session = ViSession()
-		guard viOpenDefaultRM(&resourceManager) >= VI_SUCCESS else {
+		
+		guard let resourceManager = ResourceManager.default else { return }
+		
+		guard viOpen(resourceManager.session, name, ViAccessMode(VI_NULL), ViAccessMode(VI_NULL), &session) >= VI_SUCCESS else {
 			return nil
 		}
 		
-		defer {
-			viClose(resourceManager)
-		}
-		
-		guard viOpen(resourceManager, name, ViAccessMode(VI_NULL), ViAccessMode(VI_NULL), &session) >= VI_SUCCESS else {
+		guard viSetAttribute(session, ViAttr(VI_ATTR_TMO_VALUE), ViAttrState(timeout * 1000)) >= VI_SUCCESS else {
 			return nil
 		}
-		
-		guard viSetAttribute(session, ViAttr(VI_ATTR_TMO_VALUE), 5000) >= VI_SUCCESS else {
-			return nil
-		}
-		
 	}
 }
 
+// MARK: Identification
 extension Instrument {
+	/// Returns the identification for the instrument.
 	public var identification: String? {
-		
-		var returnCount = ViUInt32()
-		guard viWrite(session, "*IDN?\n", 6, &returnCount) >= VI_SUCCESS else {
+		do {
+			try visaWrite(to: self, "*IDN?\n")
+			return try visaRead(from: self, bufferSize: 200)
+		} catch {
 			return nil
 		}
-		
-		let capacity = 200
-		let buffer = ViPBuf.allocate(capacity: capacity)
-		guard viRead(session, buffer, ViUInt32(capacity), &returnCount) >= VI_SUCCESS else {
-			return nil
-		}
-		
-		let pointer = UnsafeRawPointer(buffer)
-		let bytes = MemoryLayout<UInt8>.stride * capacity
-		let data = Data(bytes: pointer, count: bytes)
-		guard let string = String(data: data, encoding: .ascii) else {
-			return nil
-		}
-		guard returnCount <= capacity && returnCount >= 0 else {
-			return nil
-		}
-		let startIndex = string.startIndex
-		let endIndex = string.index(startIndex, offsetBy: String.IndexDistance(returnCount))
-		return String(string[startIndex..<endIndex])
+	}
+}
+
+// MARK: Close
+extension Instrument {
+	/// Closes the connection to the instrument. Call this once you are done communicating to an instrument. After this is called you can no longer read from or write to the instrument.
+	public func close() {
+		viClose(session)
 	}
 }
