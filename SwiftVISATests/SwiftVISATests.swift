@@ -19,30 +19,27 @@ class SwiftVISATests: XCTestCase {
 		// Put teardown code here. This method is called after the invocation of each test method in the class.
 	}
 	
-	func testExample() {
-		do {
-			_ = try ResourceManager.openDefault()
-		} catch {
-			print(error)
-		}
-	}
-	
 	func testIdentification() {
-		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")!
-		let identification = instrument.identification
+		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")
+		XCTAssertNotNil(instrument)
+		let identification = instrument?.identification
 		XCTAssertNotNil(identification)
-		print(identification)
 	}
 	
 	func testVoltage() {
-		let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR")!
-		let result = setVoltage(to: instrument.session, voltage: 7.0)
-		XCTAssert(result >= 0)
+		guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+			XCTFail()
+			return
+		}
+		XCTAssertNoThrow(try setVoltage(to: instrument, voltage: 7.0))
 	}
 	
 	func testReadVoltage() {
-		let instrument = Instrument(named: "USB0::0x0957::0x1A07::MY53205040::0::INSTR")!
-		let voltage = readVoltage(from: instrument.session)
+		guard let instrument = Instrument(named: "USB0::0x0957::0x1A07::MY53205040::0::INSTR") else {
+			XCTFail()
+			return
+		}
+		let voltage = try? readVoltage(from: instrument)
 		XCTAssertNotNil(voltage)
 	}
 	
