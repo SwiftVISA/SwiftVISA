@@ -31,7 +31,23 @@ class SwiftVISATests: XCTestCase {
 			XCTFail()
 			return
 		}
-		XCTAssertNoThrow(try setVoltage(to: instrument, voltage: 7.0))
+		do {
+			try setVoltage(to: instrument, peakVoltage: 8.5, acFunction: .sine)
+		} catch {
+			XCTFail()
+		}
+	}
+	
+	func testSetDCVoltage() {
+		guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+			XCTFail()
+			return
+		}
+		do {
+			try setVoltage(to: instrument, offsetVoltage: 4.25)
+		} catch {
+			XCTFail()
+		}
 	}
 	
 	func testReadVoltage() {
@@ -39,8 +55,16 @@ class SwiftVISATests: XCTestCase {
 			XCTFail()
 			return
 		}
-		let voltage = try? readVoltage(from: instrument)
+		let voltage = try? readDCVoltage(from: instrument)
 		XCTAssertNotNil(voltage)
+	}
+	
+	func testTurnOutputOn() {
+		guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+			XCTFail()
+			return
+		}
+		XCTAssertNoThrow(try turnOutputOn(for: instrument))
 	}
 	
 	func testPerformanceExample() {

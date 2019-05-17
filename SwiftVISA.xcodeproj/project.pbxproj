@@ -106,10 +106,10 @@
 		E190444D228BABC90057934D /* SwiftVISA */ = {
 			isa = PBXGroup;
 			children = (
-				5AFF162E228DCEE400545130 /* Errors */,
 				E190444E228BABC90057934D /* SwiftVISA.h */,
 				E1904465228BABEE0057934D /* SwiftVISA.private.modulemap */,
 				E190444F228BABC90057934D /* Info.plist */,
+				5AFF162E228DCEE400545130 /* Errors */,
 				E1037FC1228CA85300239BD6 /* Read.swift */,
 				E1037FC3228CA85900239BD6 /* Write.swift */,
 				E1037FC5228CAD9E00239BD6 /* Instrument.swift */,
