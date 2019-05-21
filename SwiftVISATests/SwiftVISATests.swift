@@ -67,6 +67,14 @@ class SwiftVISATests: XCTestCase {
 		XCTAssertNoThrow(try turnOutputOn(for: instrument))
 	}
 	
+	func testSetHighImpendance() {
+		guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+			XCTFail()
+			return
+		}
+		XCTAssertNoThrow(try visaWrite(to: instrument, "OUTPUT1:LOAD INF"))
+	}
+	
 	func testPerformanceExample() {
 		// This is an example of a performance test case.
 		self.measure {

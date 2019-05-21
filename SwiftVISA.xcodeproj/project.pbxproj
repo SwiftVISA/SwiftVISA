@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A5602BA228F1D8000D4C73D /* VISADecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5602B9228F1D8000D4C73D /* VISADecodable.swift */; };
 		5A75B39A228CD925007ADB39 /* ReadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B399228CD925007ADB39 /* ReadError.swift */; };
 		5A75B39C228CDA40007ADB39 /* UnknownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B39B228CDA40007ADB39 /* UnknownError.swift */; };
 		5A75B3A0228DC1B7007ADB39 /* CVISAErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75B39F228DC1B7007ADB39 /* CVISAErrorCodes.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A5602B9228F1D8000D4C73D /* VISADecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VISADecodable.swift; sourceTree = "<group>"; };
 		5A75B399228CD925007ADB39 /* ReadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadError.swift; sourceTree = "<group>"; };
 		5A75B39B228CDA40007ADB39 /* UnknownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownError.swift; sourceTree = "<group>"; };
 		5A75B39F228DC1B7007ADB39 /* CVISAErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVISAErrorCodes.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				5AFF162E228DCEE400545130 /* Errors */,
 				E1037FC1228CA85300239BD6 /* Read.swift */,
 				E1037FC3228CA85900239BD6 /* Write.swift */,
+				5A5602B9228F1D8000D4C73D /* VISADecodable.swift */,
 				E1037FC5228CAD9E00239BD6 /* Instrument.swift */,
 				E1037FC7228CAE6100239BD6 /* Voltage.swift */,
 				5AFF1631228DD44800545130 /* ResourceManager.swift */,
@@ -258,6 +261,7 @@
 				5AFF1630228DD0C300545130 /* WriteError.swift in Sources */,
 				5A75B39A228CD925007ADB39 /* ReadError.swift in Sources */,
 				E1037FC4228CA85900239BD6 /* Write.swift in Sources */,
+				5A5602BA228F1D8000D4C73D /* VISADecodable.swift in Sources */,
 				5A75B39C228CDA40007ADB39 /* UnknownError.swift in Sources */,
 				E1037FC2228CA85300239BD6 /* Read.swift in Sources */,
 				5A75B3A0228DC1B7007ADB39 /* CVISAErrorCodes.swift in Sources */,
