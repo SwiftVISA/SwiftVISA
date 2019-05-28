@@ -15,7 +15,7 @@ class MessageBasedInstrumentTests : XCTestCase {
 
     // Start the session to all the instruments
     override func setUp() {
-        let rm = ResourceManager.default
+        let im = InstrumentManager.default
 //        multimeterInstrument = rm.makeInstrument(named: multimeterUII) as? MessageBasedInstrument
 
     }
