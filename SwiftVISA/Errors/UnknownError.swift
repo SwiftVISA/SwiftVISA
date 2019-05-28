@@ -6,7 +6,7 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
-/// This error can be thrown if an unknown error has occured.
+/// This error can be thrown if an unknown error has occurred.
 public struct UnknownError: Error {
 	
 }
