@@ -20,7 +20,7 @@ extension MessageBasedInstrument {
         var returnCount = ViUInt32()
 
         // Call the read
-        let status = viRead(session, buffer, ViUInt32(bufferSize), &returnCount)
+        let status = viRead(session.viSession, buffer, ViUInt32(bufferSize), &returnCount)
 
         // Guard against an error
         guard status >= VI_SUCCESS else {
@@ -61,7 +61,7 @@ extension MessageBasedInstrument {
     // Writes the specified string to the instrument
     public func write(command: String) throws {
         var returnCount = ViUInt32()
-        let status = viWrite(session, command, ViUInt32(command.count), &returnCount)
+        let status = viWrite(session.viSession, command, ViUInt32(command.count), &returnCount)
 
         guard status >= VI_SUCCESS else {
             throw WriteError(status) ?? UnknownError()
