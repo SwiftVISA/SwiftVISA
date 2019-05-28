@@ -17,7 +17,7 @@ import CVISA
 public func visaRead(from instrument: Instrument, bufferSize: Int) throws -> String {
 	let buffer = ViPBuf.allocate(capacity: bufferSize)
 	var returnCount = ViUInt32()
-	let status = viRead(instrument.session, buffer, ViUInt32(bufferSize), &returnCount)
+	let status = viRead(instrument.session.viSession, buffer, ViUInt32(bufferSize), &returnCount)
 
 	guard status >= VI_SUCCESS else {
 		throw ReadError(status) ?? UnknownError()

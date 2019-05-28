@@ -15,7 +15,7 @@ import CVISA
 /// - Throws: If the data could not be properly written.
 public func visaWrite(to instrument: Instrument, _ string: String) throws {
 	var returnCount = ViUInt32()
-	let status = viWrite(instrument.session, string, ViUInt32(string.count), &returnCount)
+	let status = viWrite(instrument.session.viSession, string, ViUInt32(string.count), &returnCount)
 	
 	if status < VI_SUCCESS {
 		throw WriteError(status) ?? UnknownError()
