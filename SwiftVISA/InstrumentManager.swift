@@ -31,16 +31,26 @@ class InstrumentManager {
 			// If a resource manager object has already been created, use that one rather than creating a new resource manager
 			return saved
 		}
+
 		// A resource manager has not been created yet, try to create one
 		var session = ViSession()
 		let status = viOpenDefaultRM(&session)
 		guard status >= VI_SUCCESS else {
 			return nil
 		}
-		// Successfuly created, store this object for future use
+
+		// Successfully created, store this object for future use
 		let resourceManager = InstrumentManager(session: session)
 		_default = resourceManager
 		return resourceManager
+	}
+}
+
+// MARK: Make Instrument
+extension InstrumentManager {
+	public func makeInstrument(uii: String) throws -> Instrument {
+		// TODO: Make me
+		return Instrument()
 	}
 }
 
