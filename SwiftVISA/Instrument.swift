@@ -21,13 +21,11 @@ public protocol Instrument: class {
 public extension Instrument {
 	func clear() throws {
 		let status = viClear(session.viSession)
-		
 		guard status >= VI_SUCCESS else { throw ClearError(status) ?? UnknownError() }
 	}
 	
 	func close() throws {
 		let status = viClose(session.viSession)
-		
 		guard status >= VI_SUCCESS else { throw CloseError(status) ?? UnknownError() }
 	}
 	
