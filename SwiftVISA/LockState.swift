@@ -7,7 +7,11 @@
 //
 
 public enum LockState {
-	case sharedLocked
-	case exclusiveLocked
+	case locked (LockType)
 	case unlocked
+	
+	public enum LockType {
+		case shared (key: String)
+		case exclusive
+	}
 }
