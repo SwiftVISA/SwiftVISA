@@ -58,7 +58,8 @@ extension InstrumentManager {
 // MARK: Close
 extension InstrumentManager {
 	/// Closes the resource manager. Call this when you are finished with the resource manager. Once this has been called, the resource manager cannot be reopened.
-	func close() {
-		viClose(session)
+	public func close() throws {
+		let status = viClose(session)
+		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
 }

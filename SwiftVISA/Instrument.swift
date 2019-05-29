@@ -21,12 +21,12 @@ public protocol Instrument: class {
 public extension Instrument {
 	func clear() throws {
 		let status = viClear(session.viSession)
-		guard status >= VI_SUCCESS else { throw ClearError(status) ?? UnknownError() }
+		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
 	
 	func close() throws {
 		let status = viClose(session.viSession)
-		guard status >= VI_SUCCESS else { throw CloseError(status) ?? UnknownError() }
+		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
 	
 	func lock(_ type: LockState.LockType, timeout: TimeInterval) throws {
@@ -40,21 +40,21 @@ public extension Instrument {
 			var null1 = ViChar(VI_NULL)
 			let status = viLock(session.viSession, 1, viTimeout, &null0, &null1)
 			
-			guard status >= VI_SUCCESS else { throw LockError(status) ?? UnknownError() }
+			guard status >= VI_SUCCESS else { throw VISAError(status) }
 			
 			lockState = .locked(.exclusive)
 		case .shared (let key):
 			let asciiKey = key.filter { $0.isASCII }
-			guard var cRequestedKey = asciiKey.cString(using: .ascii) else { throw LockError.invalidRequestKey }
+			guard var cRequestedKey = asciiKey.cString(using: .ascii) else { throw VISAError.invalidRequestKey }
 			let capacity = min(256, asciiKey.count)
 			let accessKeyBuffer = UnsafeMutableBufferPointer<ViChar>.allocate(capacity: capacity)
 			
 			let status = viLock(session.viSession, 2, viTimeout, &cRequestedKey, accessKeyBuffer.baseAddress!)
 			
-			guard status >= VI_SUCCESS else { throw LockError(status) ?? UnknownError() }
+			guard status >= VI_SUCCESS else { throw VISAError(status) }
 			
 			let data = Data(buffer: accessKeyBuffer)
-			guard let string = String(bytes: data, encoding: .ascii) else { throw LockError.invalidAccessKey }
+			guard let string = String(bytes: data, encoding: .ascii) else { throw VISAError.invalidAccessKey }
 			
 			lockState = .locked(.shared(key: string))
 		}
@@ -65,7 +65,7 @@ public extension Instrument {
 		
 		// If the status was VI_ERROR_SESN_NLOCKED, the instrument was not locked, don't throw an error for this, just print out a warning.
 		guard status >= VI_SUCCESS || status == VI_ERROR_SESN_NLOCKED else {
-			throw LockError(status) ?? UnknownError()
+			throw VISAError(status)
 		}
 		
 		if status == VI_ERROR_SESN_NLOCKED {

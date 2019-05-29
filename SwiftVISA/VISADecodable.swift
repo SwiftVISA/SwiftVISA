@@ -51,7 +51,7 @@ extension String: VISADecodable {
 public struct DefaultVISAStringDecoder: DefaultableVISADecoder {
 	public typealias DecodingType = String
 	
-	public func decode(_ string: String) throws -> String {
+	public func decode(_ string: String) -> String {
 		return string
 	}
 	
@@ -69,7 +69,7 @@ public struct DefaultVISAIntDecoder: DefaultableVISADecoder {
 	public typealias DecodingType = Int
 	
 	public func decode(_ string: String) throws -> Int {
-		guard let value = Int(string) else { throw VISADecodingError() }
+		guard let value = Int(string) else { throw VISAError.couldNotDecode }
 		return value
 	}
 	
@@ -87,7 +87,7 @@ public struct DefaultVISADoubleDecoder: DefaultableVISADecoder {
 	public typealias DecodingType = Double
 	
 	public func decode(_ string: String) throws -> Double {
-		guard let value = Double(string) else { throw VISADecodingError() }
+		guard let value = Double(string) else { throw VISAError.couldNotDecode }
 		return value
 	}
 	
@@ -105,7 +105,7 @@ public struct DefaultVISABoolDecoder: DefaultableVISADecoder {
 	public typealias DecodingType = Bool
 	
 	public func decode(_ string: String) throws -> Bool {
-		guard let value = Bool(string) else { throw VISADecodingError() }
+		guard let value = Bool(string) else { throw VISAError.couldNotDecode }
 		return value
 	}
 	

@@ -72,7 +72,7 @@ public func readDCVoltage(from instrument: Instrument) throws -> Double {
 	var voltageString = try visaRead(from: instrument, bufferSize: 200)
 	// The returned voltage ends with a new line character -- remove this character
 	voltageString.removeLast()
-	guard let voltage = Double(voltageString) else { throw ReadError.wrongType }
+	guard let voltage = Double(voltageString) else { throw VISAError.couldNotDecode }
 	return voltage
 }
 

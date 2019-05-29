@@ -91,7 +91,10 @@ import CVISA
 /// - machineNotAvailable: The remote machine does not exist or is not accepting any connections.
 /// - machineAccessDenied: Access to the remote machine is denied.
 /// - unknownCVISAError: An unknown CVISA error status was returned from a call to CVISA. The status of this code is stored in `status`.
+/// - couldNotDecode: Could not decode the message into the specified type.
+/// - invalidRequestKey: The provided request key was invalid.
 public enum VISAError: Error {
+	// MARK: NI-VISA Defined Errors
 	case systemError
 	case invalidSession
 	case resourceLocked
@@ -173,6 +176,9 @@ public enum VISAError: Error {
 	case machineNotAvailable
 	case machineAccessDenied
 	case unknownCVISAError (status: Int32)
+	// MARK: SwiftVISA Defined Errors
+	case couldNotDecode
+	case invalidRequestKey
 }
 
 // MARK: ViStatus Initializer

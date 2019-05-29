@@ -18,6 +18,6 @@ public func visaWrite(to instrument: Instrument, _ string: String) throws {
 	let status = viWrite(instrument.session.viSession, string, ViUInt32(string.count), &returnCount)
 	
 	if status < VI_SUCCESS {
-		throw WriteError(status) ?? UnknownError()
+		throw VISAError(status)
 	}
 }

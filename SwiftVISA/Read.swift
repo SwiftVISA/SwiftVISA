@@ -20,18 +20,19 @@ public func visaRead(from instrument: Instrument, bufferSize: Int) throws -> Str
 	let status = viRead(instrument.session.viSession, buffer, ViUInt32(bufferSize), &returnCount)
 
 	guard status >= VI_SUCCESS else {
-		throw ReadError(status) ?? UnknownError()
+		throw VISAError(status)
 	}
 
 	let pointer = UnsafeRawPointer(buffer)
 	let bytes = MemoryLayout<UInt8>.stride * bufferSize
 	let data = Data(bytes: pointer, count: bytes)
 	guard let string = String(data: data, encoding: .ascii) else {
-		throw ReadError.couldNotDecode
+		throw VISAError.couldNotDecode
 	}
-	guard returnCount <= bufferSize && returnCount >= 0 else {
-		throw ReadError.returnCountExceededBufferLength
-	}
+	// TODO: Determine if this condition is needed
+//	guard returnCount <= bufferSize && returnCount >= 0 else {
+//		throw ReadError.returnCountExceededBufferLength
+//	}
 	let startIndex = string.startIndex
 	let endIndex = string.index(startIndex, offsetBy: String.IndexDistance(returnCount))
 	return String(string[startIndex..<endIndex])
