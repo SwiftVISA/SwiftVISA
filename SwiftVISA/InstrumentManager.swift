@@ -50,7 +50,8 @@ class InstrumentManager {
 extension InstrumentManager {
 	public func makeInstrument(uii: String) throws -> Instrument {
 		// TODO: Make me
-		return Instrument()
+		#warning("Not implemented")
+		fatalError("Not implemented")
 	}
 }
 
