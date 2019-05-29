@@ -7,6 +7,8 @@
 
 import CVISA
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Reads data from the given instrument. The string returned may not exceed the buffer size.
 ///
 /// - Parameters:
@@ -38,11 +40,15 @@ public func visaRead(from instrument: Instrument, bufferSize: Int) throws -> Str
 	return String(string[startIndex..<endIndex])
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 public func visaRead<T, D: VISADecoder>(from instrument: Instrument, as type: T, bufferSize: Int, decoder: D) throws -> T where D.DecodingType == T {
 	let string = try visaRead(from: instrument, bufferSize: bufferSize)
 	return try decoder.decode(string)
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 public func visaRead<T: VISADecodable>(from instrument: Instrument, as type: T, bufferSize: Int) throws -> T {
 	let string = try visaRead(from: instrument, bufferSize: bufferSize)
 	return try T(visaString: string)

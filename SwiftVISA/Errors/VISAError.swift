@@ -353,6 +353,3 @@ extension VISAError {
 		}
 	}
 }
-
-
-

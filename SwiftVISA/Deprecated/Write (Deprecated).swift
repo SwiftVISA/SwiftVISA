@@ -7,6 +7,8 @@
 
 import CVISA
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Writes the given string to the instrument.
 ///
 /// - Parameters:

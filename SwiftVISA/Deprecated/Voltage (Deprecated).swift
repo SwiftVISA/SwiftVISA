@@ -8,6 +8,8 @@
 
 import CVISA
 
+// TODO: Remove this type.
+#warning("The following type should be removed.")
 /// A function for an AC current.
 ///
 /// - sine: A sine wave.
@@ -17,6 +19,8 @@ public enum VoltageFunction {
 	case square
 }
 
+// TODO: Remove this extension.
+#warning("The following extension should be removed.")
 extension VoltageFunction {
 	/// The VISA string that devfines the function
 	var descriptor: String {
@@ -29,6 +33,8 @@ extension VoltageFunction {
 	}
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Turns the output on for a waveform generator.
 ///
 /// - Parameter instrument: The instrument to turn output on for.
@@ -36,7 +42,9 @@ extension VoltageFunction {
 public func turnOutputOn(for instrument: Instrument) throws {
 	try visaWrite(to: instrument, "OUTPUT1 ON")
 }
-	
+
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Sets the waveform generator to a DC current with the given offset voltage.
 ///
 /// - Parameters:
@@ -48,6 +56,8 @@ public func setVoltage(to instrument: Instrument, offsetVoltage voltage: Double)
 	try visaWrite(to: instrument, "SOURCE1:VOLTAGE:OFFSET \(voltage)")
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Sets the waveform generator to an AC current with the given peak voltage and function.
 ///
 /// - Parameters:
@@ -62,6 +72,8 @@ public func setVoltage(to instrument: Instrument,
 	try visaWrite(to: instrument, "SOURCE1:VOLTAGE \(voltage)")
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 /// Reads the voltage from a multimeter.
 ///
 /// - Parameter instrument: The multimeter to read from.
@@ -76,6 +88,8 @@ public func readDCVoltage(from instrument: Instrument) throws -> Double {
 	return voltage
 }
 
+// TODO: Remove this function.
+#warning("The following function should be removed.")
 public func setImpedance(for instrument: Instrument, impedance: Double) throws {
 	let adjustedImpedance: Double = {
 		if impedance == .nan {
