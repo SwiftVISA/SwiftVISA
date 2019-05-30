@@ -59,7 +59,9 @@ extension InstrumentManager {
 extension InstrumentManager {
 	/// Closes the resource manager. Call this when you are finished with the resource manager. Once this has been called, the resource manager cannot be reopened.
 	///
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.failedToClose`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.failedToClose`.
 	public func close() throws {
 		let status = viClose(session)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
