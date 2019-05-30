@@ -34,7 +34,12 @@ public extension Instrument {
 	/// - Parameters:
 	///   - type: The lock type to use.
 	///   - timeout: The time in seconds to wait before timing out.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.resourceLocked`, `.invalidLockType`, `.invalidAccessKey`, `.timeout`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.resourceLocked`
+	///   - `.invalidLockType`
+	///   - `.invalidAccessKey`
+	///   - `.timeout`
 	/// - Note: Locks can be nested.
 	func lock(_ type: LockState.LockType, timeout: TimeInterval) throws {
 		// timeout is in seconds, convert to miliseconds
@@ -68,7 +73,9 @@ public extension Instrument {
 	
 	/// Unlocks the instrument if it is locked.
 	///
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.sessionNotLocked`
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.sessionNotLocked`
 	/// - Note: Locks can be nested.
 	func unlock() throws {
 		let status = viUnlock(session.viSession)

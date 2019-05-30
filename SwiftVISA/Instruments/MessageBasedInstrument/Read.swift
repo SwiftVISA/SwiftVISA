@@ -12,7 +12,20 @@ extension MessageBasedInstrument {
 	/// Reads data from the instrument.
 	///
 	/// - Returns: The data read from the instrument.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.unsupportedOperations`, `.resourceLocked`, `.timeout`, `.rawWriteProtocolViolation`, `.rawReadProtocolViolation`, `.outputProtocolViolation`, `.busError`, `.invalidSetup`, `.notControllerInCharge`, `.noListeners`, `.parityError`, `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`.
 	private func read() throws -> String {
 		let buffer = ViPBuf.allocate(capacity: bufferSize)
 		var returnCount = ViUInt32()
@@ -43,7 +56,24 @@ extension MessageBasedInstrument {
 	///   - type: The type to return.
 	///   - decoder: The decoder to use to decode the data.
 	/// - Returns: The decoded value.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.unsupportedOperations`, `.resourceLocked`, `.timeout`, `.rawWriteProtocolViolation`, `.rawReadProtocolViolation`, `.outputProtocolViolation`, `.busError`, `.invalidSetup`, `.notControllerInCharge`, `.noListeners`, `.parityError`, `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`, `.couldNotDecode`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`
+	///   - `.overrunError`
+	///   - `.ioError`
+	///   - `.connectionLost`
+	///   - `.couldNotDecode`
 	public func read<T, D: VISADecoder>(as type: T.Type, decoder: D) throws -> T where D.DecodingType == T {
 		let visaString = try read()
 		return try decoder.decode(visaString)
@@ -53,7 +83,24 @@ extension MessageBasedInstrument {
 	///
 	/// - Parameter type: The type to return.
 	/// - Returns: The decoded value.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.unsupportedOperations`, `.resourceLocked`, `.timeout`, `.rawWriteProtocolViolation`, `.rawReadProtocolViolation`, `.outputProtocolViolation`, `.busError`, `.invalidSetup`, `.notControllerInCharge`, `.noListeners`, `.parityError`, `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`, `.couldNotDecode`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`
+	///   - `.overrunError`
+	///   - `.ioError`
+	///   - `.connectionLost`
+	///   - `.couldNotDecode`
 	public func read<T: VISADecodable>(as type: T.Type) throws -> T {
 		let visaString = try read()
 		return try T(visaString: visaString)

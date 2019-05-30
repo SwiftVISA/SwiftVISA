@@ -48,8 +48,21 @@ class InstrumentManager {
 
 // MARK: Make Instrument
 extension InstrumentManager {
-	public func makeInstrument(uii: String) throws -> Instrument {
-		// TODO: Implement
+	public func makeInstrument(identifier: String) throws -> Instrument {
+		struct Identifier: Hashable {
+			var prefix: String
+			var suffix: String
+		}
+		
+		
+		
+		let classMapping: [Identifier : Instrument.Type] = [Identifier(prefix: "TCPIP::", suffix: "::INSTR") : TCPIPInstrument.self]
+		
+		// TODO: Remove the fatal error and make this throw an error
+		guard let type = classMapping.first(where: { (key, value) -> Bool in
+			identifier.hasPrefix(key.prefix) && identifier.hasSuffix(key.suffix)
+		}) else { fatalError("Class not found") }
+		
 		#warning("Not implemented")
 		fatalError("Not implemented")
 	}
@@ -59,7 +72,9 @@ extension InstrumentManager {
 extension InstrumentManager {
 	/// Closes the instrument manager. Call this when you are finished with the instrument manager. Once this has been called, the instrument manager cannot be reopened.
 	///
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.failedToClose`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.failedToClose`.
 	public func close() throws {
 		let status = viClose(session)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }

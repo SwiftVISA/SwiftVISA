@@ -14,7 +14,25 @@ extension MessageBasedInstrument {
 	///   - type: The type to return.
 	///   - decoder: The decoder to use to decode the data.
 	/// - Returns: The decoded value.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.unsupportedOperations`, `.resourceLocked`, `.timeout`, `.rawWriteProtocolViolation`, `.rawReadProtocolViolation`, `inputProtocolViolation`, `.outputProtocolViolation`, `.busError`, `.invalidSetup`, `.notControllerInCharge`, `.noListeners`, `.parityError`, `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`, `.couldNotDecode`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `inputProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`
+	///   - `.overrunError`
+	///   - `.ioError`
+	///   - `.connectionLost`
+	///   - `.couldNotDecode`
 	public func query<T, D: VISADecoder>(_ message: String, as type: T.Type, decoder: D) throws -> T where D.DecodingType == T {
 		try write(message)
 		return try read(as: T.self, decoder: decoder)
@@ -26,7 +44,25 @@ extension MessageBasedInstrument {
 	///   - message: The message to write to the instrument.
 	///   - type: The type to return.
 	/// - Returns: The decoded value.
-	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.unsupportedOperations`, `.resourceLocked`, `.timeout`, `.rawWriteProtocolViolation`, `.rawReadProtocolViolation`, `inputProtocolViolation`, `.outputProtocolViolation`, `.busError`, `.invalidSetup`, `.notControllerInCharge`, `.noListeners`, `.parityError`, `.framingError`, `.overrunError`, `.ioError`, `.connectionLost`, `.couldNotDecode`.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `inputProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`
+	///   - `.overrunError`
+	///   - `.ioError`
+	///   - `.connectionLost`
+	///   - `.couldNotDecode`
 	public func query<T: VISADecodable>(_ message: String, as type: T.Type) throws -> T {
 		try write(message)
 		return try read(as: T.self)
