@@ -11,7 +11,7 @@ import CVISA
 /// A class the encapsulates a VISA instrument manager.
 ///
 /// Instances of this class cannot be initialized directly. To access the default instrument manager, use `InstrumentManager.default`.
-class InstrumentManager {
+public class InstrumentManager {
 	/// The session associated with the instrument manager.
 	var session: ViSession
 
@@ -55,15 +55,41 @@ extension InstrumentManager {
 		}
 		
 		// This dictionary contains the mapping from an identifier's refix and suffix, and the class that it represents.
-		let classMapping: [Identifier : Instrument.Type] = [Identifier(prefix: "TCPIP::", suffix: "::INSTR") : TCPIPInstrument.self]
+		let classMapping: [Identifier : Instrument.Type] =
+			[Identifier(prefix: "ASRL", suffix: "::INSTR") : SerialInstrument.self,
+			 Identifier(prefix: "TCPIP", suffix: "::INSTR") : TCPIPInstrument.self,
+			 Identifier(prefix: "TCPIP", suffix: "::SOCKET") : TCPIPSocket.self,
+			 Identifier(prefix: "USB", suffix: "::INSTR") : USBInstrument.self,
+			 Identifier(prefix: "USB", suffix: "::RAW") : USBRaw.self,
+			 Identifier(prefix: "GPIB", suffix: "::INSTR") : GPIBInstrument.self,
+			 Identifier(prefix: "GPIB", suffix: "::INTFC") : GPIBInterface.self,
+			 Identifier(prefix: "FIREWIRE", suffix: "::INSTR") : FirewireInstrument.self,
+			 Identifier(prefix: "PXI", suffix: "::INSTR") : PXIInstrument.self,
+			 Identifier(prefix: "PXI", suffix: "::MEMACC") : PXIMemory.self,
+			 Identifier(prefix: "VXI", suffix: "::INSTR") : VXIInstrument.self,
+			 Identifier(prefix: "VXI", suffix: "::MEMACC") : VXIMemory.self,
+			 Identifier(prefix: "VXI", suffix: "::BACKPLANE") : VXIBackplane.self]
 		
 		// TODO: Remove the fatal error and make this throw an error
 		// Find the first (there should only be one) class mapping that has the given prefix and suffix.
 		guard let type = classMapping.first(where: { (key, value) -> Bool in
 			identifier.hasPrefix(key.prefix) && identifier.hasSuffix(key.suffix)
-		})?.value else { fatalError("Class not found") }
+		})?.value else { throw VISAError.invalidInstrumentIdentifier }
 		
-		return type.init()
+		var instrumentSession = ViSession()
+		guard let rm = InstrumentManager.default else {
+			throw VISAError.instrumentManagerCouldNotBeCreated
+		}
+		let status = viOpen(rm.session,
+												identifier,
+												ViAccessMode(VI_NULL),
+												ViUInt32(VI_NULL),
+												&instrumentSession)
+		guard status > VI_SUCCESS else { throw VISAError(status) }
+		
+		let session = Session(viSession: instrumentSession)
+		let instrument = type.init(session: session)
+		return instrument
 	}
 }
 

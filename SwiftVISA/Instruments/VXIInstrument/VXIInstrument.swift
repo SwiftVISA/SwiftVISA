@@ -18,7 +18,7 @@ public final class VXIInstrument: Instrument {
 	
 	public var timeout: TimeInterval
 	
-	public init() {
+	public init(session: Session) {
 		#warning("Not implemented")
 		fatalError("Not implemented")
 	}

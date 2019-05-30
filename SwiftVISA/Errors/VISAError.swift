@@ -93,6 +93,8 @@ import CVISA
 /// - unknownCVISAError: An unknown CVISA error status was returned from a call to CVISA. The status of this code is stored in `status`.
 /// - couldNotDecode: Could not decode the message into the specified type.
 /// - invalidRequestKey: The provided request key was invalid.
+/// - invalidInstrumentIdentifier: The provided instrument identifier did not adhere to the NI-VISA standard.
+/// - instrumentManagerCouldNotBeCreated: The `InstrumentManager.default` was not able to be created due to an unknown internal NI-VISA error.
 public enum VISAError: Error {
 	// MARK: NI-VISA Defined Errors
 	case systemError
@@ -179,6 +181,8 @@ public enum VISAError: Error {
 	// MARK: SwiftVISA Defined Errors
 	case couldNotDecode
 	case invalidRequestKey
+	case invalidInstrumentIdentifier
+	case instrumentManagerCouldNotBeCreated
 }
 
 // MARK: ViStatus Initializer
