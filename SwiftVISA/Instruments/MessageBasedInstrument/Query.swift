@@ -6,8 +6,6 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
-import Foundation
-
 extension MessageBasedInstrument {
 	/// Writes the given message to the instrument and then reads data from the given instrument and decodes it to the given type using the given decoder.
 	///
