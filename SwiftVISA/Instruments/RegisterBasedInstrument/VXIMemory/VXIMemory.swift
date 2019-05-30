@@ -1,16 +1,12 @@
 //
-//  TCPIPInstrument.swift
+//  VXIMemory.swift
 //  SwiftVISA
 //
-//  Created by Connor Barnes on 5/29/19.
+//  Created by Connor Barnes on 5/30/19.
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
-public final class TCPIPInstrument: MessageBasedInstrument {
-	public var bufferSize: Int
-	
-	public var buffer: UnsafeMutableRawBufferPointer
-	
+public final class VXIMemory: RegisterBasedInstrument {
 	public var session: Session
 	
 	public var uniqueIdentifier: String
