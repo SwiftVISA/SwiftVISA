@@ -10,29 +10,29 @@ import CVISA
 
 /// A class the encapsulates a VISA resource manager.
 ///
-/// Instances of this class cannot be initialized directly. To access the default resource manager, use `ResourceManager.default`.
+/// Instances of this class cannot be initialized directly. To access the default resource manager, use `InstrumentManager.default`.
 class InstrumentManager {
 	/// The session associated with the resource manager.
 	var session: ViSession
-	
-	/// Creates a `ResourceManager` from a `ViSession`.
+
+	/// Creates an `InstrumentManager` from a `ViSession`.
 	///
 	/// - Parameter session: The VISA Session object.
 	private init(session: ViSession) {
 		self.session = session
 	}
-	
-	/// After a resource manager has been successfully initialized, it is stored here for future use.
+
+	/// After an instrument manager has been successfully initialized, it is stored here for future use.
 	private static var _default: InstrumentManager?
-	
-	/// The shared resource manager. If the resource manager could not be created, this returns `nil`.
+
+	/// The shared instrument manager. If the instrument manager could not be created, this returns `nil`.
 	static var `default`: InstrumentManager? {
 		if let saved = _default {
-			// If a resource manager object has already been created, use that one rather than creating a new resource manager
+			// If a instrument manager object has already been created, use that one rather than creating a new instrument manager
 			return saved
 		}
 
-		// A resource manager has not been created yet, try to create one
+		// A instrument manager has not been created yet, try to create one
 		var session = ViSession()
 		let status = viOpenDefaultRM(&session)
 		guard status >= VI_SUCCESS else {
@@ -40,9 +40,9 @@ class InstrumentManager {
 		}
 
 		// Successfully created, store this object for future use
-		let resourceManager = InstrumentManager(session: session)
-		_default = resourceManager
-		return resourceManager
+		let instrumentManager = InstrumentManager(session: session)
+		_default = instrumentManager
+		return instrumentManager
 	}
 }
 
@@ -57,7 +57,7 @@ extension InstrumentManager {
 
 // MARK: Close
 extension InstrumentManager {
-	/// Closes the resource manager. Call this when you are finished with the resource manager. Once this has been called, the resource manager cannot be reopened.
+	/// Closes the instrument manager. Call this when you are finished with the instrument manager. Once this has been called, the instrument manager cannot be reopened.
 	///
 	/// - Throws: One of the following `VISAError` errors: `.invalidSession`, `.failedToClose`.
 	public func close() throws {
