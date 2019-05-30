@@ -8,11 +8,11 @@
 
 import CVISA
 
-/// A class the encapsulates a VISA resource manager.
+/// A class the encapsulates a VISA instrument manager.
 ///
-/// Instances of this class cannot be initialized directly. To access the default resource manager, use `InstrumentManager.default`.
+/// Instances of this class cannot be initialized directly. To access the default instrument manager, use `InstrumentManager.default`.
 class InstrumentManager {
-	/// The session associated with the resource manager.
+	/// The session associated with the instrument manager.
 	var session: ViSession
 
 	/// Creates an `InstrumentManager` from a `ViSession`.
