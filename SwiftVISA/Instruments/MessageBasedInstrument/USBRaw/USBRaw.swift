@@ -6,6 +6,7 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+// TODO: Implement
 public final class USBRaw: MessageBasedInstrument {
 	public var bufferSize: Int
 	

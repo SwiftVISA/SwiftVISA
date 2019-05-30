@@ -6,6 +6,7 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+// TODO: Implement
 public final class PXIMemory: RegisterBasedInstrument {
 	public var session: Session
 	
