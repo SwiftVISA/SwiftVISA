@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import SwiftVISA
+import CVISA
 
 class SwiftVISATests: XCTestCase {
 	
@@ -74,6 +75,27 @@ class SwiftVISATests: XCTestCase {
 		}
 		XCTAssertNoThrow(try visaWrite(to: instrument, "OUTPUT1:LOAD INF"))
 	}
+    
+    func testGetAttribute() {
+        guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+            XCTFail()
+            return
+        }
+    
+        XCTAssertNoThrow(try instrument.get_attribute(VI_ATTR_MANF_NAME))
+    }
+    
+    func testSetAttribute() {
+        guard let instrument = Instrument(named: "USB0::0x0957::0x2607::MY52200879::INSTR") else {
+            XCTFail()
+            return
+        }
+        let rate = 2400
+        // todo I don't know what attributes we have at our disposal; just using baud
+        XCTAssertNoThrow(try instrument.setAttribute(VI_ATTR_ASRL_BAUD, rate))
+        
+        XCTAssertEqual(try instrument.getAttribute(VI_ATTR_ASRL_BAUD), rate)
+    }
 	
 	func testPerformanceExample() {
 		// This is an example of a performance test case.
