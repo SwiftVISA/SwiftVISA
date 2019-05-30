@@ -9,6 +9,5 @@
 import CVISA
 
 extension MessageBasedInstrument {
-    var 
-    
+	
 }

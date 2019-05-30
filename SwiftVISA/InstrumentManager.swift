@@ -54,17 +54,16 @@ extension InstrumentManager {
 			var suffix: String
 		}
 		
-		
-		
+		// This dictionary contains the mapping from an identifier's refix and suffix, and the class that it represents.
 		let classMapping: [Identifier : Instrument.Type] = [Identifier(prefix: "TCPIP::", suffix: "::INSTR") : TCPIPInstrument.self]
 		
 		// TODO: Remove the fatal error and make this throw an error
+		// Find the first (there should only be one) class mapping that has the given prefix and suffix.
 		guard let type = classMapping.first(where: { (key, value) -> Bool in
 			identifier.hasPrefix(key.prefix) && identifier.hasSuffix(key.suffix)
-		}) else { fatalError("Class not found") }
+		})?.value else { fatalError("Class not found") }
 		
-		#warning("Not implemented")
-		fatalError("Not implemented")
+		return type.init()
 	}
 }
 
