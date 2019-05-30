@@ -88,7 +88,7 @@ public extension Instrument {
         // TODO make sure that attribute responses are never greater than 2048 bytes
         let buffer = ViPBuf.allocate(capacity: 2048)
         
-        let status = viSetAttribute(session.viSession, attributeId, value)
-        guard status >= VI_SUCCESS else { throw VISAError(status)}
+        // let status = viSetAttribute(session.viSession, attributeId, value)
+        // guard status >= VI_SUCCESS else { throw VISAError(status)}
     }
 }
