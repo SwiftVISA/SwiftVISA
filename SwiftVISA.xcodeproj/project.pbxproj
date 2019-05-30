@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A134EDB229F5ABB008AF9EE /* MessageBasedInstrumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A134EDA229F5ABB008AF9EE /* MessageBasedInstrumentTests.swift */; };
+		5A134EDD229F7125008AF9EE /* TCPIPInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A134EDC229F7125008AF9EE /* TCPIPInstrument.swift */; };
 		5A4A0CE0229DBF36004E16B8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4A0CDF229DBF36004E16B8 /* Session.swift */; };
 		5A4A0CE2229DC0C1004E16B8 /* Locks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4A0CE1229DC0C1004E16B8 /* Locks.swift */; };
 		5A4A0CEE229DDA2B004E16B8 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF1631228DD44800545130 /* InstrumentManager.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5A134EDA229F5ABB008AF9EE /* MessageBasedInstrumentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedInstrumentTests.swift; sourceTree = "<group>"; };
+		5A134EDC229F7125008AF9EE /* TCPIPInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPIPInstrument.swift; sourceTree = "<group>"; };
 		5A4A0CDF229DBF36004E16B8 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		5A4A0CE1229DC0C1004E16B8 /* Locks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locks.swift; sourceTree = "<group>"; };
 		5A4A0CEF229E4E36004E16B8 /* VISAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VISAError.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A134EDE229F712C008AF9EE /* TCPIPInstrument */ = {
+			isa = PBXGroup;
+			children = (
+				5A134EDC229F7125008AF9EE /* TCPIPInstrument.swift */,
+			);
+			path = TCPIPInstrument;
+			sourceTree = "<group>";
+		};
 		5A4A0CEB229DD7F4004E16B8 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				5A4A0CFB229E6982004E16B8 /* Read.swift */,
 				5A4A0CFD229E6987004E16B8 /* Write.swift */,
 				5A4A0CFF229E6B71004E16B8 /* Query.swift */,
+				5A134EDE229F712C008AF9EE /* TCPIPInstrument */,
 			);
 			path = MessageBasedInstrument;
 			sourceTree = "<group>";
@@ -316,6 +327,7 @@
 				5A75B3A0228DC1B7007ADB39 /* CVISAErrorCodes.swift in Sources */,
 				E1037FC9228CAE7B00239BD6 /* Voltage (Deprecated).swift in Sources */,
 				DA9368F137CFD5DD3648FAAB /* MessageBasedInstrument.swift in Sources */,
+				5A134EDD229F7125008AF9EE /* TCPIPInstrument.swift in Sources */,
 				5A4A0CF5229E66BD004E16B8 /* Decoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

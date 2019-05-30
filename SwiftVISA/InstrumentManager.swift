@@ -48,8 +48,21 @@ class InstrumentManager {
 
 // MARK: Make Instrument
 extension InstrumentManager {
-	public func makeInstrument(uii: String) throws -> Instrument {
-		// TODO: Implement
+	public func makeInstrument(identifier: String) throws -> Instrument {
+		struct Identifier: Hashable {
+			var prefix: String
+			var suffix: String
+		}
+		
+		
+		
+		let classMapping: [Identifier : Instrument.Type] = [Identifier(prefix: "TCPIP::", suffix: "::INSTR") : TCPIPInstrument.self]
+		
+		// TODO: Remove the fatal error and make this throw an error
+		guard let type = classMapping.first(where: { (key, value) -> Bool in
+			identifier.hasPrefix(key.prefix) && identifier.hasSuffix(key.suffix)
+		}) else { fatalError("Class not found") }
+		
 		#warning("Not implemented")
 		fatalError("Not implemented")
 	}
