@@ -67,4 +67,22 @@ class MessageBasedInstrumentTests : XCTestCase {
 			XCTFail()
 		}
 	}
+
+	//Test the functionality of the Read command utilizing multiple reads
+	// public func read<T: VISADecodable>(as type: T, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.025) throws -> [T?]
+	func testMultipleReading() {
+		XCTAssertNotNil(multimeterInstrument)
+
+		do {
+			// Read 10 voltage values
+			try multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
+			let voltage = try multimeterInstrument?.read(as: Double.self, numberOfReads: 10)
+
+			// Assert we got 10 back
+			XCTAssertNotNil(voltage)
+			XCTAssertEqual(voltage?.count, 10)
+		} catch {
+			XCTFail()
+		}
+	}
 }
