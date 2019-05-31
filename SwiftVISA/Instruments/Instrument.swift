@@ -18,8 +18,6 @@ public protocol Instrument: class {
 	/// A completion handler that is ran before the instrument is closed.
 	var beforeClose: () -> Void { get set }
 	// TODO: Should this be moved to session? Should it be read-only? The setter is only used for the default implementation, but aside from that, this should never be set by the user.
-	/// The lock state for the instrument.
-	var lockState: LockState { get set }
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }
 }

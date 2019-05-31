@@ -95,6 +95,7 @@ import CVISA
 /// - invalidRequestKey: The provided request key was invalid.
 /// - invalidInstrumentIdentifier: The provided instrument identifier did not adhere to the NI-VISA standard.
 /// - instrumentManagerCouldNotBeCreated: The `InstrumentManager.default` was not able to be created due to an unknown internal NI-VISA error.
+/// - invalidInstrument: The instrument class is not valid.
 public enum VISAError: Error {
 	// MARK: NI-VISA Defined Errors
 	case systemError
@@ -183,6 +184,7 @@ public enum VISAError: Error {
 	case invalidRequestKey
 	case invalidInstrumentIdentifier
 	case instrumentManagerCouldNotBeCreated
+	case invalidInstrument
 }
 
 // MARK: ViStatus Initializer

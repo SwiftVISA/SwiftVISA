@@ -8,13 +8,13 @@
 
 // TODO: Implement
 public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
+	var _lockState: LockState
+	
 	public var session: Session
 	
 	public var identifier: String
 	
 	public var beforeClose: () -> Void
-	
-	public var lockState: LockState
 	
 	public var timeout: TimeInterval
 	

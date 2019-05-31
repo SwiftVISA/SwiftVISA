@@ -8,6 +8,8 @@
 
 // TODO: Implement
 public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
+	var _lockState: LockState
+	
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer
@@ -17,8 +19,6 @@ public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	public var identifier: String
 	
 	public var beforeClose: () -> Void
-	
-	public var lockState: LockState
 	
 	public var timeout: TimeInterval
 	

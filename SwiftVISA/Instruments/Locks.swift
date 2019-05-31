@@ -42,6 +42,7 @@ public extension Instrument {
 	///   - `.timeout`
 	/// - Note: Locks can be nested.
 	func lock(_ type: LockState.LockType, timeout: TimeInterval) throws {
+		guard let self = self as? InstrumentProtocol else { throw VISAError.invalidInstrument }
 		// timeout is in seconds, convert to miliseconds
 		let viTimeout = ViUInt32(timeout * 1000.0)
 		
@@ -53,7 +54,7 @@ public extension Instrument {
 			
 			guard status >= VI_SUCCESS else { throw VISAError(status) }
 			
-			lockState = .locked(.exclusive)
+			self._lockState = .locked(.exclusive)
 		case .shared (let key):
 			let asciiKey = key.filter { $0.isASCII }
 			guard var cRequestedKey = asciiKey.cString(using: .ascii) else { throw VISAError.invalidRequestKey }
@@ -67,7 +68,7 @@ public extension Instrument {
 			let data = Data(buffer: accessKeyBuffer)
 			guard let string = String(bytes: data, encoding: .ascii) else { throw VISAError.invalidAccessKey }
 			
-			lockState = .locked(.shared(key: string))
+			self._lockState = .locked(.shared(key: string))
 		}
 	}
 	
@@ -78,6 +79,7 @@ public extension Instrument {
 	///   - `.sessionNotLocked`
 	/// - Note: Locks can be nested.
 	func unlock() throws {
+		guard let self = self as? InstrumentProtocol else { throw VISAError.invalidInstrument }
 		let status = viUnlock(session.viSession)
 		
 		// If the status was VI_ERROR_SESN_NLOCKED, the instrument was not locked, don't throw an error for this, just print out a warning.
@@ -89,6 +91,6 @@ public extension Instrument {
 			print("WARNING: The instrument \"\(identifier)\" was not locked, but unlock() was called!")
 		}
 		
-		lockState = .unlocked
+		self._lockState = .unlocked
 	}
 }

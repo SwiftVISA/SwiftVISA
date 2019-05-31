@@ -8,6 +8,8 @@
 
 // TODO: Implement
 public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
+	var _lockState: LockState
+	
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer
@@ -18,8 +20,6 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var beforeClose: () -> Void
 	
-	public var lockState: LockState
-	
 	public var timeout: TimeInterval
 	
 	public init(session: Session, identifier: String) {
@@ -29,7 +29,7 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 		self.identifier = identifier
 		// TODO: Why can beforeClose not be nil, maybe this should be moved to a delegate?
 		beforeClose = { }
-		lockState = .unlocked
+		_lockState = .unlocked
 		timeout = 5.0
 	}
 }
