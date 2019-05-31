@@ -148,7 +148,7 @@ extension MessageBasedInstrument {
 	///   - `.ioError`
 	///   - `.connectionLost`
 	///   - `.couldNotDecode`
-	public func read<T: VISADecodable>(as type: T, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.025) throws -> [T?] {
+	public func read<T: VISADecodable>(as type: T.Type, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.025) throws -> [T?] {
 		#warning("Not tested")
 		var readList: [T?] = []
 
@@ -216,7 +216,7 @@ extension MessageBasedInstrument {
 	///   - `.ioError`
 	///   - `.connectionLost`
 	///   - `.couldNotDecode`
-	public func read<T, D: VISADecoder>(as type: T, decoder: D, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.025) throws -> [T?] where D.DecodingType == T {
+	public func read<T, D: VISADecoder>(as type: T.Type, decoder: D, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.025) throws -> [T?] where D.DecodingType == T {
 		#warning("Not tested")
 		var readList: [T?] = []
 
