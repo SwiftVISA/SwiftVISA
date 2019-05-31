@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class GPIBInterface: Instrument {
+public final class GPIBInterface: InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

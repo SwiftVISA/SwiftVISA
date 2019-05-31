@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class USBRaw: MessageBasedInstrument {
+public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer

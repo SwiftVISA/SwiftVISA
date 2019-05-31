@@ -55,7 +55,7 @@ extension InstrumentManager {
 		}
 		
 		// This dictionary contains the mapping from an identifier's refix and suffix, and the class that it represents.
-		let classMapping: [Identifier : Instrument.Type] =
+		let classMapping: [Identifier : InstrumentProtocol.Type] =
 			[Identifier(prefix: "ASRL", suffix: "::INSTR") : SerialInstrument.self,
 			 Identifier(prefix: "TCPIP", suffix: "::INSTR") : TCPIPInstrument.self,
 			 Identifier(prefix: "TCPIP", suffix: "::SOCKET") : TCPIPSocket.self,

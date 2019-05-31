@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class TCPIPSocket: MessageBasedInstrument {
+public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer

@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class VXIMemory: RegisterBasedInstrument {
+public final class VXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

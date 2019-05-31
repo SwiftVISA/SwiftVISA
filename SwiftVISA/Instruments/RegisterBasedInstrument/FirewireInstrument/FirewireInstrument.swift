@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class FirewireInstrument: RegisterBasedInstrument {
+public final class FirewireInstrument: RegisterBasedInstrument, InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

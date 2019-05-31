@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class TCPIPInstrument: MessageBasedInstrument {
+public final class TCPIPInstrument: MessageBasedInstrument, InstrumentProtocol {
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer

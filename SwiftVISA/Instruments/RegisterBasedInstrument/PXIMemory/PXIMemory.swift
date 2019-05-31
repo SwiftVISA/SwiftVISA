@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class PXIMemory: RegisterBasedInstrument {
+public final class PXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

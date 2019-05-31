@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class VXIInstrument: Instrument {
+public final class VXIInstrument: InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

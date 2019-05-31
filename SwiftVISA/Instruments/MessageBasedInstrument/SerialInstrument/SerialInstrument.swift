@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class SerialInstrument: MessageBasedInstrument {
+public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol {
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer

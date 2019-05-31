@@ -22,8 +22,6 @@ public protocol Instrument: class {
 	var lockState: LockState { get set }
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }
-	/// Creates a new instrument. Do not call this your self, instead call InstrumentManager.makeInstrument
-	init(session: Session, identifier: String)
 }
 
 // MARK: Default Implementations

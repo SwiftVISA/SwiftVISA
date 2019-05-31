@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class GPIBInstrument: MessageBasedInstrument {
+public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	public var bufferSize: Int
 	
 	public var buffer: UnsafeMutableRawBufferPointer

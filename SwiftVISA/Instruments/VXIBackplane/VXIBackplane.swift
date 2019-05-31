@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class VXIBackplane: Instrument {
+public final class VXIBackplane: InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String

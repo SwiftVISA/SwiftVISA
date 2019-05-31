@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class PXIInstrument: RegisterBasedInstrument {
+public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
 	public var session: Session
 	
 	public var identifier: String
