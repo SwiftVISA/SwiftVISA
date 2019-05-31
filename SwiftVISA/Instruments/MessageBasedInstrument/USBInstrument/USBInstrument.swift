@@ -23,7 +23,14 @@ public final class USBInstrument: MessageBasedInstrument {
 	public var timeout: TimeInterval
 	
 	public init(session: Session) {
-		#warning("Not implemented")
-		fatalError("Not implemented")
+		bufferSize = 20480
+		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
+		self.session = session
+		// TODO: What is uniqueIdentifier, why can it not be nil?
+		uniqueIdentifier = ""
+		// TODO: Why can beforeClose not be nil, maybe this should be moved to a delegate?
+		beforeClose = { }
+		lockState = .unlocked
+		timeout = 5.0
 	}
 }
