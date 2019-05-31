@@ -70,7 +70,7 @@ extension InstrumentManager {
 			 Identifier(prefix: "VXI", suffix: "::MEMACC") : VXIMemory.self,
 			 Identifier(prefix: "VXI", suffix: "::BACKPLANE") : VXIBackplane.self]
 		
-		// TODO: Remove the fatal error and make this throw an error
+		// TODO: Should this really throw if it cannot find the correct class? Should we create a class that implements Instrument with no additional functionalities that is the fallback class to instantiate if the class cannot be found?
 		// Find the first (there should only be one) class mapping that has the given prefix and suffix.
 		guard let type = classMapping.first(where: { (key, value) -> Bool in
 			identifier.hasPrefix(key.prefix) && identifier.hasSuffix(key.suffix)
