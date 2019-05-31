@@ -88,7 +88,7 @@ extension InstrumentManager {
 		guard status > VI_SUCCESS else { throw VISAError(status) }
 		
 		let session = Session(viSession: instrumentSession)
-		let instrument = type.init(session: session)
+		let instrument = type.init(session: session, identifier: identifier)
 		return instrument
 	}
 }

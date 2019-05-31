@@ -10,7 +10,7 @@
 public final class VXIInstrument: Instrument {
 	public var session: Session
 	
-	public var uniqueIdentifier: String
+	public var identifier: String
 	
 	public var beforeClose: () -> Void
 	
@@ -18,7 +18,7 @@ public final class VXIInstrument: Instrument {
 	
 	public var timeout: TimeInterval
 	
-	public init(session: Session) {
+	public init(session: Session, identifier: String) {
 		#warning("Not implemented")
 		fatalError("Not implemented")
 	}

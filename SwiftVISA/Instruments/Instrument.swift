@@ -8,12 +8,13 @@
 
 import CVISA
 
+//  TODO: should beforeClose() be removed? It is very uncommon to have a type store a closure like this. If we would like to keep its functionality, we could move it a delegate?
 /// A type that can communicated with via VISA.
 public protocol Instrument: class {
 	/// The session associated with the instrument.
 	var session: Session { get }
 	/// A unique identifier for the instrument.
-	var uniqueIdentifier: String { get }
+	var identifier: String { get }
 	/// A completion handler that is ran before the instrument is closed.
 	var beforeClose: () -> Void { get set }
 	// TODO: Should this be moved to session? Should it be read-only? The setter is only used for the default implementation, but aside from that, this should never be set by the user.
@@ -22,7 +23,7 @@ public protocol Instrument: class {
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }
 	/// Creates a new instrument. Do not call this your self, instead call InstrumentManager.makeInstrument
-	init(session: Session)
+	init(session: Session, identifier: String)
 }
 
 // MARK: Default Implementations

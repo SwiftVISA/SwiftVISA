@@ -86,7 +86,7 @@ public extension Instrument {
 		}
 		
 		if status == VI_ERROR_SESN_NLOCKED {
-			print("WARNING: The instrument \"\(uniqueIdentifier)\" was not locked, but unlock() was called!")
+			print("WARNING: The instrument \"\(identifier)\" was not locked, but unlock() was called!")
 		}
 		
 		lockState = .unlocked

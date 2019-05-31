@@ -14,7 +14,7 @@ public final class USBInstrument: MessageBasedInstrument {
 	
 	public var session: Session
 	
-	public var uniqueIdentifier: String
+	public var identifier: String
 	
 	public var beforeClose: () -> Void
 	
@@ -22,12 +22,11 @@ public final class USBInstrument: MessageBasedInstrument {
 	
 	public var timeout: TimeInterval
 	
-	public init(session: Session) {
+	public init(session: Session, identifier: String) {
 		bufferSize = 20480
 		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
 		self.session = session
-		// TODO: What is uniqueIdentifier, why can it not be nil?
-		uniqueIdentifier = ""
+		self.identifier = identifier
 		// TODO: Why can beforeClose not be nil, maybe this should be moved to a delegate?
 		beforeClose = { }
 		lockState = .unlocked
