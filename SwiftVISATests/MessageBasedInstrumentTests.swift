@@ -68,22 +68,17 @@ class MessageBasedInstrumentTests : XCTestCase {
 	}
     
     func testGetAttribute() {
-        do {
-            let manufacture = try waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_MANF_NAME), as: String.self)
-            XCTAssertEqual(manufacture, "Agilent Technologies")
-        } catch {
-            XCTFail()
-        }
+        let manufacture = try? waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_MANF_NAME), as: String.self)
+
+        XCTAssertNotNil(manufacture)
+        XCTAssertEqual(manufacture, "Agilent Technologies")
     }
     
     func testSetAttribute() {
-        // Will only pass when get also passes
-        do {
-            try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000)
-            let timeout = try waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
-            XCTAssertEqual(timeout, 3000)
-        } catch {
-            XCTFail()
-        }
+        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000))
+        let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
+
+        XCTAssertNotNil(timeout)
+        XCTAssertEqual(timeout, 3000)
     }
 }
