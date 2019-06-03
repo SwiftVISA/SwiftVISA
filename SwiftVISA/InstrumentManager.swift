@@ -85,8 +85,8 @@ extension InstrumentManager {
 				identifier,
 				ViAccessMode(VI_NULL),
 				ViUInt32(VI_NULL),
-				&instrumentSession
-		)
+				&instrumentSession)
+
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 		
 		let session = Session(viSession: instrumentSession)
