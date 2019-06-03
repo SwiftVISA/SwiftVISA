@@ -15,14 +15,15 @@ class MessageBasedInstrumentTests : XCTestCase {
 	
 	// Start the session to all the instruments
 	override func setUp() {
-		let im = InstrumentManager.default
-		//        multimeterInstrument = rm.makeInstrument(named: multimeterUII) as? MessageBasedInstrument
-		
+		guard let im = InstrumentManager.default else { return }
+		multimeterInstrument = try! im.makeInstrument(identifier: multimeterUII) as? MessageBasedInstrument
+		waveformGeneratorInstrument = try! im.makeInstrument(identifier: waveformGeneratorUUI) as? MessageBasedInstrument
 	}
 	
 	// Remove all the sessions
 	override func tearDown() {
-		
+		try? multimeterInstrument?.close()
+		try? waveformGeneratorInstrument?.close()
 	}
 	
 	// Test the write command by setting the waveform characteristics
@@ -33,7 +34,7 @@ class MessageBasedInstrumentTests : XCTestCase {
 		do {
 			// Write DC Function, and the voltage to set to
 			try waveformGeneratorInstrument?.write("SOURCE1:FUNCTION DC")
-			try waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE 5");
+			try waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE:OFFSET 5");
 			
 			// Turn the output on
 			try waveformGeneratorInstrument?.write("OUTPUT1 ON")
@@ -47,13 +48,10 @@ class MessageBasedInstrumentTests : XCTestCase {
 	func testReadDCVoltage() {
 		XCTAssertNotNil(multimeterInstrument)
 		
-		do {
-			try multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
-			let voltage = try multimeterInstrument?.read(as: Double.self)
-			XCTAssertNotNil(voltage)
-		} catch {
-			XCTFail()
-		}
+		try? multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
+		let voltage = try? multimeterInstrument?.read(as: Double.self)
+		print(voltage)
+		XCTAssertNotNil(voltage)
 	}
 	
 	// Test the functionality of the Query command by writing and reading a DC Voltage
