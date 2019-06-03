@@ -53,8 +53,9 @@ extension InstrumentManager {
 			var prefix: String
 			var suffix: String
 		}
-		
-		// This dictionary contains the mapping from an identifier's refix and suffix, and the class that it represents.
+
+		// TODO: Move this dictionary building somewhere else: shouldn't rebuilt it on every makeInstrument
+		// This dictionary contains the mapping from an identifier's prefix and suffix, and the class that it represents.
 		let classMapping: [Identifier : InstrumentProtocol.Type] =
 			[Identifier(prefix: "ASRL", suffix: "::INSTR") : SerialInstrument.self,
 			 Identifier(prefix: "TCPIP", suffix: "::INSTR") : TCPIPInstrument.self,
@@ -81,11 +82,12 @@ extension InstrumentManager {
 			throw VISAError.instrumentManagerCouldNotBeCreated
 		}
 		let status = viOpen(rm.session,
-												identifier,
-												ViAccessMode(VI_NULL),
-												ViUInt32(VI_NULL),
-												&instrumentSession)
-		guard status > VI_SUCCESS else { throw VISAError(status) }
+				identifier,
+				ViAccessMode(VI_NULL),
+				ViUInt32(VI_NULL),
+				&instrumentSession
+		)
+		guard status >= VI_SUCCESS else { throw VISAError(status) }
 		
 		let session = Session(viSession: instrumentSession)
 		let instrument = type.init(session: session, identifier: identifier)
