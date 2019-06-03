@@ -54,5 +54,8 @@ public extension Instrument {
 		#warning("Not tested")
 		let status = viClose(session.viSession)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
-	}
+    }
+    
+
+    
 }

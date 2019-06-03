@@ -5,6 +5,7 @@
 
 import XCTest
 @testable import SwiftVISA
+import CVISA
 
 /// This class tests MessageBasedInstrument by running tests against and agilent
 class MessageBasedInstrumentTests : XCTestCase {
@@ -65,4 +66,24 @@ class MessageBasedInstrumentTests : XCTestCase {
         XCTAssertNotNil(voltage)
         XCTAssertEqual(voltage?.count, 10)
 	}
+    
+    func testGetAttribute() {
+        do {
+            let manufacture = try waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_MANF_NAME), as: String.self)
+            XCTAssertEqual(manufacture, "Agilent Technologies")
+        } catch {
+            XCTFail()
+        }
+    }
+    
+    func testSetAttribute() {
+        // Will only pass when get also passes
+        do {
+            try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000)
+            let timeout = try waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
+            XCTAssertEqual(timeout, 3000)
+        } catch {
+            XCTFail()
+        }
+    }
 }
