@@ -77,15 +77,4 @@ public extension Instrument {
         }
         return String(string[startIndex..<endIndex])
     }
-    
-    /// sets the given NI-VISA attribute on the instrument
-    ///
-    /// - Throws: ???
-    func setAttibute(_ attributeId: ViAttr, value: String) throws {
-        // TODO make sure that attribute responses are never greater than 2048 bytes
-        let buffer = ViPBuf.allocate(capacity: 2048)
-        
-        // let status = viSetAttribute(session.viSession, attributeId, value)
-        // guard status >= VI_SUCCESS else { throw VISAError(status)}
-    }
 }

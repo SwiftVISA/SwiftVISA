@@ -15,6 +15,7 @@ protocol InstrumentProtocol: Instrument {
 }
 
 public extension Instrument {
+	/// The current lock state of the instrument.
 	var lockState: LockState {
 		guard let self = self as? InstrumentProtocol else { fatalError("Invalid instrument class") }
 		return self._lockState
