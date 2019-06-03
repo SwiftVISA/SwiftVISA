@@ -16,85 +16,63 @@ class MessageBasedInstrumentTests : XCTestCase {
 	// Start the session to all the instruments
 	override func setUp() {
 		guard let im = InstrumentManager.default else { return }
-		multimeterInstrument = try! im.makeInstrument(identifier: multimeterUII) as? MessageBasedInstrument
-		waveformGeneratorInstrument = try! im.makeInstrument(identifier: waveformGeneratorUUI) as? MessageBasedInstrument
-	}
+		multimeterInstrument = try? im.makeInstrument(identifier: multimeterUII) as? MessageBasedInstrument
+		waveformGeneratorInstrument = try? im.makeInstrument(identifier: waveformGeneratorUUI) as? MessageBasedInstrument
+
+        // Ensure we connected to the instruments
+        XCTAssertNotNil(waveformGeneratorInstrument)
+        XCTAssertNotNil(multimeterInstrument)
+    }
 	
 	// Remove all the sessions
 	override func tearDown() {
-		try? multimeterInstrument?.close()
-		try? waveformGeneratorInstrument?.close()
-	}
-	
+        try? multimeterInstrument?.close()
+        try? waveformGeneratorInstrument?.close()
+    }
+
 	// Test the write command by setting the waveform characteristics
 	func testSetWaveformCharacteristics() {
-		// First, ensure we have an instrument
-		XCTAssertNotNil(waveformGeneratorInstrument)
-		
-		do {
-			// Write DC Function, and the voltage to set to
-			try waveformGeneratorInstrument?.write("SOURCE1:FUNCTION DC")
-			try waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE:OFFSET 5");
-			
-			// Turn the output on
-			try waveformGeneratorInstrument?.write("OUTPUT1 ON")
-		} catch {
-			XCTFail()
-		}
+        // Write DC Function, and the voltage to set to
+        try? waveformGeneratorInstrument?.write("SOURCE1:FUNCTION DC")
+        try? waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE:OFFSET 5");
+
+        // Turn the output on
+        try? waveformGeneratorInstrument?.write("OUTPUT1 ON")
 	}
 	
 	
 	// Test the read by reading DC voltage. This also tests write too
 	func testReadDCVoltage() {
-		XCTAssertNotNil(multimeterInstrument)
-		
 		try? multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
 		let voltage = try? multimeterInstrument?.read(as: Double.self)
-		print(voltage)
+		print(voltage ?? "Nothing returned")
+
 		XCTAssertNotNil(voltage)
 	}
 	
 	// Test the functionality of the Query command by writing and reading a DC Voltage
 	func testQuery() {
-		XCTAssertNotNil(multimeterInstrument)
-		
-		do {
-			let voltage = try multimeterInstrument?.query("MEASURE:VOLTAGE:DC?", as: Double.self)
-			XCTAssertNotNil(voltage)
-		} catch {
-			XCTFail()
-		}
+        let voltage = try? multimeterInstrument?.query("MEASURE:VOLTAGE:DC?", as: Double.self)
+        XCTAssertNotNil(voltage)
 	}
 
 	//Test the functionality of the Read command utilizing multiple reads
 	func testMultipleReading() {
-		XCTAssertNotNil(multimeterInstrument)
+        // Read 10 voltage values
+        try? multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
+        let voltage = try? multimeterInstrument?.read(as: Double.self, numberOfReads: 10)
 
-		do {
-			// Read 10 voltage values
-			try multimeterInstrument?.write("MEASURE:VOLTAGE:DC?")
-			let voltage = try multimeterInstrument?.read(as: Double.self, numberOfReads: 10)
-
-			// Assert we got 10 back
-			XCTAssertNotNil(voltage)
-			XCTAssertEqual(voltage?.count, 10)
-		} catch {
-			XCTFail()
-		}
+        // Assert we got 10 back
+        XCTAssertNotNil(voltage)
+        XCTAssertEqual(voltage?.count, 10)
 	}
 
 	// Ditto above, but on query
 	func testMultipleReadQuery() {
-		XCTAssertNotNil(multimeterInstrument)
+        let voltage = try? multimeterInstrument?.query("MEASURE:VOLTAGE:DC?", as: Double.self, numberOfReads: 10)
 
-		do {
-			let voltage = try multimeterInstrument?.query("MEASURE:VOLTAGE:DC?", as: Double.self, numberOfReads: 10)
-
-			// Assert we got 10 back
-			XCTAssertNotNil(voltage)
-			XCTAssertEqual(voltage?.count, 10)
-		} catch {
-			XCTFail()
-		}
+        // Assert we got 10 back
+        XCTAssertNotNil(voltage)
+        XCTAssertEqual(voltage?.count, 10)
 	}
 }
