@@ -78,10 +78,10 @@ extension InstrumentManager {
 		})?.value else { throw VISAError.invalidInstrumentIdentifier }
 		
 		var instrumentSession = ViSession()
-		guard let rm = InstrumentManager.default else {
+		guard let im = InstrumentManager.default else {
 			throw VISAError.instrumentManagerCouldNotBeCreated
 		}
-		let status = viOpen(rm.session,
+		let status = viOpen(im.session,
 				identifier,
 				ViAccessMode(VI_NULL),
 				ViUInt32(VI_NULL),
@@ -91,6 +91,7 @@ extension InstrumentManager {
 		
 		let session = Session(viSession: instrumentSession)
 		let instrument = type.init(session: session, identifier: identifier)
+
 		return instrument
 	}
 }

@@ -51,8 +51,15 @@ public extension Instrument {
 	///   - `.invalidSession`
 	///   - `.failedToClose`
 	func close() throws {
-		#warning("Not tested")
 		let status = viClose(session.viSession)
+		guard status >= VI_SUCCESS else { throw VISAError(status) }
+    }
+}
+
+// MARK: viAssertTrigger
+extension Instrument {
+	func assertTrigger(_ code: Int32) throws {
+		let status = viAssertTrigger(session.viSession, UInt16(code))
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
 }
