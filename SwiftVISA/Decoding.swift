@@ -113,7 +113,8 @@ public struct DefaultVISAIntDecoder: DefaultableVISADecoder {
 	/// - Returns: The message converted to an integer.
 	/// - Throws: If the message could not be converted to an integer.
 	public func decode(_ string: String) throws -> Int {
-		guard let value = Int(string) else { throw VISAError.couldNotDecode }
+		let strippedString = string.filter { !$0.isWhitespace }
+		guard let value = Int(strippedString) else { throw VISAError.couldNotDecode }
 		return value
 	}
 	
@@ -139,7 +140,9 @@ public struct DefaultVISADoubleDecoder: DefaultableVISADecoder {
 	/// - Returns: The message converted to a floating-point number.
 	/// - Throws: If the message could not be converted to a floating-point-number.
 	public func decode(_ string: String) throws -> Double {
-		guard let value = Double(string) else { throw VISAError.couldNotDecode }
+		let strippedString = string.filter { !$0.isWhitespace }
+		
+		guard let value = Double(strippedString) else { throw VISAError.couldNotDecode }
 		return value
 	}
 	
