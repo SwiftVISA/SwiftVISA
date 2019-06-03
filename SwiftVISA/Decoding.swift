@@ -84,10 +84,6 @@ public struct DefaultVISAStringDecoder: VISADecoder {
 	public func decode(_ string: String) -> String {
 		return string
 	}
-	
-	public init() {
-		// Do nothing
-	}
 }
 
 extension String: VISADecodable {
@@ -114,10 +110,6 @@ public struct DefaultVISAIntDecoder: VISADecoder {
 		let strippedString = string.filter { !$0.isWhitespace }
 		guard let value = Int(strippedString) else { throw VISAError.couldNotDecode }
 		return value
-	}
-	
-	public init() {
-		
 	}
 }
 
@@ -147,10 +139,6 @@ public struct DefaultVISADoubleDecoder: VISADecoder {
 		guard let value = Double(strippedString) else { throw VISAError.couldNotDecode }
 		return value
 	}
-	
-	public init() {
-		
-	}
 }
 
 extension Double: VISADecodable {
@@ -176,10 +164,6 @@ public struct DefaultVISABoolDecoder: VISADecoder {
 	public func decode(_ string: String) throws -> Bool {
 		#warning("Not implemented")
 		fatalError("Not implemented")
-	}
-	
-	public init() {
-		
 	}
 }
 
@@ -212,10 +196,6 @@ public struct DefaultVISAOptionalDecoder<W: VISADecodable>: VISADecoder {
 		}
 		let decoder = W.defaultVISADecoder
 		return try decoder.decode(string)
-	}
-	
-	public init() {
-		
 	}
 }
 
