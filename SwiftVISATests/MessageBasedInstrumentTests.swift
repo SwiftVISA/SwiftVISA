@@ -54,9 +54,14 @@ class MessageBasedInstrumentTests : XCTestCase {
 	// Test the functionality of the Query command by writing and reading a DC Voltage
 	func testQuery() {
         let voltage = try? multimeterInstrument?.query("MEASURE:SCALAR:VOLTAGE:DC?", as: Double.self)
-		print(voltage ?? "Nothing returned")
         XCTAssertNotNil(voltage)
 	}
+
+    // A query that waits between the write/read
+    func testDelayedQuery() {
+        let voltage = try? multimeterInstrument?.query("MEASURE:SCALAR:VOLTAGE:DC?", as: Double.self, readDelay: 0.5)
+        XCTAssertNotNil(voltage)
+    }
 
 	// Test querying 10 times at once.
 	func testMultipleReadQuery() {
