@@ -98,10 +98,7 @@ extension MessageBasedInstrument {
 
 		for var i in 1...numberOfReads {
 			let startTime = Date()
-			var nextRead: T?
-
-			try write(message)
-			nextRead = try self.read(as: T.self)
+			let nextRead = try self.query(message, as: type)
 
 			let endTime = Date()
 			let timeElapsed = endTime.timeIntervalSince(startTime)
@@ -155,10 +152,7 @@ extension MessageBasedInstrument {
 
 		for var i in 1...numberOfReads {
 			let startTime = Date()
-			var nextRead: T?
-
-			try write(message)
-			nextRead = try self.read(as: type.self, decoder: decoder)
+			let nextRead = try query(message, as: type, decoder: decoder)
 
 			let endTime = Date()
 			let timeElapsed = endTime.timeIntervalSince(startTime)
