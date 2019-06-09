@@ -19,9 +19,9 @@ public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var identifier: String
 	
-	public var beforeClose: () -> Void
-	
 	public var timeout: TimeInterval
+	
+	public var delegate: InstrumentDelegate?
 	
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")

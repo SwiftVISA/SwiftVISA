@@ -11,6 +11,6 @@ extension MessageBasedInstrument {
     ///     This sends that trigger
     public func assertTrigger() throws {
         #warning("Not unit tested")
-        try assertTrigger(VI_TRIG_PROT_DEFAULT)
+        try assertTrigger(Int(VI_TRIG_PROT_DEFAULT))
     }
 }
