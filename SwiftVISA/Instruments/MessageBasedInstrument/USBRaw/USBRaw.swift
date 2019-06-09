@@ -23,7 +23,13 @@ public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
 	public var timeout: TimeInterval
 	
 	public init(session: Session, identifier: String) {
-		#warning("Not implemented")
-		fatalError("Not implemented")
+        bufferSize = 20480
+        buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
+        self.session = session
+        self.identifier = identifier
+        // TODO: Why can beforeClose not be nil, maybe this should be moved to a delegate?
+        beforeClose = { }
+        _lockState = .unlocked
+        timeout = 5.0
 	}
 }

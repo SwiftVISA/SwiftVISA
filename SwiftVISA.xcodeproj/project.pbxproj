@@ -84,6 +84,7 @@
 		5AFF1631228DD44800545130 /* InstrumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		DA93684268AE7C064A376944 /* WriteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteError.swift; sourceTree = "<group>"; };
 		DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedInstrument.swift; sourceTree = "<group>"; };
+		DF73A21B22A5BCC300FD6004 /* MemoryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDecoder.swift; sourceTree = "<group>"; };
 		DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBasedAttributes.swift; sourceTree = "<group>"; };
 		E1037FC1228CA85300239BD6 /* Read (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Read (Deprecated).swift"; sourceTree = "<group>"; };
 		E1037FC3228CA85900239BD6 /* Write (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Write (Deprecated).swift"; sourceTree = "<group>"; };
@@ -330,6 +331,7 @@
 				5A4A0CF7229E67FD004E16B8 /* Instruments */,
 				5A4A0CF6229E67F2004E16B8 /* Deprecated */,
 				E1904466228BABF20057934D /* SwiftVISA */,
+				DF73A21B22A5BCC300FD6004 /* MemoryDecoder.swift */,
 			);
 			path = SwiftVISA;
 			sourceTree = "<group>";
