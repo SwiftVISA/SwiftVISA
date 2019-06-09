@@ -19,10 +19,11 @@ extension Instrument {
     }
 	
 	/// Gets the given NI-VISA attribute on the instrument
+    /// Returns the raw data retreived from the device
 	///
 	/// - Throws: ???
-	private func getAttribute(_ attributeId: ViAttr) throws -> String {
-		#warning("Not unit tested")
+	private func getAttribute(_ attributeId: ViAttr) throws -> Data {
+		#warning("Not tested")
 		let buffer = ViPBuf.allocate(capacity: 2048)
 		let status = viGetAttribute(session.viSession, attributeId, buffer)
 		
@@ -31,6 +32,9 @@ extension Instrument {
 		let pointer = UnsafeRawPointer(buffer)
 		let bytes = MemoryLayout<UInt8>.stride * 2048
 		let data = Data(bytes: pointer, count: bytes)
+        return data
+        /*
+        print()
 		guard let string = String(data: data, encoding: .ascii) else {
 			throw VISAError.couldNotDecode
 		}
@@ -41,22 +45,28 @@ extension Instrument {
 			throw VISAError.couldNotDecode
 		}
 		return String(string[startIndex..<endIndex])
+        */
 	}
     
     /// Gets the given NI-VISA attribute on the instrument as a type
     /// Also has the additional feature of providing a decoder for the attribute
     ///
     /// - Throws: VisaError.couldNotDecode
+    /*
     func getAttribute<T, D: VISADecoder>(_ attributeId: ViAttr, as type: T.Type, decoder: D) throws -> T where D.DecodingType == T {
-        let visaString = try getAttribute(attributeId)
-        return try decoder.decode(visaString)
+        let visaData = try getAttribute(attributeId)
+        return T()
+        // return decoder.decode(visaData)
     }
+ */
     
     /// Gets the given NI-VISA attribute on the instrument as a type
     ///
     /// - Throws: VisaError.couldNotDecode
     func getAttribute<T: VISADecodable>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
-        let visaString = try getAttribute(attributeId)
-        return try T(visaString: visaString)
+        let visaData = try getAttribute(attributeId)
+        return visaData.withUnsafeBytes {
+            $0.load(as: T.self)
+        }
     }
 }

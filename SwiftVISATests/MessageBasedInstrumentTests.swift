@@ -80,9 +80,10 @@ class MessageBasedInstrumentTests : XCTestCase {
     }
     
     func testSetAttribute() {
-        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000))
+        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 1))
         let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
 
+        print(timeout as! Int)
         XCTAssertNotNil(timeout)
         XCTAssertEqual(timeout, 3000)
     }
