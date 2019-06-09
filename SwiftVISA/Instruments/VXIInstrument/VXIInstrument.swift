@@ -6,8 +6,15 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 // TODO: Implement
 public final class VXIInstrument: InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ,
+																VI_EVENT_TRIG,
+																VI_EVENT_VXI_SIGP,
+																VI_EVENT_VXI_VME_INTR]
+	
 	var _lockState: LockState
 	
 	public var session: Session

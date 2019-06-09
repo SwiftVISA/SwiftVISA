@@ -6,8 +6,12 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 // TODO: Implement
 public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_PXI_INTR]
+	
 	var _lockState: LockState
 	
 	public var session: Session

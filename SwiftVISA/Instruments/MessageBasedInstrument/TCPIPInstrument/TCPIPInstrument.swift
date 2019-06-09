@@ -6,8 +6,12 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 // TODO: Implement
 public final class TCPIPInstrument: MessageBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ]
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int

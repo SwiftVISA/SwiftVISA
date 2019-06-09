@@ -9,6 +9,8 @@ import CVISA
 
 // TODO: Implement
 public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ]
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int

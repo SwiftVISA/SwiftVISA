@@ -8,6 +8,9 @@
 
 // TODO: Implement
 public final class VXIMemory: RegisterBasedInstrument, InstrumentProtocol {
+	// FIXME: What NI-VISA resoruce does this correspond to?
+	static var _events: [UInt] = []
+	
 	var _lockState: LockState
 	
 	public var session: Session

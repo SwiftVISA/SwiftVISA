@@ -8,6 +8,9 @@
 
 // TODO: Implement
 public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
+	// TODO: What NI-VISA resource does this correspond to?
+	static var _events: [UInt] = []
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int

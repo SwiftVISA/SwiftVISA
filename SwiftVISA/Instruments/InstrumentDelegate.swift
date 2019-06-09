@@ -6,30 +6,117 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 public protocol InstrumentDelegate {
 	func willClose()
 	
-	func didReceiveServiceRequest()
-	
-	func didReceiveVXIBusSignal(status: Int)
-	
-	func didReceiveVXIInterrupt(interruptLevel: Int, status: Int)
-	
-	func didReceiveVXITrigger(line: Int)
-	
-	func didReceivePXIInterrupt()
-	
 	func didReceiveBreakSignal()
-	
-	func ctsLineDidChange()
-	
-	func cdcLineDidChange()
-	
-	func dsrLineDidChange()
-	
-	func riInputDidChange()
 	
 	func didReceiveData()
 	
+	func ctsLineDidChange()
+	
+	func dcdLineDidChange()
+	
+	func dsrLineDidChange()
+	
+	func riInputDidAssert()
+	
 	func didReceiveTerminationCharacter()
+	
+	func willClear()
+	
+	func didGainControllerInCharge()
+	
+	func didLoseControllerInCharge()
+	
+	func didReceiveListenRequest()
+	
+	func didReceiveTalkRequest()
+	
+	func didReceivePXIInterrupt()
+	
+	func didReceiveServiceRequest()
+	
+	//func didReceiveTriggerInterrupt(trigger: Trigger)
+	
+	//func didReceiveUSBInterrupt(status: Status, data: Data)
+	
+	func didReceiveVXIBusSignal(status: Int)
+	
+	func didReceiveVXIBusInterrupt(status: Int, interruptLevel: Int)
+	
+	func systemFailLineWasAsserted()
+	
+	func systemResetLineWasAsserted()
+}
+
+public extension InstrumentDelegate {
+	func willClose() { }
+	
+	func didReceiveBreakSignal() { }
+	
+	func didReceiveData() { }
+	
+	func ctsLineDidChange() { }
+	
+	func dcdLineDidChange() { }
+	
+	func dsrLineDidChange() { }
+	
+	func riInputDidAssert() { }
+	
+	func didReceiveTerminationCharacter() { }
+	
+	func willClear() { }
+	
+	func didGainControllerInCharge() { }
+	
+	func didLoseControllerInCharge() { }
+	
+	func didReceiveListenRequest() { }
+	
+	func didReceiveTalkRequest() { }
+	
+	func didReceivePXIInterrupt() { }
+	
+	func didReceiveServiceRequest() { }
+	
+	//func didReceiveTriggerInterrupt(trigger: Trigger) { }
+	
+	//func didReceiveUSBInterrupt(status: Status, data: Data) { }
+	
+	func didReceiveVXIBusSignal(status: Int) { }
+	
+	func didReceiveVXIBusInterrupt(status: Int, interruptLevel: Int) { }
+	
+	func systemFailLineWasAsserted() { }
+	
+	func systemResetLineWasAsserted() { }
+}
+
+extension InstrumentProtocol {
+	func registerEvents() throws {
+		func handleEvent(session: ViSession, eventType: ViEventType, event: ViEvent, address: ViAddr?) -> ViStatus {
+			switch UInt(eventType) {
+			case VI_EVENT_ASRL_BREAK:
+				//delegate?.didReceiveBreakSignal()
+				break
+			default:
+				break
+			}
+			#warning("Not implemented")
+			fatalError("Not implemented")
+		}
+		
+		let handler: ViHndlr = handleEvent(session:eventType:event:address:)
+		
+		var null = VI_NULL
+		
+		for event in Self._events {
+			viInstallHandler(session.viSession, ViEventType(event), handler, &null)
+		}
+		
+	}
 }

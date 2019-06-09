@@ -6,8 +6,18 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 // TODO: Implement
 public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_ASRL_BREAK,
+																VI_EVENT_ASRL_CHAR,
+																VI_EVENT_ASRL_CTS,
+																VI_EVENT_ASRL_DCD,
+																VI_EVENT_ASRL_DSR,
+																VI_EVENT_ASRL_RI,
+																VI_EVENT_ASRL_TERMCHAR]
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int

@@ -10,6 +10,8 @@ import CVISA
 
 // TODO: Implement
 public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ, VI_EVENT_USB_INTR]
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int
