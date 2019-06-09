@@ -10,7 +10,7 @@ extension MessageBasedInstrument {
     ///     According to NI-VISA, you can configure the hardware to wait for a trigger to do anything.
     ///     This sends that trigger
     public func assertTrigger() throws {
-        #warning("Not tested")
+        #warning("Not unit tested")
         try assertTrigger(VI_TRIG_PROT_DEFAULT)
     }
 }

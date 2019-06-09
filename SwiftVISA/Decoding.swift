@@ -8,8 +8,9 @@
 
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
-	/// The default decoder to use when decoding.
+	/// The default decoder type to use when decoding.
 	associatedtype DefaultVISADecoder: VISADecoder where DefaultVISADecoder.DecodingType == Self
+	/// The defualt decoder to use when decoding.
 	static var defaultVISADecoder: DefaultVISADecoder { get }
 }
 

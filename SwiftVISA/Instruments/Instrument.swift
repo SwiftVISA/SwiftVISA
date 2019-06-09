@@ -39,7 +39,7 @@ public extension Instrument {
 	///   - `.invalidSetup`
 	///   - `.connectionLost`
 	func clear() throws {
-		#warning("Not tested")
+		#warning("Not unit tested")
 		let status = viClear(session.viSession)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
