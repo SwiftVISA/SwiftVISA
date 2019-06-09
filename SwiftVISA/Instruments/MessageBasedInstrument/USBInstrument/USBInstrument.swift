@@ -26,6 +26,8 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var delegate: InstrumentDelegate?
 	
+	public var dispatchQueue: DispatchQueue
+	
 	public init(session: Session, identifier: String) {
 		bufferSize = 20480
 		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
@@ -33,6 +35,7 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 		self.identifier = identifier
 		_lockState = .unlocked
 		timeout = 5.0
+		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
 	
 	/// Performs a USB control pipe transfer from the device

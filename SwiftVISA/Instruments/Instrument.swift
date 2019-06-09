@@ -20,6 +20,8 @@ public protocol Instrument: class {
 	var timeout: TimeInterval { get set }
 	
 	var delegate: InstrumentDelegate? { get }
+	
+	var dispatchQueue: DispatchQueue { get }
 }
 
 // MARK: Default Implementations

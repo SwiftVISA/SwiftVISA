@@ -25,6 +25,8 @@ public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var delegate: InstrumentDelegate?
 	
+	public var dispatchQueue: DispatchQueue
+	
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")
         self.session = session

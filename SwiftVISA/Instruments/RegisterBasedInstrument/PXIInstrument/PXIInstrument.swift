@@ -22,6 +22,8 @@ public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
 	
 	public var delegate: InstrumentDelegate?
 	
+	public var dispatchQueue: DispatchQueue
+	
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")
 		fatalError("Not implemented")

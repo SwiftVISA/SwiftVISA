@@ -26,12 +26,15 @@ public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var delegate: InstrumentDelegate?
 	
+	public var dispatchQueue: DispatchQueue
+	
 	public init(session: Session, identifier: String) {
-        bufferSize = 20480
-        buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
-        self.session = session
-        self.identifier = identifier
-        _lockState = .unlocked
-        timeout = 5.0
+		bufferSize = 20480
+		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
+		self.session = session
+		self.identifier = identifier
+		_lockState = .unlocked
+		timeout = 5.0
+		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
 }
