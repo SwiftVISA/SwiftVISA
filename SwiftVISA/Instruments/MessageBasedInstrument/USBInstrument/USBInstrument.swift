@@ -8,7 +8,6 @@
 
 import CVISA
 
-// TODO: Implement
 public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	var _lockState: LockState
 	
@@ -44,12 +43,8 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
     ///   - requestValue: wValue param of setup stage in the USB standard
     ///   - index: wIndex parameter of setup stage in the USB standard (typically index of interface or endpoint)
     ///   - length: wLength parameter of setup stage in the USB standard; also specifies the amount of data elements to receive data from optional data stage of the control transfer
-    /// - Return: A tuple containing the data buffer created and the return count
-    
-    public func usb_control_in(requestType: Int16, requestId: Int16, requestValue: UInt16, index: UInt16, length: UInt16) throws -> (UnsafeMutablePointer<UInt8>, UInt16) {
-        // todo I'm debating if we want to leave these as the specific integer types
-        // (have the user explicitly know that their values have to be these to avoid
-        // type conversion issues)
+    /// - Return: The data buffer received from the optional data stage of the control transfer
+    public func usb_control_in(requestType: Int16, requestId: Int16, requestValue: UInt16, index: UInt16, length: UInt16) throws -> Data {
         #warning("not tested")
         let returnCountBuffer = UnsafeMutablePointer<ViUInt16>.allocate(capacity: 1)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(length))
@@ -59,8 +54,9 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
         if status < VI_SUCCESS {
             throw VISAError(status)
         }
+		let result = Data(bytes: buffer, count: Int(returnCountBuffer.pointee))
         // todo I don't know enough about the USB standard to know if we should unpack the data from the buffer ourselves
-        return (buffer, returnCountBuffer.pointee)
+        return result
     }
     
     /// Performs a USB control pipe transfer from the device
@@ -73,20 +69,18 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
     ///   - index: wIndex parameter of setup stage in the USB standard (typically index of interface or endpoint)
     ///   - length: wLength parameter of setup stage in the USB standard; also specifies the size of the data buffer to send from optional data stage of the control transfer
     ///   - buffer: data buffer that sends data from the optional data stage of the control transfer. Ignored if length is 0.
-    
-    public func usb_control_out(requestType: Int16, requestId: Int16, requestValue: UInt16, index: UInt16, length: UInt16) throws -> UnsafeMutablePointer<UInt8>{
-        // todo I'm debating if we want to leave these as the specific types
-        // (have the user explicitly know that their values have to be these to avoid
-        // type conversion issues)
+	/// - Returns: The data buffer that sends the data from the optional data stage of the control transfer.
+    public func usb_control_out(requestType: Int16, requestId: Int16, requestValue: UInt16, index: UInt16, length: UInt16) throws -> Data {
         #warning("not tested")
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(length))
+		let result = Data(bytes: buffer, count: Int(length))
         let status = viUsbControlOut(session.viSession, requestType, requestId, requestValue, index, length, buffer)
         
         if status < VI_SUCCESS {
             throw VISAError(status)
         }
         // todo same note as usb_control in on if we should unpack data
-        return buffer
+        return result
     }
     
 }

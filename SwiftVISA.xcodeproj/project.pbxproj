@@ -39,6 +39,8 @@
 		5A4D0B8E229FCDD0004E6B76 /* Write (Deprecated).swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC3228CA85900239BD6 /* Write (Deprecated).swift */; };
 		5A4D0B8F229FCDD0004E6B76 /* Voltage (Deprecated).swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC7228CAE6100239BD6 /* Voltage (Deprecated).swift */; };
 		5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7FE1722A595BF0021662F /* Attributes.swift */; };
+		DF73A21E22AEE52000FD6004 /* RenMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21D22AEE52000FD6004 /* RenMode.swift */; };
+		DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21F22AEE95D00FD6004 /* AtnMode.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; };
@@ -85,6 +87,8 @@
 		DA93684268AE7C064A376944 /* WriteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteError.swift; sourceTree = "<group>"; };
 		DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedInstrument.swift; sourceTree = "<group>"; };
 		DF73A21B22A5BCC300FD6004 /* MemoryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDecoder.swift; sourceTree = "<group>"; };
+		DF73A21D22AEE52000FD6004 /* RenMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenMode.swift; sourceTree = "<group>"; };
+		DF73A21F22AEE95D00FD6004 /* AtnMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtnMode.swift; sourceTree = "<group>"; };
 		DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBasedAttributes.swift; sourceTree = "<group>"; };
 		E1037FC1228CA85300239BD6 /* Read (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Read (Deprecated).swift"; sourceTree = "<group>"; };
 		E1037FC3228CA85900239BD6 /* Write (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Write (Deprecated).swift"; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 		5A4A0CFA229E68C6004E16B8 /* MessageBasedInstrument */ = {
 			isa = PBXGroup;
 			children = (
+				DF73A21F22AEE95D00FD6004 /* AtnMode.swift */,
 				DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */,
 				DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */,
 				5A4A0CFB229E6982004E16B8 /* Read.swift */,
@@ -286,6 +291,7 @@
 				5A49290522A0998300578832 /* USBInstrument */,
 				5A49290422A0998000578832 /* USBRaw */,
 				5A49290322A0997600578832 /* GPIBInstrument */,
+				DF73A21D22AEE52000FD6004 /* RenMode.swift */,
 			);
 			path = MessageBasedInstrument;
 			sourceTree = "<group>";
@@ -486,7 +492,9 @@
 				5A4D0B86229FCDD0004E6B76 /* MessageBasedInstrument.swift in Sources */,
 				5A4928F322A0991D00578832 /* PXIMemory.swift in Sources */,
 				5A4928F922A0994100578832 /* VXIInstrument.swift in Sources */,
+				DF73A21E22AEE52000FD6004 /* RenMode.swift in Sources */,
 				5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */,
+				DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */,
 				5A4928ED22A0990300578832 /* GPIBInstrument.swift in Sources */,
 				5A4D0B87229FCDD0004E6B76 /* MessageBasedAttributes.swift in Sources */,
 				5A4D0B8C229FCDD0004E6B76 /* TCPIPInstrument.swift in Sources */,

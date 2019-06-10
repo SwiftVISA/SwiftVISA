@@ -2,4 +2,70 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftVISA/Instruments/Attributes.swift"
+            timestampString = "581893247.710863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getAttribute(_:as:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in SwiftVISA):SwiftVISA.Instrument.getAttribute&lt;A&gt;(_: Swift.UInt32, as: A1.Type) throws -&gt; A1"
+                  moduleName = "SwiftVISA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/visaman/Documents/SwiftVISA/SwiftVISA/Instruments/Attributes.swift"
+                  timestampString = "581893248.527591"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "1620">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.UnsafeRawBufferPointer) -&gt; A1 in (extension in SwiftVISA):SwiftVISA.Instrument.getAttribute&lt;A&gt;(_: Swift.UInt32, as: A1.Type) throws -&gt; A1"
+                  moduleName = "SwiftVISA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/visaman/Documents/SwiftVISA/SwiftVISA/Instruments/Attributes.swift"
+                  timestampString = "581893248.530244"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftVISA/Instruments/Attributes.swift"
+            timestampString = "581893247.710936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getAttribute(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -63,8 +63,14 @@ extension Instrument {
     /// Gets the given NI-VISA attribute on the instrument as a type
     ///
     /// - Throws: VisaError.couldNotDecode
-    func getAttribute<T: VISADecodable>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
+    func getAttribute<T>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
         let visaData = try getAttribute(attributeId)
+		if type == String.self {
+			let string = String(bytes: visaData, encoding: .ascii)!
+			let startIndex = string.startIndex
+			let endIndex = string.firstIndex(of: "\0") ?? string.endIndex
+			return String(string[startIndex..<endIndex]) as! T
+		}
         return visaData.withUnsafeBytes {
             $0.load(as: T.self)
         }
