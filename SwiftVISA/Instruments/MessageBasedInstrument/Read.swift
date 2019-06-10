@@ -172,4 +172,48 @@ extension MessageBasedInstrument {
 
 		return readList
 	}
+
+	/// Reads data from the instrument and does nothing but convert it straight to a string -- doesn't even strip
+	///	the termination characters.
+	///
+	/// - Parameters:
+	///   - type: The type to return.
+	///   - decoder: The decoder to use to decode the data.
+	/// - Returns: The decoded value.
+	/// - Throws: One of the following `VISAError` errors:
+	///   - `.invalidSession`
+	///   - `.unsupportedOperations`
+	///   - `.resourceLocked`
+	///   - `.timeout`
+	///   - `.rawWriteProtocolViolation`
+	///   - `.rawReadProtocolViolation`
+	///   - `.outputProtocolViolation`
+	///   - `.busError`
+	///   - `.invalidSetup`
+	///   - `.notControllerInCharge`
+	///   - `.noListeners`
+	///   - `.parityError`
+	///   - `.framingError`
+	///   - `.overrunError`
+	///   - `.ioError`
+	///   - `.connectionLost`
+	///   - `.couldNotDecode`
+	public func readRaw() throws -> String {
+		let buffer = ViPBuf.allocate(capacity: bufferSize)
+		var returnCount = ViUInt32()
+		let status = viRead(session.viSession, buffer, ViUInt32(bufferSize), &returnCount)
+
+		guard status >= VI_SUCCESS else {
+			throw VISAError(status)
+		}
+
+		let pointer = UnsafeRawPointer(buffer)
+		let bytes = MemoryLayout<UInt8>.stride * bufferSize
+		let data = Data(bytes: pointer, count: bytes)
+		guard let string = String(data: data, encoding: .ascii) else {
+			throw VISAError.couldNotDecode
+		}
+
+		return string
+	}
 }
