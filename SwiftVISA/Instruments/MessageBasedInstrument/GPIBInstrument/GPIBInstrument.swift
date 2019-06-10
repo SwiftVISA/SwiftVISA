@@ -163,15 +163,11 @@ public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 				}
 				outEventType.deallocate()
 				outContext.deallocate()
-				let stbPointer = UnsafeMutablePointer<ViUInt16>.allocate(capacity: 1)
-				let stbReadStatus = viReadSTB(session.viSession, stbPointer)
-				
-				guard stbReadStatus >= VI_SUCCESS else {
-					throw VISAError(stbReadStatus)
-				}
+				let stbPointer = try! readStatusByte()
+
 				// oh god why
 				// this may or may not be wrong -- it's based on the truthyness of the left hand side in Python which I think is 0 is false, anything else true
-				if Int(stbPointer.pointee) & 0x40 != 0 {
+				if stbPointer.first != nil && Int(stbPointer.first!) & 0x40 != 0 {
 					break
 				}
 			}
