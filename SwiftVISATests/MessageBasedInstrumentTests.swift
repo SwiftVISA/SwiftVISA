@@ -107,4 +107,11 @@ class MessageBasedInstrumentTests : XCTestCase {
 		XCTAssertNoThrow(try multimeterInstrument?.assertTrigger())
 		XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
 	}
+
+	// Test reading the status byte, STB
+	func testSTB() {
+		let STB = try? multimeterInstrument?.readStatusByte()
+
+		XCTAssertNotNil(STB)
+	}
 }
