@@ -101,4 +101,10 @@ class MessageBasedInstrumentTests : XCTestCase {
         XCTAssertNotNil(timeout)
         XCTAssertEqual(timeout, 3000)
     }
+
+	// Tests sending a trigger to the devices
+	func testAssertTrigger() {
+		XCTAssertNoThrow(try multimeterInstrument?.assertTrigger())
+		XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
+	}
 }
