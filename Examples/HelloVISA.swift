@@ -3,3 +3,4 @@
 import SwiftVISA
 
 let im = InstrumentManager.default
+print(im.resources)
