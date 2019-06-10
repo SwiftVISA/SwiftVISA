@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A23B00E22AEE00900DE5388 /* STB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23B00D22AEE00800DE5388 /* STB.swift */; };
 		5A35B9E822A5C15D00DEECA6 /* SendTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35B9E722A5C15D00DEECA6 /* SendTrigger.swift */; };
 		5A4928E322A0988000578832 /* SerialInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4928E222A0988000578832 /* SerialInstrument.swift */; };
 		5A4928E622A0989D00578832 /* TCPIPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4928E522A0989D00578832 /* TCPIPSocket.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		5A134EE3229FCD5D008AF9EE /* TCPIPInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPIPInstrument.swift; sourceTree = "<group>"; };
 		5A134EE4229FCD5D008AF9EE /* MessageBasedAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedAttributes.swift; sourceTree = "<group>"; };
+		5A23B00D22AEE00800DE5388 /* STB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STB.swift; sourceTree = "<group>"; };
 		5A35B9E722A5C15D00DEECA6 /* SendTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTrigger.swift; sourceTree = "<group>"; };
 		5A4928E222A0988000578832 /* SerialInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialInstrument.swift; sourceTree = "<group>"; };
 		5A4928E522A0989D00578832 /* TCPIPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPIPSocket.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				5A4A0CFD229E6987004E16B8 /* Write.swift */,
 				5A4A0CFF229E6B71004E16B8 /* Query.swift */,
 				5A35B9E722A5C15D00DEECA6 /* SendTrigger.swift */,
+				5A23B00D22AEE00800DE5388 /* STB.swift */,
 				5A4928E422A0988300578832 /* SerialInstrument */,
 				5A134EE9229FCD60008AF9EE /* TCPIPInstrument */,
 				5A4928E722A098A300578832 /* TCPIPSocket */,
@@ -496,6 +499,7 @@
 				5A4928F922A0994100578832 /* VXIInstrument.swift in Sources */,
 				5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */,
 				5A4928ED22A0990300578832 /* GPIBInstrument.swift in Sources */,
+				5A23B00E22AEE00900DE5388 /* STB.swift in Sources */,
 				5A4D0B87229FCDD0004E6B76 /* MessageBasedAttributes.swift in Sources */,
 				5A4D0B8C229FCDD0004E6B76 /* TCPIPInstrument.swift in Sources */,
 				5A4D0B8D229FCDD0004E6B76 /* Read (Deprecated).swift in Sources */,
