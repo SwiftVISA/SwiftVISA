@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Instrument Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Instrument" class="dashAnchor"></a>
+    <a title="Instrument Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (49% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Instrument Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FirewireInstrument.html">FirewireInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInstrument.html">GPIBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInterface.html">GPIBInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InstrumentManager.html">InstrumentManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIInstrument.html">PXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIMemory.html">PXIMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialInstrument.html">SerialInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPInstrument.html">TCPIPInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPSocket.html">TCPIPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBInstrument.html">USBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBRaw.html">USBRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIBackplane.html">VXIBackplane</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIInstrument.html">VXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIMemory.html">VXIMemory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AtnMode.html">AtnMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState.html">LockState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState/LockType.html">– LockType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RenMode.html">RenMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VISAError.html">VISAError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9SwiftVISA23RegisterBasedInstrumentP">RegisterBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecodable.html">VISADecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecoder.html">VISADecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISABoolDecoder.html">DefaultVISABoolDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISADoubleDecoder.html">DefaultVISADoubleDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAIntDecoder.html">DefaultVISAIntDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAOptionalDecoder.html">DefaultVISAOptionalDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAStringDecoder.html">DefaultVISAStringDecoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Instrument</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Instrument</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type that can communicated with via VISA.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP7sessionAA7SessionCvp"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP7sessionAA7SessionCvp">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The session associated with the instrument.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP10identifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP10identifierSSvp">identifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A unique identifier for the instrument.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP7timeoutSdvp"></a>
+                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP7timeoutSdvp">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time in seconds to wait before timing out when performing operations with the instrument.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP8delegateAA0C8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP8delegateAA0C8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate for the instrument – used for managing events.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP13dispatchQueueSo03OS_D6_queueCvp"></a>
+                    <a name="//apple_ref/swift/Property/dispatchQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP13dispatchQueueSo03OS_D6_queueCvp">dispatchQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instrument&rsquo;s dispatch queue that allows for running instrument code on another thread. Each instrument has a unique dispatch queue.</p>
+
+<p>It is reccomended to run all code that interfaces with the instrument on this dispatch queue to prevent blocking the main thread when reading/writing data to/from the instrument. Doing so will prevent GUI hangs and also allows for communicating with multiple instruments at the same time. If one or more instruments need to wait on another instrument before doing work, you can run the code for the instruments on a single instrument&rsquo;s dispatch queue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dispatchQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20Implementations"></a>
+                <a name="//apple_ref/swift/Section/Default Implementations" class="dashAnchor"></a>
+                <a href="#/Default%20Implementations">
+                  <h3 class="section-name">Default Implementations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentPAAE5clearyyKF"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentPAAE5clearyyKF">clear()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs an IEEE-488.1-style clear of the device.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperation</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code><a href="../Protocols/Instrument.html#/s:9SwiftVISA10InstrumentP7timeoutSdvp">.timeout</a></code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.connectionLost</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentPAAE5closeyyKF"></a>
+                    <a name="//apple_ref/swift/Method/close()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentPAAE5closeyyKF">close()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closes the specified insturment. After the instrument has been closed, no more operations can be performed with the instrument.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.failedToClose</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">close</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentPAAE9lockStateAA04LockE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/lockState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentPAAE9lockStateAA04LockE0Ovp">lockState</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current lock state of the instrument.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lockState</span><span class="p">:</span> <span class="kt"><a href="../Enums/LockState.html">LockState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instrument%20Default%20Implementations"></a>
+                <a name="//apple_ref/swift/Section/Instrument Default Implementations" class="dashAnchor"></a>
+                <a href="#/Instrument%20Default%20Implementations">
+                  <h3 class="section-name">Instrument Default Implementations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentPAAE4lock_7timeoutyAA9LockStateO0F4TypeO_SdtKF"></a>
+                    <a name="//apple_ref/swift/Method/lock(_:timeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentPAAE4lock_7timeoutyAA9LockStateO0F4TypeO_SdtKF">lock(_:timeout:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Locks the instrument with the specified lock type and timeout.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.invalidLockType</code></li>
+<li><code>.invalidAccessKey</code></li>
+<li><code><a href="../Protocols/Instrument.html#/s:9SwiftVISA10InstrumentP7timeoutSdvp">.timeout</a></code></li>
+</ul>
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Locks can be nested.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lock</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/LockState.html">LockState</a></span><span class="o">.</span><span class="kt">LockType</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The lock type to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time in seconds to wait before timing out.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentPAAE6unlockyyKF"></a>
+                    <a name="//apple_ref/swift/Method/unlock()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentPAAE6unlockyyKF">unlock()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unlocks the instrument if it is locked.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.sessionNotLocked</code></li>
+</ul>
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Locks can be nested.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unlock</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

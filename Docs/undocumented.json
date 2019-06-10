@@ -1,0 +1,1202 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 101,
+      "symbol": "VISAError.systemError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 102,
+      "symbol": "VISAError.invalidSession",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 103,
+      "symbol": "VISAError.resourceLocked",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 104,
+      "symbol": "VISAError.invalidExpressionForSearch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 105,
+      "symbol": "VISAError.resourceNotFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 106,
+      "symbol": "VISAError.invalidResourceName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 107,
+      "symbol": "VISAError.invalidAccessMode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 108,
+      "symbol": "VISAError.timeout",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 109,
+      "symbol": "VISAError.failedToClose",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 110,
+      "symbol": "VISAError.invalidDegree",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 111,
+      "symbol": "VISAError.invalidJobIdentifier",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 112,
+      "symbol": "VISAError.unsupportedAttribute",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 113,
+      "symbol": "VISAError.unsupportedAttributeState",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 114,
+      "symbol": "VISAError.readOnlyAttribute",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 115,
+      "symbol": "VISAError.invalidLockType",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 116,
+      "symbol": "VISAError.invalidAccessKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 117,
+      "symbol": "VISAError.invalidEvent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 118,
+      "symbol": "VISAError.invalidMechanism",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 119,
+      "symbol": "VISAError.handlerNotInstalled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 120,
+      "symbol": "VISAError.invalidHandlerReference",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 121,
+      "symbol": "VISAError.invalidContext",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 122,
+      "symbol": "VISAError.queueOverflow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 123,
+      "symbol": "VISAError.eventNotEnabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 124,
+      "symbol": "VISAError.operationAborted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 125,
+      "symbol": "VISAError.rawWriteProtocolViolation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 126,
+      "symbol": "VISAError.rawReadProtocolViolation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 127,
+      "symbol": "VISAError.outputProtocolViolation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 128,
+      "symbol": "VISAError.inputProtocolViolation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 129,
+      "symbol": "VISAError.busError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 130,
+      "symbol": "VISAError.operationAlreadyInProgress",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 131,
+      "symbol": "VISAError.invalidSetup",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 132,
+      "symbol": "VISAError.queueError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 133,
+      "symbol": "VISAError.insufficientSystemResources",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 134,
+      "symbol": "VISAError.invalidBufferMask",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 135,
+      "symbol": "VISAError.ioError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 136,
+      "symbol": "VISAError.invalidFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 137,
+      "symbol": "VISAError.unsupportedFormat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 138,
+      "symbol": "VISAError.triggerLineInUse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 139,
+      "symbol": "VISAError.unsupportedMode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 140,
+      "symbol": "VISAError.serviceRequestNotReceived",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 141,
+      "symbol": "VISAError.invalidAddressSpace",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 142,
+      "symbol": "VISAError.invalidOffset",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 143,
+      "symbol": "VISAError.invalidWidth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 144,
+      "symbol": "VISAError.unsupportedOffset",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 145,
+      "symbol": "VISAError.nonequalSourceAndDestinationWidths",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 146,
+      "symbol": "VISAError.sessionNotMapped",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 147,
+      "symbol": "VISAError.responseStillPending",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 148,
+      "symbol": "VISAError.noListeners",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 149,
+      "symbol": "VISAError.notControllerInCharge",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 150,
+      "symbol": "VISAError.notSystemController",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 151,
+      "symbol": "VISAError.unsupportedOperation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 152,
+      "symbol": "VISAError.interuptStillPending",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 153,
+      "symbol": "VISAError.parityError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 154,
+      "symbol": "VISAError.framingError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 155,
+      "symbol": "VISAError.overrunError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 156,
+      "symbol": "VISAError.triggerNotMapped",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 157,
+      "symbol": "VISAError.unsupportedAlignOffset",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 158,
+      "symbol": "VISAError.invalidUserBuffer",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 159,
+      "symbol": "VISAError.resourceBusy",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 160,
+      "symbol": "VISAError.unsupportedWidth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 161,
+      "symbol": "VISAError.invalidParameter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 162,
+      "symbol": "VISAError.invalidProtocol",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 163,
+      "symbol": "VISAError.invalidWindowSize",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 164,
+      "symbol": "VISAError.windowMapped",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 165,
+      "symbol": "VISAError.unimplementedOperation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 166,
+      "symbol": "VISAError.invalidLength",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 167,
+      "symbol": "VISAError.invalidMode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 168,
+      "symbol": "VISAError.sessionNotLocked",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 169,
+      "symbol": "VISAError.memoryNotShared",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 170,
+      "symbol": "VISAError.libraryNotFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 171,
+      "symbol": "VISAError.unsupportedInterrupt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 172,
+      "symbol": "VISAError.invalidLineParameter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 173,
+      "symbol": "VISAError.fileAccessError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 174,
+      "symbol": "VISAError.fileIOError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 175,
+      "symbol": "VISAError.unsupportedLine",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 176,
+      "symbol": "VISAError.unsupportedMechanism",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 177,
+      "symbol": "VISAError.interfaceNumberNotConfigured",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 178,
+      "symbol": "VISAError.connectionLost",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 179,
+      "symbol": "VISAError.machineNotAvailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 180,
+      "symbol": "VISAError.machineAccessDenied",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 181,
+      "symbol": "VISAError.unknownCVISAError(status:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 183,
+      "symbol": "VISAError.couldNotDecode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 184,
+      "symbol": "VISAError.invalidRequestKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 185,
+      "symbol": "VISAError.invalidInstrumentIdentifier",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 186,
+      "symbol": "VISAError.instrumentManagerCouldNotBeCreated",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Errors/VISAError.swift",
+      "line": 187,
+      "symbol": "VISAError.invalidInstrument",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/InstrumentManager.swift",
+      "line": 51,
+      "symbol": "InstrumentManager.makeInstrument(identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/GPIBInterface/GPIBInterface.swift",
+      "line": 12,
+      "symbol": "GPIBInterface",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/GPIBInterface/GPIBInterface.swift",
+      "line": 32,
+      "symbol": "GPIBInterface.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": null,
+      "symbol": "InstrumentDelegate",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 11,
+      "symbol": "InstrumentDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 12,
+      "symbol": "InstrumentDelegate.willClose()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 14,
+      "symbol": "InstrumentDelegate.didReceiveBreakSignal()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 16,
+      "symbol": "InstrumentDelegate.didReceiveData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 18,
+      "symbol": "InstrumentDelegate.ctsLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 20,
+      "symbol": "InstrumentDelegate.dcdLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 22,
+      "symbol": "InstrumentDelegate.dsrLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 24,
+      "symbol": "InstrumentDelegate.riInputDidAssert()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 26,
+      "symbol": "InstrumentDelegate.didReceiveTerminationCharacter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 28,
+      "symbol": "InstrumentDelegate.willClear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 30,
+      "symbol": "InstrumentDelegate.didGainControllerInCharge()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 32,
+      "symbol": "InstrumentDelegate.didLoseControllerInCharge()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 34,
+      "symbol": "InstrumentDelegate.didReceiveListenRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 36,
+      "symbol": "InstrumentDelegate.didReceiveTalkRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 38,
+      "symbol": "InstrumentDelegate.didReceivePXIInterrupt()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 40,
+      "symbol": "InstrumentDelegate.didReceiveServiceRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 46,
+      "symbol": "InstrumentDelegate.didReceiveVXIBusSignal(status:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 48,
+      "symbol": "InstrumentDelegate.didReceiveVXIBusInterrupt(status:interruptLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 50,
+      "symbol": "InstrumentDelegate.systemFailLineWasAsserted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 52,
+      "symbol": "InstrumentDelegate.systemResetLineWasAsserted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 56,
+      "symbol": "InstrumentDelegate.willClose()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 58,
+      "symbol": "InstrumentDelegate.didReceiveBreakSignal()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 60,
+      "symbol": "InstrumentDelegate.didReceiveData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 62,
+      "symbol": "InstrumentDelegate.ctsLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 64,
+      "symbol": "InstrumentDelegate.dcdLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 66,
+      "symbol": "InstrumentDelegate.dsrLineDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 68,
+      "symbol": "InstrumentDelegate.riInputDidAssert()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 70,
+      "symbol": "InstrumentDelegate.didReceiveTerminationCharacter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 72,
+      "symbol": "InstrumentDelegate.willClear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 74,
+      "symbol": "InstrumentDelegate.didGainControllerInCharge()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 76,
+      "symbol": "InstrumentDelegate.didLoseControllerInCharge()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 78,
+      "symbol": "InstrumentDelegate.didReceiveListenRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 80,
+      "symbol": "InstrumentDelegate.didReceiveTalkRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 82,
+      "symbol": "InstrumentDelegate.didReceivePXIInterrupt()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 84,
+      "symbol": "InstrumentDelegate.didReceiveServiceRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 90,
+      "symbol": "InstrumentDelegate.didReceiveVXIBusSignal(status:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 92,
+      "symbol": "InstrumentDelegate.didReceiveVXIBusInterrupt(status:interruptLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 94,
+      "symbol": "InstrumentDelegate.systemFailLineWasAsserted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/InstrumentDelegate.swift",
+      "line": 96,
+      "symbol": "InstrumentDelegate.systemResetLineWasAsserted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/Locks.swift",
+      "line": 16,
+      "symbol": "LockState.locked(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/Locks.swift",
+      "line": 17,
+      "symbol": "LockState.unlocked",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/Locks.swift",
+      "line": 24,
+      "symbol": "LockState.LockType.shared(key:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/Locks.swift",
+      "line": 25,
+      "symbol": "LockState.LockType.exclusive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/AtnMode.swift",
+      "line": 10,
+      "symbol": "AtnMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/AtnMode.swift",
+      "line": 23,
+      "symbol": "AtnMode.deassert",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/AtnMode.swift",
+      "line": 24,
+      "symbol": "AtnMode.assert",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/AtnMode.swift",
+      "line": 25,
+      "symbol": "AtnMode.deassertHandshake",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/AtnMode.swift",
+      "line": 26,
+      "symbol": "AtnMode.assertImmediate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/GPIBInstrument/GPIBInstrument.swift",
+      "line": 11,
+      "symbol": "GPIBInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/GPIBInstrument/GPIBInstrument.swift",
+      "line": 30,
+      "symbol": "GPIBInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 10,
+      "symbol": "RenMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 31,
+      "symbol": "RenMode.deassert",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 32,
+      "symbol": "RenMode.assert",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 33,
+      "symbol": "RenMode.deassertGTL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 34,
+      "symbol": "RenMode.assertAddress",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 35,
+      "symbol": "RenMode.assertLLO",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 36,
+      "symbol": "RenMode.assertAddressLLO",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/RenMode.swift",
+      "line": 37,
+      "symbol": "RenMode.addressGTL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/SerialInstrument/SerialInstrument.swift",
+      "line": 12,
+      "symbol": "SerialInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/SerialInstrument/SerialInstrument.swift",
+      "line": 37,
+      "symbol": "SerialInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/TCPIPInstrument/TCPIPInstrument.swift",
+      "line": 12,
+      "symbol": "TCPIPInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/TCPIPInstrument/TCPIPInstrument.swift",
+      "line": 31,
+      "symbol": "TCPIPInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/TCPIPSocket/TCPIPSocket.swift",
+      "line": 10,
+      "symbol": "TCPIPSocket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/TCPIPSocket/TCPIPSocket.swift",
+      "line": 30,
+      "symbol": "TCPIPSocket.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/USBInstrument/USBInstrument.swift",
+      "line": 11,
+      "symbol": "USBInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/USBInstrument/USBInstrument.swift",
+      "line": 30,
+      "symbol": "USBInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/USBRaw/USBRaw.swift",
+      "line": 12,
+      "symbol": "USBRaw",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/MessageBasedInstrument/USBRaw/USBRaw.swift",
+      "line": 31,
+      "symbol": "USBRaw.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/FirewireInstrument/FirewireInstrument.swift",
+      "line": 10,
+      "symbol": "FirewireInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/FirewireInstrument/FirewireInstrument.swift",
+      "line": 26,
+      "symbol": "FirewireInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/PXIInstrument/PXIInstrument.swift",
+      "line": 12,
+      "symbol": "PXIInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/PXIInstrument/PXIInstrument.swift",
+      "line": 27,
+      "symbol": "PXIInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/PXIMemory/PXIMemory.swift",
+      "line": 10,
+      "symbol": "PXIMemory",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/PXIMemory/PXIMemory.swift",
+      "line": 26,
+      "symbol": "PXIMemory.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/RegisterBasedInstrument.swift",
+      "line": 10,
+      "symbol": "RegisterBasedInstrument",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/VXIMemory/VXIMemory.swift",
+      "line": 10,
+      "symbol": "VXIMemory",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/RegisterBasedInstrument/VXIMemory/VXIMemory.swift",
+      "line": 26,
+      "symbol": "VXIMemory.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/VXIBackplane/VXIBackplane.swift",
+      "line": 12,
+      "symbol": "VXIBackplane",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/VXIBackplane/VXIBackplane.swift",
+      "line": 29,
+      "symbol": "VXIBackplane.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/VXIInstrument/VXIInstrument.swift",
+      "line": 12,
+      "symbol": "VXIInstrument",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/avinash/AppcodeProjects/SwiftVISA/SwiftVISA/Instruments/VXIInstrument/VXIInstrument.swift",
+      "line": 30,
+      "symbol": "VXIInstrument.init(session:identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/avinash/AppcodeProjects/SwiftVISA"
+}
