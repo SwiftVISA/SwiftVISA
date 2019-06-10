@@ -1,7 +1,7 @@
 # SwiftVISA
 A Swift wrapper for National Instruments VISA.
 
-![logo](./logo)
+![logo](./logo.png)
 
 # License
 MIT
