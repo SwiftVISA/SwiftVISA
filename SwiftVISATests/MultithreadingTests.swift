@@ -24,7 +24,6 @@ class MultithreadingTests: XCTestCase {
 		
 		instrument.dispatchQueue.async {
 			print("Starting Async")
-			ç
 			for _ in 0...10 {
 				print("Do Something")
 				try? instrument.write("SOURCE1:VOLTAGE:OFFSET 0.5")
