@@ -1,5 +1,5 @@
 //
-// Created by Avinash on 2019-05-28.
+// Created by the SwiftVISA team on 2019-05-28.
 // Copyright (c) 2019 SwiftVISA. All rights reserved.
 //
 
@@ -27,7 +27,8 @@ class MessageBasedInstrumentTests : XCTestCase {
 	
 	// Remove all the sessions
 	override func tearDown() {
-        try? multimeterInstrument?.close()
+		try? waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 2000)
+		try? multimeterInstrument?.close()
         try? waveformGeneratorInstrument?.close()
     }
 
@@ -83,22 +84,21 @@ class MessageBasedInstrumentTests : XCTestCase {
 	// Test getting attributes
     func testGetAttribute() {
         let manufacture = try? waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_MANF_NAME), as: String.self)
+		
+		let timeout = try? waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int32.self)
 
         XCTAssertNotNil(manufacture)
+		XCTAssertNotNil(timeout)
         XCTAssertEqual(manufacture, "Agilent Technologies")
+		XCTAssertEqual(timeout, 2000)
     }
 
 	// Test setting attributes
     func testSetAttribute() {
         XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000))
-        let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
+        let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int32.self)
 
         XCTAssertNotNil(timeout)
         XCTAssertEqual(timeout, 3000)
-    }
-
-    // Test sending a trigger to the instrument
-    func testAssertTrigger() {
-        XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
     }
 }

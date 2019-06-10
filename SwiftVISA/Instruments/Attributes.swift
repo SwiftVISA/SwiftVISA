@@ -9,9 +9,13 @@
 import CVISA
 
 extension Instrument {
+	
     /// sets the given NI-VISA attribute on the instrument using an int argument
     ///
-    /// - Throws: ???
+    /// - Parameters:
+    ///   - attributeId: The VISA Attribute ID to set
+    ///   - value: The value of the 
+    /// - Throws: <#throws value description#>
     func setAttribute(_ attributeId: ViAttr, value: Int) throws {
         #warning("Not unit tested")
         let status = viSetAttribute(session.viSession, attributeId, ViAttrState(value))
@@ -19,9 +23,11 @@ extension Instrument {
     }
 	
 	/// Gets the given NI-VISA attribute on the instrument
-    /// Returns the raw data retreived from the device
+	/// Returns the raw data retreived from the device
 	///
-	/// - Throws: ???
+	/// - Parameter attributeId: The VISA Attribute ID to set
+	/// - Returns: The raw data received from the device
+	/// - Throws: <#throws value description#>
 	private func getAttribute(_ attributeId: ViAttr) throws -> Data {
 		#warning("Not tested")
 		let buffer = ViPBuf.allocate(capacity: 2048)
@@ -33,38 +39,23 @@ extension Instrument {
 		let bytes = MemoryLayout<UInt8>.stride * 2048
 		let data = Data(bytes: pointer, count: bytes)
         return data
-        /*
-        print()
-		guard let string = String(data: data, encoding: .ascii) else {
-			throw VISAError.couldNotDecode
-		}
-		let startIndex = string.startIndex
-		guard let endIndex = string.firstIndex(of: "\0") else {
-			// TODO remove this print when "rigorous" testing done
-			print("Buffer size bad (null byte not found) D:")
-			throw VISAError.couldNotDecode
-		}
-		return String(string[startIndex..<endIndex])
-        */
 	}
-    
-    /// Gets the given NI-VISA attribute on the instrument as a type
-    /// Also has the additional feature of providing a decoder for the attribute
-    ///
-    /// - Throws: VisaError.couldNotDecode
-    /*
-    func getAttribute<T, D: VISADecoder>(_ attributeId: ViAttr, as type: T.Type, decoder: D) throws -> T where D.DecodingType == T {
-        let visaData = try getAttribute(attributeId)
-        return T()
-        // return decoder.decode(visaData)
-    }
- */
-    
+
     /// Gets the given NI-VISA attribute on the instrument as a type
     ///
-    /// - Throws: VisaError.couldNotDecode
-    func getAttribute<T: VISADecodable>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
+    /// - Parameters:
+    ///   - attributeId: The VISA Attribute ID to get
+    ///   - type: The type to cast the data to
+    /// - Returns: The data returned from the device, cast to the type
+    /// - Throws: <#throws value description#>
+    func getAttribute<T>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
         let visaData = try getAttribute(attributeId)
+		if type == String.self {
+			let string = String(bytes: visaData, encoding: .ascii)!
+			let startIndex = string.startIndex
+			let endIndex = string.firstIndex(of: "\0") ?? string.endIndex
+			return String(string[startIndex..<endIndex]) as! T
+		}
         return visaData.withUnsafeBytes {
             $0.load(as: T.self)
         }
