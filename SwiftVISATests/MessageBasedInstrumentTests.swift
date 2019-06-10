@@ -1,5 +1,5 @@
 //
-// Created by Avinash on 2019-05-28.
+// Created by the SwiftVISA team on 2019-05-28.
 // Copyright (c) 2019 SwiftVISA. All rights reserved.
 //
 
@@ -84,16 +84,11 @@ class MessageBasedInstrumentTests : XCTestCase {
     }
     
     func testSetAttribute() {
-        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 90000))
+        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000))
         let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int32.self)
 
         print(timeout!)
         XCTAssertNotNil(timeout)
-        XCTAssertEqual(timeout, 0)
-    }
-
-    // Test sending a trigger to the instrument
-    func testAssertTrigger() {
-        // XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
+        XCTAssertEqual(timeout, 3000)
     }
 }
