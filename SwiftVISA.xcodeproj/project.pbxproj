@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A23B00E22AEE00900DE5388 /* STB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23B00D22AEE00800DE5388 /* STB.swift */; };
+		5A23B01022AEE37100DE5388 /* MultithreadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23B00F22AEE37100DE5388 /* MultithreadingTests.swift */; };
 		5A35B9E822A5C15D00DEECA6 /* SendTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35B9E722A5C15D00DEECA6 /* SendTrigger.swift */; };
 		5A4928E322A0988000578832 /* SerialInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4928E222A0988000578832 /* SerialInstrument.swift */; };
 		5A4928E622A0989D00578832 /* TCPIPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4928E522A0989D00578832 /* TCPIPSocket.swift */; };
@@ -61,6 +62,7 @@
 		5A134EE3229FCD5D008AF9EE /* TCPIPInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPIPInstrument.swift; sourceTree = "<group>"; };
 		5A134EE4229FCD5D008AF9EE /* MessageBasedAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedAttributes.swift; sourceTree = "<group>"; };
 		5A23B00D22AEE00800DE5388 /* STB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STB.swift; sourceTree = "<group>"; };
+		5A23B00F22AEE37100DE5388 /* MultithreadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultithreadingTests.swift; sourceTree = "<group>"; };
 		5A35B9E722A5C15D00DEECA6 /* SendTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTrigger.swift; sourceTree = "<group>"; };
 		5A4928E222A0988000578832 /* SerialInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialInstrument.swift; sourceTree = "<group>"; };
 		5A4928E522A0989D00578832 /* TCPIPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPIPSocket.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				5A49290922A0A93900578832 /* MessageBasedInstrumentTests.swift */,
+				5A23B00F22AEE37100DE5388 /* MultithreadingTests.swift */,
 				E190445B228BABC90057934D /* Info.plist */,
 			);
 			path = SwiftVISATests;
@@ -521,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A23B01022AEE37100DE5388 /* MultithreadingTests.swift in Sources */,
 				5A49290A22A0A93900578832 /* MessageBasedInstrumentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
