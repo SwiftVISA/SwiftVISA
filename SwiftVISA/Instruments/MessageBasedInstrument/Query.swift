@@ -157,7 +157,7 @@ extension MessageBasedInstrument {
 	///   - `.connectionLost`
 	///   - `.couldNotDecode`
 	public func query<T, D: VISADecoder>(_ message: String, as type: T.Type, decoder: D, numberOfReads: Int, timeBetweenReads: TimeInterval = 0.5, readDelay: TimeInterval = 0.0) throws -> [T?] where D.DecodingType == T {
-		#warning("Not tested")
+		#warning("Not unit tested")
 		var readList: [T?] = []
 
 		for var i in 1...numberOfReads {

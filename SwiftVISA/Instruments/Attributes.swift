@@ -13,7 +13,7 @@ extension Instrument {
     ///
     /// - Throws: ???
     func setAttribute(_ attributeId: ViAttr, value: Int) throws {
-        #warning("Not tested")
+        #warning("Not unit tested")
         let status = viSetAttribute(session.viSession, attributeId, ViAttrState(value))
         guard status >= VI_SUCCESS else { throw VISAError(status)}
     }

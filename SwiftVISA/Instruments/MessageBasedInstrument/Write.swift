@@ -29,6 +29,7 @@ extension MessageBasedInstrument {
 	public func write(_ message: String) throws {
 		var returnCount = ViUInt32()
 		let status = viWrite(session.viSession, message, ViUInt32(message.count), &returnCount)
+
 		if status < VI_SUCCESS {
 			throw VISAError(status)
 		}

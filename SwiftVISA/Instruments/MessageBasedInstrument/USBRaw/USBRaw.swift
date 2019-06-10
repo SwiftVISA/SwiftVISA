@@ -6,8 +6,12 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+import CVISA
+
 // TODO: Implement
 public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
+	static var _events: [UInt] = [VI_EVENT_USB_INTR]
+	
 	var _lockState: LockState
 	
 	public var bufferSize: Int
@@ -18,18 +22,19 @@ public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var identifier: String
 	
-	public var beforeClose: () -> Void
-	
 	public var timeout: TimeInterval
 	
+	public var delegate: InstrumentDelegate?
+	
+	public var dispatchQueue: DispatchQueue
+	
 	public init(session: Session, identifier: String) {
-        bufferSize = 20480
-        buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
-        self.session = session
-        self.identifier = identifier
-        // TODO: Why can beforeClose not be nil, maybe this should be moved to a delegate?
-        beforeClose = { }
-        _lockState = .unlocked
-        timeout = 5.0
+		bufferSize = 20480
+		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
+		self.session = session
+		self.identifier = identifier
+		_lockState = .unlocked
+		timeout = 5.0
+		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
 }

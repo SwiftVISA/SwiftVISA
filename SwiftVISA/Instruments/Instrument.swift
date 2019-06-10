@@ -15,11 +15,13 @@ public protocol Instrument: class {
 	var session: Session { get }
 	/// A unique identifier for the instrument.
 	var identifier: String { get }
-	/// A completion handler that is ran before the instrument is closed.
-	var beforeClose: () -> Void { get set }
 	// TODO: Should this be moved to session? Should it be read-only? The setter is only used for the default implementation, but aside from that, this should never be set by the user.
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }
+	
+	var delegate: InstrumentDelegate? { get }
+	
+	var dispatchQueue: DispatchQueue { get }
 }
 
 // MARK: Default Implementations
@@ -39,7 +41,7 @@ public extension Instrument {
 	///   - `.invalidSetup`
 	///   - `.connectionLost`
 	func clear() throws {
-		#warning("Not tested")
+		#warning("Not unit tested")
 		let status = viClear(session.viSession)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}
@@ -51,6 +53,7 @@ public extension Instrument {
 	///   - `.invalidSession`
 	///   - `.failedToClose`
 	func close() throws {
+		#warning("Not unit tested")
 		let status = viClose(session.viSession)
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
     }
@@ -58,7 +61,8 @@ public extension Instrument {
 
 // MARK: viAssertTrigger
 extension Instrument {
-	func assertTrigger(_ code: Int32) throws {
+	func assertTrigger(_ code: Int) throws {
+		#warning("Not unit tested")
 		let status = viAssertTrigger(session.viSession, UInt16(code))
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 	}

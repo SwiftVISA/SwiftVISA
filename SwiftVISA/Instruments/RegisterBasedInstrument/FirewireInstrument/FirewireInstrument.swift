@@ -8,15 +8,20 @@
 
 // TODO: Implement
 public final class FirewireInstrument: RegisterBasedInstrument, InstrumentProtocol {
+	// TODO: What NI-VISA resource does this correspond to?
+	static var _events: [UInt] = []
+	
 	var _lockState: LockState
 	
 	public var session: Session
 	
 	public var identifier: String
 	
-	public var beforeClose: () -> Void
-	
 	public var timeout: TimeInterval
+	
+	public var delegate: InstrumentDelegate?
+	
+	public var dispatchQueue: DispatchQueue
 	
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")

@@ -42,7 +42,7 @@ public extension Instrument {
 	///   - `.timeout`
 	/// - Note: Locks can be nested.
 	func lock(_ type: LockState.LockType, timeout: TimeInterval) throws {
-		#warning("Not tested")
+		#warning("Not unit tested")
 		guard let self = self as? InstrumentProtocol else { throw VISAError.invalidInstrument }
 		// timeout is in seconds, convert to miliseconds
 		let viTimeout = ViUInt32(timeout * 1000.0)
@@ -80,7 +80,7 @@ public extension Instrument {
 	///   - `.sessionNotLocked`
 	/// - Note: Locks can be nested.
 	func unlock() throws {
-		#warning("Not tested")
+		#warning("Not unit tested")
 		guard let self = self as? InstrumentProtocol else { throw VISAError.invalidInstrument }
 		let status = viUnlock(session.viSession)
 		
