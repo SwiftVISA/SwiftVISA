@@ -43,6 +43,8 @@
 		5A4D0B8F229FCDD0004E6B76 /* Voltage (Deprecated).swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC7228CAE6100239BD6 /* Voltage (Deprecated).swift */; };
 		5A83192B22ADA9BE002F7B7E /* InstrumentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83192A22ADA9BE002F7B7E /* InstrumentDelegate.swift */; };
 		5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7FE1722A595BF0021662F /* Attributes.swift */; };
+		DF5B347622AF0C1400EFB3DC /* InterfaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */; };
+		DF5B347822B08DFA00EFB3DC /* IOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */; };
 		DF73A21E22AEE52000FD6004 /* RenMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21D22AEE52000FD6004 /* RenMode.swift */; };
 		DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21F22AEE95D00FD6004 /* AtnMode.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
@@ -94,6 +96,8 @@
 		5AFF1631228DD44800545130 /* InstrumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		DA93684268AE7C064A376944 /* WriteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteError.swift; sourceTree = "<group>"; };
 		DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedInstrument.swift; sourceTree = "<group>"; };
+		DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceType.swift; sourceTree = "<group>"; };
+		DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOProtocol.swift; sourceTree = "<group>"; };
 		DF73A21B22A5BCC300FD6004 /* MemoryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDecoder.swift; sourceTree = "<group>"; };
 		DF73A21D22AEE52000FD6004 /* RenMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenMode.swift; sourceTree = "<group>"; };
 		DF73A21F22AEE95D00FD6004 /* AtnMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtnMode.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				5A4928FE22A0995A00578832 /* GPIBInterface */,
 				5A4A0CFA229E68C6004E16B8 /* MessageBasedInstrument */,
 				5A49290622A099BD00578832 /* RegisterBasedInstrument */,
+				DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */,
 			);
 			path = Instruments;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				5A49290422A0998000578832 /* USBRaw */,
 				5A49290322A0997600578832 /* GPIBInstrument */,
 				DF73A21D22AEE52000FD6004 /* RenMode.swift */,
+				DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */,
 			);
 			path = MessageBasedInstrument;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4D0B8E229FCDD0004E6B76 /* Write (Deprecated).swift in Sources */,
+				DF5B347822B08DFA00EFB3DC /* IOProtocol.swift in Sources */,
 				5A83192B22ADA9BE002F7B7E /* InstrumentDelegate.swift in Sources */,
 				5A49290822A09B7F00578832 /* RegisterBasedInstrument.swift in Sources */,
 				5A4D0B8F229FCDD0004E6B76 /* Voltage (Deprecated).swift in Sources */,
@@ -518,6 +525,7 @@
 				5A4D0B89229FCDD0004E6B76 /* Write.swift in Sources */,
 				5A4928E322A0988000578832 /* SerialInstrument.swift in Sources */,
 				5A4D0B80229FCDD0004E6B76 /* InstrumentManager.swift in Sources */,
+				DF5B347622AF0C1400EFB3DC /* InterfaceType.swift in Sources */,
 				5A4D0B7F229FCDD0004E6B76 /* Decoding.swift in Sources */,
 				5A4928EB22A098B900578832 /* USBRaw.swift in Sources */,
 				5A4928EF22A0990C00578832 /* FirewireInstrument.swift in Sources */,

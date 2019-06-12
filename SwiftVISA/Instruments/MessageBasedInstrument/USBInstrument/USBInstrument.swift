@@ -84,5 +84,12 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
         // todo same note as usb_control in on if we should unpack data
         return result
     }
-    
+	
+	public func getProductID() throws -> UInt16 {
+		return try getAttribute(VI_ATTR_MODEL_CODE, as: UInt16.self)
+	}
+	
+	public func getModelName() throws -> String {
+		return try getAttribute(VI_ATTR_MODEL_NAME, as: String.self)
+	}
 }

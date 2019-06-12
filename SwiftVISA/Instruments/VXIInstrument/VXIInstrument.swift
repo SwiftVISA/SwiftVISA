@@ -31,4 +31,20 @@ public final class VXIInstrument: InstrumentProtocol {
 		#warning("Not implemented")
 		fatalError("Not implemented")
 	}
+	
+	public func getIOProtocol() throws -> IOProtocol {
+		return try IOProtocol(getAttribute(VI_ATTR_IO_PROT, as: UInt16.self))
+	}
+	
+	public func setIOProtocol(ioProtocol: IOProtocol) throws {
+		return try setAttribute(VI_ATTR_IO_PROT, value: Int(ioProtocol.protoCode))
+	}
+	
+	public func getModelCode() throws -> UInt16 {
+		return try getAttribute(VI_ATTR_MODEL_CODE, as: UInt16.self)
+	}
+	
+	public func getModelName() throws -> String {
+		return try getAttribute(VI_ATTR_MODEL_NAME, as: String.self)
+	}
 }

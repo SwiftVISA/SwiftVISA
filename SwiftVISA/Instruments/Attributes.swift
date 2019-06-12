@@ -16,9 +16,9 @@ extension Instrument {
     ///   - attributeId: The VISA Attribute ID to set
     ///   - value: The value of the 
     /// - Throws: <#throws value description#>
-    func setAttribute(_ attributeId: ViAttr, value: Int) throws {
+    func setAttribute(_ attributeId: UInt, value: Int) throws {
         #warning("Not unit tested")
-        let status = viSetAttribute(session.viSession, attributeId, ViAttrState(value))
+        let status = viSetAttribute(session.viSession, ViAttr(attributeId), ViAttrState(value))
         guard status >= VI_SUCCESS else { throw VISAError(status)}
     }
 	
@@ -28,10 +28,10 @@ extension Instrument {
 	/// - Parameter attributeId: The VISA Attribute ID to set
 	/// - Returns: The raw data received from the device
 	/// - Throws: <#throws value description#>
-	private func getAttribute(_ attributeId: ViAttr) throws -> Data {
+	private func getAttribute(_ attributeId: UInt) throws -> Data {
 		#warning("Not tested")
 		let buffer = ViPBuf.allocate(capacity: 2048)
-		let status = viGetAttribute(session.viSession, attributeId, buffer)
+		let status = viGetAttribute(session.viSession, ViAttr(attributeId), buffer)
 		
 		guard status >= VI_SUCCESS else { throw VISAError(status) }
 		// convert the data to a readable string format
@@ -48,7 +48,7 @@ extension Instrument {
     ///   - type: The type to cast the data to
     /// - Returns: The data returned from the device, cast to the type
     /// - Throws: <#throws value description#>
-    func getAttribute<T>(_ attributeId: ViAttr, as type: T.Type) throws -> T {
+    func getAttribute<T>(_ attributeId: UInt, as type: T.Type) throws -> T {
         let visaData = try getAttribute(attributeId)
 		if type == String.self {
 			let string = String(bytes: visaData, encoding: .ascii)!
