@@ -92,4 +92,8 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	public func getModelName() throws -> String {
 		return try getAttribute(VI_ATTR_MODEL_NAME, as: String.self)
 	}
+	
+	public func getIs4882Compliant() throws -> Bool {
+		return try getAttribute(VI_ATTR_4882_COMPLIANT, as: Bool.self)
+	}
 }

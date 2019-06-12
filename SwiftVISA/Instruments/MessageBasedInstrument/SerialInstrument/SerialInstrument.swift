@@ -44,12 +44,4 @@ public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol 
 		timeout = 5.0
 		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
-	
-	public func getIOProtocol() throws -> IOProtocol {
-		return try IOProtocol(getAttribute(VI_ATTR_IO_PROT, as: UInt16.self))
-	}
-	
-	public func setIOProtocol(ioProtocol: IOProtocol) throws {
-		return try setAttribute(VI_ATTR_IO_PROT, value: Int(ioProtocol.protoCode))
-	}
 }
