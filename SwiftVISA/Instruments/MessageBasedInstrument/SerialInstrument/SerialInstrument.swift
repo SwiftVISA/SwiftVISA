@@ -36,6 +36,12 @@ public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol 
 	
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")
-		fatalError("Not implemented")
+		bufferSize = 20480
+		buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: bufferSize, alignment: 4096)
+		self.session = session
+		self.identifier = identifier
+		_lockState = .unlocked
+		timeout = 5.0
+		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
 }

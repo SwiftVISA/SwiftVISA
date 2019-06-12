@@ -15,6 +15,7 @@ public protocol Instrument: class {
 	var session: Session { get }
 	/// A unique identifier for the instrument.
 	var identifier: String { get }
+	
 	// TODO: Should this be moved to session? Should it be read-only? The setter is only used for the default implementation, but aside from that, this should never be set by the user.
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }

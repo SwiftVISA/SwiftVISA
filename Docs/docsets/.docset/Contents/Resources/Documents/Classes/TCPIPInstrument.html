@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TCPIPInstrument Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TCPIPInstrument" class="dashAnchor"></a>
+    <a title="TCPIPInstrument Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (49% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TCPIPInstrument Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FirewireInstrument.html">FirewireInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInstrument.html">GPIBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInterface.html">GPIBInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InstrumentManager.html">InstrumentManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIInstrument.html">PXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIMemory.html">PXIMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialInstrument.html">SerialInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPInstrument.html">TCPIPInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPSocket.html">TCPIPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBInstrument.html">USBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBRaw.html">USBRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIBackplane.html">VXIBackplane</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIInstrument.html">VXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIMemory.html">VXIMemory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AtnMode.html">AtnMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState.html">LockState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState/LockType.html">– LockType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RenMode.html">RenMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VISAError.html">VISAError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9SwiftVISA23RegisterBasedInstrumentP">RegisterBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecodable.html">VISADecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecoder.html">VISADecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISABoolDecoder.html">DefaultVISABoolDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISADoubleDecoder.html">DefaultVISADoubleDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAIntDecoder.html">DefaultVISAIntDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAOptionalDecoder.html">DefaultVISAOptionalDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAStringDecoder.html">DefaultVISAStringDecoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TCPIPInstrument</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TCPIPInstrument</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a></span><span class="p">,</span> <span class="kt">InstrumentProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentP10bufferSizeSivp"></a>
+                    <a name="//apple_ref/swift/Property/bufferSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentP10bufferSizeSivp">bufferSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentP6bufferSwvp"></a>
+                    <a name="//apple_ref/swift/Property/buffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentP6bufferSwvp">buffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">buffer</span><span class="p">:</span> <span class="kt">UnsafeMutableRawBufferPointer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP7sessionAA7SessionCvp"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP7sessionAA7SessionCvp">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP10identifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP10identifierSSvp">identifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP7timeoutSdvp"></a>
+                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP7timeoutSdvp">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP8delegateAA0C8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP8delegateAA0C8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA10InstrumentP13dispatchQueueSo03OS_D6_queueCvp"></a>
+                    <a name="//apple_ref/swift/Property/dispatchQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA10InstrumentP13dispatchQueueSo03OS_D6_queueCvp">dispatchQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dispatchQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA15TCPIPInstrumentC7session10identifierAcA7SessionC_SStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(session:identifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA15TCPIPInstrumentC7session10identifierAcA7SessionC_SStcfc">init(session:identifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a></span><span class="p">,</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -5,7 +5,7 @@
 //  Created by Connor Barnes on 5/30/19.
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
-
+import CVISA
 // TODO: Implement
 public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
 	// TODO: What NI-VISA resource does this correspond to?
@@ -30,5 +30,13 @@ public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
 	public init(session: Session, identifier: String) {
 		#warning("Not implemented")
 		fatalError("Not implemented")
+	}
+	
+	public func getIOProtocol() throws -> IOProtocol {
+		return try IOProtocol(getAttribute(VI_ATTR_IO_PROT, as: UInt16.self))
+	}
+	
+	public func setIOProtocol(ioProtocol: IOProtocol) throws {
+		return try setAttribute(VI_ATTR_IO_PROT, value: Int(ioProtocol.protoCode))
 	}
 }

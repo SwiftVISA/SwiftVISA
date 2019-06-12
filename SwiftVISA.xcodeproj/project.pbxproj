@@ -43,6 +43,14 @@
 		5A4D0B8F229FCDD0004E6B76 /* Voltage (Deprecated).swift in Sources */ = {isa = PBXBuildFile; fileRef = E1037FC7228CAE6100239BD6 /* Voltage (Deprecated).swift */; };
 		5A83192B22ADA9BE002F7B7E /* InstrumentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83192A22ADA9BE002F7B7E /* InstrumentDelegate.swift */; };
 		5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7FE1722A595BF0021662F /* Attributes.swift */; };
+		DF5B347622AF0C1400EFB3DC /* InterfaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */; };
+		DF5B347822B08DFA00EFB3DC /* IOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */; };
+		DF5B347A22B0982C00EFB3DC /* SignalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347922B0982C00EFB3DC /* SignalState.swift */; };
+		DF5B347F22B098C200EFB3DC /* InstrumentAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B347E22B098C200EFB3DC /* InstrumentAttributes.swift */; };
+		DF5B348122B0993200EFB3DC /* VXIAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B348022B0993200EFB3DC /* VXIAttributes.swift */; };
+		DF5B348322B0999800EFB3DC /* SerialAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B348222B0999800EFB3DC /* SerialAttributes.swift */; };
+		DF73A21E22AEE52000FD6004 /* RenMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21D22AEE52000FD6004 /* RenMode.swift */; };
+		DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21F22AEE95D00FD6004 /* AtnMode.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; };
@@ -92,7 +100,15 @@
 		5AFF1631228DD44800545130 /* InstrumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		DA93684268AE7C064A376944 /* WriteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteError.swift; sourceTree = "<group>"; };
 		DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBasedInstrument.swift; sourceTree = "<group>"; };
+		DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceType.swift; sourceTree = "<group>"; };
+		DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOProtocol.swift; sourceTree = "<group>"; };
+		DF5B347922B0982C00EFB3DC /* SignalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalState.swift; sourceTree = "<group>"; };
+		DF5B347E22B098C200EFB3DC /* InstrumentAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentAttributes.swift; sourceTree = "<group>"; };
+		DF5B348022B0993200EFB3DC /* VXIAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXIAttributes.swift; sourceTree = "<group>"; };
+		DF5B348222B0999800EFB3DC /* SerialAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialAttributes.swift; sourceTree = "<group>"; };
 		DF73A21B22A5BCC300FD6004 /* MemoryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDecoder.swift; sourceTree = "<group>"; };
+		DF73A21D22AEE52000FD6004 /* RenMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenMode.swift; sourceTree = "<group>"; };
+		DF73A21F22AEE95D00FD6004 /* AtnMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtnMode.swift; sourceTree = "<group>"; };
 		DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBasedAttributes.swift; sourceTree = "<group>"; };
 		E1037FC1228CA85300239BD6 /* Read (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Read (Deprecated).swift"; sourceTree = "<group>"; };
 		E1037FC3228CA85900239BD6 /* Write (Deprecated).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Write (Deprecated).swift"; sourceTree = "<group>"; };
@@ -266,10 +282,10 @@
 		5A4A0CF7229E67FD004E16B8 /* Instruments */ = {
 			isa = PBXGroup;
 			children = (
+				DF5B347D22B0989100EFB3DC /* Attributes */,
 				5A49290B22A0AEEA00578832 /* InstrumentProtocol.swift */,
 				E1037FC5228CAD9E00239BD6 /* Instrument.swift */,
 				5A83192A22ADA9BE002F7B7E /* InstrumentDelegate.swift */,
-				5AB7FE1722A595BF0021662F /* Attributes.swift */,
 				5A4A0CDF229DBF36004E16B8 /* Session.swift */,
 				5A4A0CE1229DC0C1004E16B8 /* Locks.swift */,
 				5A4928FC22A0994F00578832 /* VXIBackplane */,
@@ -285,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				DA936BB89F4E8A8E9B632837 /* MessageBasedInstrument.swift */,
-				DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */,
 				5A4A0CFB229E6982004E16B8 /* Read.swift */,
 				5A4A0CFD229E6987004E16B8 /* Write.swift */,
 				5A4A0CFF229E6B71004E16B8 /* Query.swift */,
@@ -308,6 +323,31 @@
 				5A4A0CEF229E4E36004E16B8 /* VISAError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		DF5B347B22B0983500EFB3DC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DF73A21D22AEE52000FD6004 /* RenMode.swift */,
+				DF5B347722B08DFA00EFB3DC /* IOProtocol.swift */,
+				DF73A21F22AEE95D00FD6004 /* AtnMode.swift */,
+				DF5B347522AF0C1400EFB3DC /* InterfaceType.swift */,
+				DF5B347922B0982C00EFB3DC /* SignalState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		DF5B347D22B0989100EFB3DC /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				DFB53662229F5F52004BB266 /* MessageBasedAttributes.swift */,
+				5AB7FE1722A595BF0021662F /* Attributes.swift */,
+				DF5B347B22B0983500EFB3DC /* Enums */,
+				DF5B347E22B098C200EFB3DC /* InstrumentAttributes.swift */,
+				DF5B348022B0993200EFB3DC /* VXIAttributes.swift */,
+				DF5B348222B0999800EFB3DC /* SerialAttributes.swift */,
+			);
+			path = Attributes;
 			sourceTree = "<group>";
 		};
 		E1904441228BABC90057934D = {
@@ -484,6 +524,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4D0B8E229FCDD0004E6B76 /* Write (Deprecated).swift in Sources */,
+				DF5B347822B08DFA00EFB3DC /* IOProtocol.swift in Sources */,
+				DF5B347A22B0982C00EFB3DC /* SignalState.swift in Sources */,
 				5A83192B22ADA9BE002F7B7E /* InstrumentDelegate.swift in Sources */,
 				5A49290822A09B7F00578832 /* RegisterBasedInstrument.swift in Sources */,
 				5A4D0B8F229FCDD0004E6B76 /* Voltage (Deprecated).swift in Sources */,
@@ -500,16 +542,22 @@
 				5A4D0B86229FCDD0004E6B76 /* MessageBasedInstrument.swift in Sources */,
 				5A4928F322A0991D00578832 /* PXIMemory.swift in Sources */,
 				5A4928F922A0994100578832 /* VXIInstrument.swift in Sources */,
+				DF73A21E22AEE52000FD6004 /* RenMode.swift in Sources */,
+				DF5B348122B0993200EFB3DC /* VXIAttributes.swift in Sources */,
+				DF5B347F22B098C200EFB3DC /* InstrumentAttributes.swift in Sources */,
 				5AB7FE1822A595BF0021662F /* Attributes.swift in Sources */,
+				DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */,
 				5A4928ED22A0990300578832 /* GPIBInstrument.swift in Sources */,
 				5A23B00E22AEE00900DE5388 /* STB.swift in Sources */,
 				5A4D0B87229FCDD0004E6B76 /* MessageBasedAttributes.swift in Sources */,
 				5A4D0B8C229FCDD0004E6B76 /* TCPIPInstrument.swift in Sources */,
+				DF5B348322B0999800EFB3DC /* SerialAttributes.swift in Sources */,
 				5A4D0B8D229FCDD0004E6B76 /* Read (Deprecated).swift in Sources */,
 				5A4928F122A0991400578832 /* PXIInstrument.swift in Sources */,
 				5A4D0B89229FCDD0004E6B76 /* Write.swift in Sources */,
 				5A4928E322A0988000578832 /* SerialInstrument.swift in Sources */,
 				5A4D0B80229FCDD0004E6B76 /* InstrumentManager.swift in Sources */,
+				DF5B347622AF0C1400EFB3DC /* InterfaceType.swift in Sources */,
 				5A4D0B7F229FCDD0004E6B76 /* Decoding.swift in Sources */,
 				5A4928EB22A098B900578832 /* USBRaw.swift in Sources */,
 				5A4928EF22A0990C00578832 /* FirewireInstrument.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-// Created by Avinash on 2019-05-28.
+// Created by the SwiftVISA team on 2019-05-28.
 // Copyright (c) 2019 SwiftVISA. All rights reserved.
 //
 
@@ -27,7 +27,8 @@ class MessageBasedInstrumentTests : XCTestCase {
 	
 	// Remove all the sessions
 	override func tearDown() {
-        try? multimeterInstrument?.close()
+		try? waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 2000)
+		try? multimeterInstrument?.close()
         try? waveformGeneratorInstrument?.close()
     }
 
@@ -46,11 +47,19 @@ class MessageBasedInstrumentTests : XCTestCase {
 	func testReadDCVoltage() {
 		try? multimeterInstrument?.write("MEASURE:SCALAR:VOLTAGE:DC?")
 		let voltage = try? multimeterInstrument?.read(as: Double.self)
-		print(voltage ?? "Nothing returned")
 
 		XCTAssertNotNil(voltage)
 	}
-	
+
+	// Test the readRaw function
+	func testReadRaw() {
+		try? multimeterInstrument?.write("MEASURE:SCALAR:VOLTAGE:DC?")
+		let voltage: String? = try? multimeterInstrument?.readRaw()
+
+		XCTAssertNotNil(voltage) // Verify we got a voltage
+		XCTAssert(voltage!.last == "\n" || voltage!.last == "\0") // Verify there is a termination character
+	}
+
 	// Test the functionality of the Query command by writing and reading a DC Voltage
 	func testQuery() {
         let voltage = try? multimeterInstrument?.query("MEASURE:SCALAR:VOLTAGE:DC?", as: Double.self)
@@ -71,25 +80,38 @@ class MessageBasedInstrumentTests : XCTestCase {
         XCTAssertNotNil(voltage)
         XCTAssertEqual(voltage?.count, 10)
 	}
-    
+
+	// Test getting attributes
     func testGetAttribute() {
         let manufacture = try? waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_MANF_NAME), as: String.self)
+		
+		let timeout = try? waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int32.self)
 
         XCTAssertNotNil(manufacture)
+		XCTAssertNotNil(timeout)
         XCTAssertEqual(manufacture, "Agilent Technologies")
+		XCTAssertEqual(timeout, 2000)
     }
-    
-    func testSetAttribute() {
-        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 1))
-        let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int.self)
 
-        print(timeout as! Int)
+	// Test setting attributes
+    func testSetAttribute() {
+        XCTAssertNoThrow(try waveformGeneratorInstrument?.setAttribute(UInt32(VI_ATTR_TMO_VALUE), value: 3000))
+        let timeout = try! waveformGeneratorInstrument?.getAttribute(UInt32(VI_ATTR_TMO_VALUE), as: Int32.self)
+
         XCTAssertNotNil(timeout)
         XCTAssertEqual(timeout, 3000)
     }
 
-    // Test sending a trigger to the instrument
-    func testAssertTrigger() {
-        XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
-    }
+	// Tests sending a trigger to the devices
+	func testAssertTrigger() {
+		XCTAssertNoThrow(try multimeterInstrument?.assertTrigger())
+		XCTAssertNoThrow(try waveformGeneratorInstrument?.assertTrigger())
+	}
+
+	// Test reading the status byte, STB
+	func testSTB() {
+		let STB = try? multimeterInstrument?.readStatusByte()
+
+		XCTAssertNotNil(STB)
+	}
 }

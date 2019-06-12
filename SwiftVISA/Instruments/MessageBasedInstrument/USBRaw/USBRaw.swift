@@ -37,4 +37,20 @@ public final class USBRaw: MessageBasedInstrument, InstrumentProtocol {
 		timeout = 5.0
 		dispatchQueue = DispatchQueue(label: identifier, qos: .userInitiated)
 	}
+	
+	public func getIOProtocol() throws -> IOProtocol {
+		return try IOProtocol(getAttribute(VI_ATTR_IO_PROT, as: UInt16.self))
+	}
+	
+	public func setIOProtocol(ioProtocol: IOProtocol) throws {
+		return try setAttribute(VI_ATTR_IO_PROT, value: Int(ioProtocol.protoCode))
+	}
+	
+	public func getProductID() throws -> UInt16 {
+		return try getAttribute(VI_ATTR_MODEL_CODE, as: UInt16.self)
+	}
+	
+	public func getModelName() throws -> String {
+		return try getAttribute(VI_ATTR_MODEL_NAME, as: String.self)
+	}
 }
