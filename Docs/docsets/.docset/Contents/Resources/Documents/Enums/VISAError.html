@@ -1,0 +1,2622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VISAError Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/VISAError" class="dashAnchor"></a>
+    <a title="VISAError Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (49% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        VISAError Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FirewireInstrument.html">FirewireInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInstrument.html">GPIBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInterface.html">GPIBInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InstrumentManager.html">InstrumentManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIInstrument.html">PXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIMemory.html">PXIMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialInstrument.html">SerialInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPInstrument.html">TCPIPInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPSocket.html">TCPIPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBInstrument.html">USBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBRaw.html">USBRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIBackplane.html">VXIBackplane</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIInstrument.html">VXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIMemory.html">VXIMemory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AtnMode.html">AtnMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState.html">LockState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState/LockType.html">– LockType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RenMode.html">RenMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VISAError.html">VISAError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9SwiftVISA23RegisterBasedInstrumentP">RegisterBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecodable.html">VISADecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecoder.html">VISADecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISABoolDecoder.html">DefaultVISABoolDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISADoubleDecoder.html">DefaultVISADoubleDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAIntDecoder.html">DefaultVISAIntDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAOptionalDecoder.html">DefaultVISAOptionalDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAStringDecoder.html">DefaultVISAStringDecoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VISAError</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">VISAError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                </div>
+              </div>
+            <p>An error that can be thrown by the SwiftVISA framework.</p>
+
+<ul>
+<li>systemError: Unknown system error (miscellaneous error).</li>
+<li>invalidSession: The given session or object reference is invalid.</li>
+<li>resourceLocked: Specified type of lock cannot be obtained or specified operation cannot be performed, because the resource is locked.</li>
+<li>invalidExpressionForSearch: Invalid expression specified for search.</li>
+<li>resourceNotFound: Insufficient location information or the device or resource is not present in the system.</li>
+<li>invalidResourceName: Invalid resource reference specified. Parsing error.</li>
+<li>invalidAccessMode: Invalid access mode.</li>
+<li>timeout: Timeout expired before operation completed.</li>
+<li>failedToClose: Unable to deallocate the previously allocated data structures corresponding to this session or object reference.</li>
+<li>invalidDegree: Specified degree is invalid.</li>
+<li>invalidJobIdentifier: Specified job identifier is invalid.</li>
+<li>unsupportedAttribute: The specified attribute is not defined or supported by the referenced session, event, or find list.</li>
+<li>unsupportedAttributeState: The specified state of the attribute is not valid, or is not supported as defined by the session, event, or find list.</li>
+<li>readOnlyAttribute: The specified attribute is Read Only.</li>
+<li>invalidLockType: The specified type of lock is not supported by this resource.</li>
+<li>invalidAccessKey: The access key to the resource associated with this session is invalid.</li>
+<li>invalidEvent: Specified event type is not supported by the resource.</li>
+<li>invalidMechanism: Invalid mechanism specified.</li>
+<li>handlerNotInstalled: A handler is not currently installed for the specified event.</li>
+<li>invalidHandlerReference: The given handler reference is invalid.</li>
+<li>invalidContext: Specified event context is invalid.</li>
+<li>queueOverflow: The event queue for the specified type has overflowed (usually due to previous events not having been closed).</li>
+<li>eventNotEnabled: The session must be enabled for events of the specified type in order to receive them.</li>
+<li>operationAborted: The operation was aborted.</li>
+<li>rawWriteProtocolViolation: Violation of raw write protocol occurred during transfer.</li>
+<li>rawReadProtocolViolation: Violation of raw read protocol occurred during transfer.</li>
+<li>outputProtocolViolation: Device reported an output protocol error during transfer.</li>
+<li>inputProtocolViolation: Device reported an input protocol error during transfer.</li>
+<li>busError: Bus error occurred during transfer.</li>
+<li>operationAlreadyInProgress: Unable to queue the asynchronous operation because there is already an operation in progress.</li>
+<li>invalidSetup: Unable to start operation because setup is invalid (due to attributes being set to an inconsistent state).</li>
+<li>queueError: Unable to queue asynchronous operation.</li>
+<li>insufficientSystemResources: Insufficient system resources to perform necessary memory allocation.</li>
+<li>invalidBufferMask: Invalid buffer mask specified.</li>
+<li>ioError: Could not perform operation because of I/O error.</li>
+<li>invalidFormat: A format specifier in the format string is invalid.</li>
+<li>unsupportedFormat: A format specifier in the format string is not supported.</li>
+<li>triggerLineInUse: The specified trigger line is currently in use.</li>
+<li>unsupportedMode: The specified mode is not supported by this VISA implementation.</li>
+<li>serviceRequestNotReceived: Service request has not been received for the session.</li>
+<li>invalidAddressSpace: Invalid address space specified.</li>
+<li>invalidOffset: Invalid offset specified.</li>
+<li>invalidWidth: Invalid source or destination width specified.</li>
+<li>unsupportedOffset: Specified offset is not accessible from this hardware.</li>
+<li>nonequalSourceAndDestinationWidths: Cannot support source and destination widths that are different.</li>
+<li>sessionNotMapped: The specified session is not currently mapped.</li>
+<li>responseStillPending: A previous response is still pending, causing a multiple query error.</li>
+<li>noListeners: No Listeners condition is detected (both <code>NRFD</code> and <code>NDAC</code> are deasserted).</li>
+<li>notControllerInCharge: The interface associated with this session is not currently the controller in charge.</li>
+<li>notSystemController: The interface associated with this session is not the system controller.</li>
+<li>unsupportedOperation: The given session or object reference does not support this operation.</li>
+<li>interuptStillPending: An interrupt is still pending from a previous call.</li>
+<li>parityError: A parity error occurred during transfer.</li>
+<li>framingError: A framing error occurred during transfer.</li>
+<li>overrunError: An overrun error occurred during transfer. A character was not read from the hardware before the next character arrived.</li>
+<li>triggerNotMapped: The path from trigSrc to trigDest is not currently mapped.</li>
+<li>unsupportedAlignOffset: The specified offset is not properly aligned for the access width of the operation.</li>
+<li>invalidUserBuffer: A specified user buffer is not valid or cannot be accessed for the required size.</li>
+<li>resourceBusy: The resource is valid, but VISA cannot currently access it.</li>
+<li>unsupportedWidth: Specified width is not supported by this hardware.</li>
+<li>invalidParameter: The value of some parameter—which parameter is not known—is invalid.</li>
+<li>invalidProtocol: The protocol specified is invalid.</li>
+<li>invalidWindowSize: Invalid size of window specified.</li>
+<li>windowMapped: The specified session currently contains a mapped window.</li>
+<li>unimplementedOperation: The given operation is not implemented.</li>
+<li>invalidLength: Invalid length specified.</li>
+<li>invalidMode: The specified mode is invalid.</li>
+<li>sessionNotLocked: The current session did not have any lock on the resource.</li>
+<li>memoryNotShared: The device does not export any memory.</li>
+<li>libraryNotFound: A code library required by VISA could not be located or loaded.</li>
+<li>unsupportedInterrupt: The interface cannot generate an interrupt on the requested level or with the requested statusID value.</li>
+<li>invalidLineParameter: The value specified by the line parameter is invalid.</li>
+<li>fileAccessError: An error occurred while trying to open the specified file. Possible reasons include an invalid path or lack of access rights.</li>
+<li>fileIOError: An error occurred while performing I/O on the specified file.</li>
+<li>unsupportedLine: One of the specified lines (trigSrc or trigDest) is not supported by this VISA implementation, or the combination of lines is not a valid mapping.</li>
+<li>unsupportedMechanism: The specified mechanism is not supported by the given event type.</li>
+<li>interfaceNumberNotConfigured: The interface type is valid but the specified interface number is not configured.</li>
+<li>connectionLost: The connection for the given session has been lost.</li>
+<li>machineNotAvailable: The remote machine does not exist or is not accepting any connections.</li>
+<li>machineAccessDenied: Access to the remote machine is denied.</li>
+<li>unknownCVISAError: An unknown CVISA error status was returned from a call to CVISA. The status of this code is stored in <code>status</code>.</li>
+<li>couldNotDecode: Could not decode the message into the specified type.</li>
+<li>invalidRequestKey: The provided request key was invalid.</li>
+<li>invalidInstrumentIdentifier: The provided instrument identifier did not adhere to the NI-VISA standard.</li>
+<li>instrumentManagerCouldNotBeCreated: The <code>InstrumentManager.default</code> was not able to be created due to an unknown internal NI-VISA error.</li>
+<li>invalidInstrument: The instrument class is not valid.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/NI-VISA%20Defined%20Errors"></a>
+                <a name="//apple_ref/swift/Section/NI-VISA Defined Errors" class="dashAnchor"></a>
+                <a href="#/NI-VISA%20Defined%20Errors">
+                  <h3 class="section-name">NI-VISA Defined Errors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO11systemErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/systemError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO11systemErroryA2CmF">systemError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">systemError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO14invalidSessionyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidSession" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO14invalidSessionyA2CmF">invalidSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidSession</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO14resourceLockedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/resourceLocked" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO14resourceLockedyA2CmF">resourceLocked</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resourceLocked</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO26invalidExpressionForSearchyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidExpressionForSearch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO26invalidExpressionForSearchyA2CmF">invalidExpressionForSearch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidExpressionForSearch</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16resourceNotFoundyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/resourceNotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16resourceNotFoundyA2CmF">resourceNotFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resourceNotFound</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19invalidResourceNameyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidResourceName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19invalidResourceNameyA2CmF">invalidResourceName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidResourceName</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidAccessModeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidAccessMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidAccessModeyA2CmF">invalidAccessMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidAccessMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO7timeoutyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO7timeoutyA2CmF">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">timeout</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13failedToCloseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/failedToClose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13failedToCloseyA2CmF">failedToClose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">failedToClose</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13invalidDegreeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidDegree" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13invalidDegreeyA2CmF">invalidDegree</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidDegree</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20invalidJobIdentifieryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidJobIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20invalidJobIdentifieryA2CmF">invalidJobIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidJobIdentifier</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20unsupportedAttributeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20unsupportedAttributeyA2CmF">unsupportedAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedAttribute</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO25unsupportedAttributeStateyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedAttributeState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO25unsupportedAttributeStateyA2CmF">unsupportedAttributeState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedAttributeState</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17readOnlyAttributeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/readOnlyAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17readOnlyAttributeyA2CmF">readOnlyAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">readOnlyAttribute</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15invalidLockTypeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidLockType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15invalidLockTypeyA2CmF">invalidLockType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidLockType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16invalidAccessKeyyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidAccessKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16invalidAccessKeyyA2CmF">invalidAccessKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidAccessKey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12invalidEventyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12invalidEventyA2CmF">invalidEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidEvent</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16invalidMechanismyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidMechanism" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16invalidMechanismyA2CmF">invalidMechanism</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidMechanism</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19handlerNotInstalledyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/handlerNotInstalled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19handlerNotInstalledyA2CmF">handlerNotInstalled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">handlerNotInstalled</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO23invalidHandlerReferenceyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidHandlerReference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO23invalidHandlerReferenceyA2CmF">invalidHandlerReference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidHandlerReference</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO14invalidContextyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO14invalidContextyA2CmF">invalidContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidContext</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13queueOverflowyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/queueOverflow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13queueOverflowyA2CmF">queueOverflow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">queueOverflow</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15eventNotEnabledyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/eventNotEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15eventNotEnabledyA2CmF">eventNotEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">eventNotEnabled</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16operationAbortedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/operationAborted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16operationAbortedyA2CmF">operationAborted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">operationAborted</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO25rawWriteProtocolViolationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/rawWriteProtocolViolation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO25rawWriteProtocolViolationyA2CmF">rawWriteProtocolViolation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rawWriteProtocolViolation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO24rawReadProtocolViolationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/rawReadProtocolViolation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO24rawReadProtocolViolationyA2CmF">rawReadProtocolViolation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rawReadProtocolViolation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO23outputProtocolViolationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/outputProtocolViolation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO23outputProtocolViolationyA2CmF">outputProtocolViolation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">outputProtocolViolation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO22inputProtocolViolationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/inputProtocolViolation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO22inputProtocolViolationyA2CmF">inputProtocolViolation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">inputProtocolViolation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO8busErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/busError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO8busErroryA2CmF">busError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">busError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO26operationAlreadyInProgressyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/operationAlreadyInProgress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO26operationAlreadyInProgressyA2CmF">operationAlreadyInProgress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">operationAlreadyInProgress</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12invalidSetupyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidSetup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12invalidSetupyA2CmF">invalidSetup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidSetup</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO10queueErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/queueError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO10queueErroryA2CmF">queueError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">queueError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO27insufficientSystemResourcesyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/insufficientSystemResources" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO27insufficientSystemResourcesyA2CmF">insufficientSystemResources</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">insufficientSystemResources</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidBufferMaskyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidBufferMask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidBufferMaskyA2CmF">invalidBufferMask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidBufferMask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO7ioErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/ioError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO7ioErroryA2CmF">ioError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">ioError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13invalidFormatyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13invalidFormatyA2CmF">invalidFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidFormat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17unsupportedFormatyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17unsupportedFormatyA2CmF">unsupportedFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedFormat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16triggerLineInUseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/triggerLineInUse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16triggerLineInUseyA2CmF">triggerLineInUse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">triggerLineInUse</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15unsupportedModeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15unsupportedModeyA2CmF">unsupportedMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO25serviceRequestNotReceivedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/serviceRequestNotReceived" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO25serviceRequestNotReceivedyA2CmF">serviceRequestNotReceived</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">serviceRequestNotReceived</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19invalidAddressSpaceyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidAddressSpace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19invalidAddressSpaceyA2CmF">invalidAddressSpace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidAddressSpace</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13invalidOffsetyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13invalidOffsetyA2CmF">invalidOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidOffset</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12invalidWidthyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12invalidWidthyA2CmF">invalidWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidWidth</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17unsupportedOffsetyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17unsupportedOffsetyA2CmF">unsupportedOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedOffset</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO34nonequalSourceAndDestinationWidthsyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/nonequalSourceAndDestinationWidths" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO34nonequalSourceAndDestinationWidthsyA2CmF">nonequalSourceAndDestinationWidths</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">nonequalSourceAndDestinationWidths</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16sessionNotMappedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/sessionNotMapped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16sessionNotMappedyA2CmF">sessionNotMapped</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sessionNotMapped</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20responseStillPendingyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/responseStillPending" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20responseStillPendingyA2CmF">responseStillPending</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">responseStillPending</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO11noListenersyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/noListeners" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO11noListenersyA2CmF">noListeners</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noListeners</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO21notControllerInChargeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notControllerInCharge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO21notControllerInChargeyA2CmF">notControllerInCharge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notControllerInCharge</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19notSystemControlleryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notSystemController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19notSystemControlleryA2CmF">notSystemController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notSystemController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20unsupportedOperationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedOperation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20unsupportedOperationyA2CmF">unsupportedOperation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20interuptStillPendingyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/interuptStillPending" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20interuptStillPendingyA2CmF">interuptStillPending</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">interuptStillPending</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO11parityErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/parityError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO11parityErroryA2CmF">parityError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">parityError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12framingErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/framingError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12framingErroryA2CmF">framingError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">framingError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12overrunErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/overrunError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12overrunErroryA2CmF">overrunError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">overrunError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16triggerNotMappedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/triggerNotMapped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16triggerNotMappedyA2CmF">triggerNotMapped</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">triggerNotMapped</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO22unsupportedAlignOffsetyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedAlignOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO22unsupportedAlignOffsetyA2CmF">unsupportedAlignOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedAlignOffset</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidUserBufferyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidUserBuffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidUserBufferyA2CmF">invalidUserBuffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidUserBuffer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12resourceBusyyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/resourceBusy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12resourceBusyyA2CmF">resourceBusy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resourceBusy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16unsupportedWidthyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedWidth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16unsupportedWidthyA2CmF">unsupportedWidth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedWidth</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16invalidParameteryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidParameter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16invalidParameteryA2CmF">invalidParameter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidParameter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15invalidProtocolyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15invalidProtocolyA2CmF">invalidProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidWindowSizeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidWindowSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidWindowSizeyA2CmF">invalidWindowSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidWindowSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO12windowMappedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/windowMapped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO12windowMappedyA2CmF">windowMapped</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">windowMapped</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO22unimplementedOperationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unimplementedOperation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO22unimplementedOperationyA2CmF">unimplementedOperation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unimplementedOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO13invalidLengthyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO13invalidLengthyA2CmF">invalidLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidLength</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO11invalidModeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO11invalidModeyA2CmF">invalidMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO16sessionNotLockedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/sessionNotLocked" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO16sessionNotLockedyA2CmF">sessionNotLocked</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sessionNotLocked</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15memoryNotSharedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/memoryNotShared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15memoryNotSharedyA2CmF">memoryNotShared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">memoryNotShared</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15libraryNotFoundyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/libraryNotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15libraryNotFoundyA2CmF">libraryNotFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">libraryNotFound</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20unsupportedInterruptyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedInterrupt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20unsupportedInterruptyA2CmF">unsupportedInterrupt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedInterrupt</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20invalidLineParameteryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidLineParameter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20invalidLineParameteryA2CmF">invalidLineParameter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidLineParameter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15fileAccessErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/fileAccessError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15fileAccessErroryA2CmF">fileAccessError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileAccessError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO11fileIOErroryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/fileIOError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO11fileIOErroryA2CmF">fileIOError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileIOError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO15unsupportedLineyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedLine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO15unsupportedLineyA2CmF">unsupportedLine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedLine</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO20unsupportedMechanismyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedMechanism" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO20unsupportedMechanismyA2CmF">unsupportedMechanism</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedMechanism</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO28interfaceNumberNotConfiguredyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/interfaceNumberNotConfigured" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO28interfaceNumberNotConfiguredyA2CmF">interfaceNumberNotConfigured</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">interfaceNumberNotConfigured</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO14connectionLostyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/connectionLost" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO14connectionLostyA2CmF">connectionLost</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">connectionLost</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19machineNotAvailableyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/machineNotAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19machineNotAvailableyA2CmF">machineNotAvailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">machineNotAvailable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO19machineAccessDeniedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/machineAccessDenied" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO19machineAccessDeniedyA2CmF">machineAccessDenied</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">machineAccessDenied</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17unknownCVISAErroryACs5Int32V_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/unknownCVISAError(status:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17unknownCVISAErroryACs5Int32V_tcACmF">unknownCVISAError(status:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unknownCVISAError</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SwiftVISA%20Defined%20Errors"></a>
+                <a name="//apple_ref/swift/Section/SwiftVISA Defined Errors" class="dashAnchor"></a>
+                <a href="#/SwiftVISA%20Defined%20Errors">
+                  <h3 class="section-name">SwiftVISA Defined Errors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO14couldNotDecodeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/couldNotDecode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO14couldNotDecodeyA2CmF">couldNotDecode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">couldNotDecode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidRequestKeyyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidRequestKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidRequestKeyyA2CmF">invalidRequestKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidRequestKey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO27invalidInstrumentIdentifieryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidInstrumentIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO27invalidInstrumentIdentifieryA2CmF">invalidInstrumentIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidInstrumentIdentifier</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO34instrumentManagerCouldNotBeCreatedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/instrumentManagerCouldNotBeCreated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO34instrumentManagerCouldNotBeCreatedyA2CmF">instrumentManagerCouldNotBeCreated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">instrumentManagerCouldNotBeCreated</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA9VISAErrorO17invalidInstrumentyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidInstrument" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA9VISAErrorO17invalidInstrumentyA2CmF">invalidInstrument</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidInstrument</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

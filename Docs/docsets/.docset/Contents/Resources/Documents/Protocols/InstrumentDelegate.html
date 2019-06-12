@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>InstrumentDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/InstrumentDelegate" class="dashAnchor"></a>
+    <a title="InstrumentDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (49% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        InstrumentDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FirewireInstrument.html">FirewireInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInstrument.html">GPIBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInterface.html">GPIBInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InstrumentManager.html">InstrumentManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIInstrument.html">PXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIMemory.html">PXIMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialInstrument.html">SerialInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPInstrument.html">TCPIPInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPSocket.html">TCPIPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBInstrument.html">USBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBRaw.html">USBRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIBackplane.html">VXIBackplane</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIInstrument.html">VXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIMemory.html">VXIMemory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AtnMode.html">AtnMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState.html">LockState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState/LockType.html">– LockType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RenMode.html">RenMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VISAError.html">VISAError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9SwiftVISA23RegisterBasedInstrumentP">RegisterBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecodable.html">VISADecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecoder.html">VISADecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISABoolDecoder.html">DefaultVISABoolDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISADoubleDecoder.html">DefaultVISADoubleDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAIntDecoder.html">DefaultVISAIntDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAOptionalDecoder.html">DefaultVISAOptionalDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAStringDecoder.html">DefaultVISAStringDecoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>InstrumentDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">InstrumentDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP9willCloseyyF"></a>
+                    <a name="//apple_ref/swift/Method/willClose()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP9willCloseyyF">willClose()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willClose</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP21didReceiveBreakSignalyyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveBreakSignal()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP21didReceiveBreakSignalyyF">didReceiveBreakSignal()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveBreakSignal</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP14didReceiveDatayyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP14didReceiveDatayyF">didReceiveData()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveData</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP16ctsLineDidChangeyyF"></a>
+                    <a name="//apple_ref/swift/Method/ctsLineDidChange()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP16ctsLineDidChangeyyF">ctsLineDidChange()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">ctsLineDidChange</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP16dcdLineDidChangeyyF"></a>
+                    <a name="//apple_ref/swift/Method/dcdLineDidChange()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP16dcdLineDidChangeyyF">dcdLineDidChange()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dcdLineDidChange</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP16dsrLineDidChangeyyF"></a>
+                    <a name="//apple_ref/swift/Method/dsrLineDidChange()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP16dsrLineDidChangeyyF">dsrLineDidChange()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dsrLineDidChange</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP16riInputDidAssertyyF"></a>
+                    <a name="//apple_ref/swift/Method/riInputDidAssert()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP16riInputDidAssertyyF">riInputDidAssert()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">riInputDidAssert</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP30didReceiveTerminationCharacteryyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveTerminationCharacter()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP30didReceiveTerminationCharacteryyF">didReceiveTerminationCharacter()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveTerminationCharacter</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP9willClearyyF"></a>
+                    <a name="//apple_ref/swift/Method/willClear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP9willClearyyF">willClear()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">willClear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP25didGainControllerInChargeyyF"></a>
+                    <a name="//apple_ref/swift/Method/didGainControllerInCharge()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP25didGainControllerInChargeyyF">didGainControllerInCharge()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didGainControllerInCharge</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP25didLoseControllerInChargeyyF"></a>
+                    <a name="//apple_ref/swift/Method/didLoseControllerInCharge()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP25didLoseControllerInChargeyyF">didLoseControllerInCharge()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didLoseControllerInCharge</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP23didReceiveListenRequestyyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveListenRequest()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP23didReceiveListenRequestyyF">didReceiveListenRequest()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveListenRequest</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP21didReceiveTalkRequestyyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveTalkRequest()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP21didReceiveTalkRequestyyF">didReceiveTalkRequest()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveTalkRequest</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP22didReceivePXIInterruptyyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceivePXIInterrupt()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP22didReceivePXIInterruptyyF">didReceivePXIInterrupt()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceivePXIInterrupt</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP24didReceiveServiceRequestyyF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveServiceRequest()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP24didReceiveServiceRequestyyF">didReceiveServiceRequest()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveServiceRequest</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP22didReceiveVXIBusSignal6statusySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveVXIBusSignal(status:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP22didReceiveVXIBusSignal6statusySi_tF">didReceiveVXIBusSignal(status:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveVXIBusSignal</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP25didReceiveVXIBusInterrupt6status14interruptLevelySi_SitF"></a>
+                    <a name="//apple_ref/swift/Method/didReceiveVXIBusInterrupt(status:interruptLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP25didReceiveVXIBusInterrupt6status14interruptLevelySi_SitF">didReceiveVXIBusInterrupt(status:interruptLevel:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didReceiveVXIBusInterrupt</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">interruptLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP25systemFailLineWasAssertedyyF"></a>
+                    <a name="//apple_ref/swift/Method/systemFailLineWasAsserted()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP25systemFailLineWasAssertedyyF">systemFailLineWasAsserted()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">systemFailLineWasAsserted</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA18InstrumentDelegateP26systemResetLineWasAssertedyyF"></a>
+                    <a name="//apple_ref/swift/Method/systemResetLineWasAsserted()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA18InstrumentDelegateP26systemResetLineWasAssertedyyF">systemResetLineWasAsserted()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">systemResetLineWasAsserted</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

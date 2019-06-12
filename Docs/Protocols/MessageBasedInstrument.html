@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MessageBasedInstrument Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/MessageBasedInstrument" class="dashAnchor"></a>
+    <a title="MessageBasedInstrument Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (49% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MessageBasedInstrument Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FirewireInstrument.html">FirewireInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInstrument.html">GPIBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPIBInterface.html">GPIBInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InstrumentManager.html">InstrumentManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIInstrument.html">PXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PXIMemory.html">PXIMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SerialInstrument.html">SerialInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9SwiftVISA7SessionC">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPInstrument.html">TCPIPInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TCPIPSocket.html">TCPIPSocket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBInstrument.html">USBInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/USBRaw.html">USBRaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIBackplane.html">VXIBackplane</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIInstrument.html">VXIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VXIMemory.html">VXIMemory</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AtnMode.html">AtnMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState.html">LockState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LockState/LockType.html">– LockType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RenMode.html">RenMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VISAError.html">VISAError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Instrument.html">Instrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/InstrumentDelegate.html">InstrumentDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageBasedInstrument.html">MessageBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9SwiftVISA23RegisterBasedInstrumentP">RegisterBasedInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecodable.html">VISADecodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VISADecoder.html">VISADecoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISABoolDecoder.html">DefaultVISABoolDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISADoubleDecoder.html">DefaultVISADoubleDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAIntDecoder.html">DefaultVISAIntDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAOptionalDecoder.html">DefaultVISAOptionalDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultVISAStringDecoder.html">DefaultVISAStringDecoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MessageBasedInstrument</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MessageBasedInstrument</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Instrument.html">Instrument</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A type that can communicate using the NI-VISA protocol with ASCII strings.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentP10bufferSizeSivp"></a>
+                    <a name="//apple_ref/swift/Property/bufferSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentP10bufferSizeSivp">bufferSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The size in bytes to store incoming messages in.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentP6bufferSwvp"></a>
+                    <a name="//apple_ref/swift/Property/buffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentP6bufferSwvp">buffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The buffer where incoming messages are stored in.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">buffer</span><span class="p">:</span> <span class="kt">UnsafeMutableRawBufferPointer</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as7decoder9readDelayqd__SS_qd__mqd_0_SdtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:as:decoder:readDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as7decoder9readDelayqd__SS_qd__mqd_0_SdtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF">query(_:as:decoder:readDelay:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the given message to the instrument and then reads data from the given instrument and decodes it to the given type using the given decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>inputProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">query</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span> <span class="nv">readDelay</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">D</span><span class="o">.</span><span class="kt">DecodingType</span><span class="p">,</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecoder.html">VISADecoder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to write to the instrument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The decoder to use to decode the data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as9readDelayqd__SS_qd__mSdtKAA13VISADecodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:as:readDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as9readDelayqd__SS_qd__mSdtKAA13VISADecodableRd__lF">query(_:as:readDelay:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the given message to the instrument and then reads data from the given instrument and decodes it to the given type using the default decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>inputProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">query</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">readDelay</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecodable.html">VISADecodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to write to the instrument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as13numberOfReads011timeBetweenJ09readDelaySayqd__SgGSS_qd__mSiS2dtKAA13VISADecodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:as:numberOfReads:timeBetweenReads:readDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as13numberOfReads011timeBetweenJ09readDelaySayqd__SgGSS_qd__mSiS2dtKAA13VISADecodableRd__lF">query(_:as:numberOfReads:timeBetweenReads:readDelay:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the given message to the instrument and then reads multiple data points from the given instrument and decodes it to the given type using the default decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>inputProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">query</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">numberOfReads</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">timeBetweenReads</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nv">readDelay</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">?]</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecodable.html">VISADecodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to write to the instrument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as7decoder13numberOfReads011timeBetweenK09readDelaySayqd__SgGSS_qd__mqd_0_SiS2dtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/query(_:as:decoder:numberOfReads:timeBetweenReads:readDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE5query_2as7decoder13numberOfReads011timeBetweenK09readDelaySayqd__SgGSS_qd__mqd_0_SiS2dtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF">query(_:as:decoder:numberOfReads:timeBetweenReads:readDelay:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the given message to the instrument and then reads data from the given instrument and decodes it to the given type using the given decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>inputProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">query</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span> <span class="nv">numberOfReads</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">timeBetweenReads</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nv">readDelay</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">?]</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">D</span><span class="o">.</span><span class="kt">DecodingType</span><span class="p">,</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecoder.html">VISADecoder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to write to the instrument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The decoder to use to decode the data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2as7decoderqd__qd__m_qd_0_tK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/read(as:decoder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2as7decoderqd__qd__m_qd_0_tK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF">read(as:decoder:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads data from the instrument and decodes it into the given type using the given decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">D</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">D</span><span class="o">.</span><span class="kt">DecodingType</span><span class="p">,</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecoder.html">VISADecoder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The decoder to use to decode the data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2asqd__qd__m_tKAA13VISADecodableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/read(as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2asqd__qd__m_tKAA13VISADecodableRd__lF">read(as:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads data from the instrument and decodes it into the given type using the default decoder.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecodable.html">VISADecodable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2as7decoder13numberOfReads011timeBetweenK0Sayqd__SgGqd__m_qd_0_SiSdtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/read(as:decoder:numberOfReads:timeBetweenReads:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE4read2as7decoder13numberOfReads011timeBetweenK0Sayqd__SgGqd__m_qd_0_SiSdtK12DecodingTypeQyd_0_Rsd__AA11VISADecoderRd_0_r0_lF">read(as:decoder:numberOfReads:timeBetweenReads:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Repeatedly reads values from an instrument with the specified amount of time between each read and returns an array of these values.</p>
+
+<p>This function performs <code>numberOfReads</code> number of reads sequentially and returns the results from the read as an array. Each reading is taken with <code>timeDelay</code> number of seconds between them. Each non-nil sequential value in the array is guarenteed to have occurred with <code>timeDelay</code> number of seconds between them. If the instrument&rsquo;s read could not be completed in <code>timeDelay</code> number of seconds, then the next value(s) in the array are <code>nil</code>, indicating that this time index was skipped. Further, the resuling array will always have <code>numberOfReads</code> elements.</p>
+
+<p>The resulting array is returned:</p>
+<pre class="highlight swift"><code><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">read</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span> <span class="nv">numberOfReads</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">timeBetweenReads</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.025</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">?]</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">==</span> <span class="kt">D</span><span class="o">.</span><span class="kt">DecodingType</span><span class="p">,</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/VISADecoder.html">VISADecoder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfReads</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of reads to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to be returned from each read.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The decoder to use to decode the data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeDelay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of time between each successive read operation, defaults to 25 ms.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of the results of the successive read operations.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE7readRawSSyKF"></a>
+                    <a name="//apple_ref/swift/Method/readRaw()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE7readRawSSyKF">readRaw()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads data from the instrument and does nothing but convert it straight to a string &ndash; doesn&rsquo;t even strip
+the termination characters.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperations</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteProtocolViolation</code></li>
+<li><code>.rawReadProtocolViolation</code></li>
+<li><code>.outputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.parityError</code></li>
+<li><code>.framingError</code></li>
+<li><code>.overrunError</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+<li><code>.couldNotDecode</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">readRaw</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type to return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The decoder to use to decode the data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decoded value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE14readStatusByte10Foundation4DataVyKF"></a>
+                    <a name="//apple_ref/swift/Method/readStatusByte()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE14readStatusByte10Foundation4DataVyKF">readStatusByte()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads the service request status byte.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    TODO: Add errors.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">readStatusByte</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The service request byte.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE13assertTriggeryyKF"></a>
+                    <a name="//apple_ref/swift/Method/assertTrigger()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE13assertTriggeryyKF">assertTrigger()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a software trigger to the device.</p>
+
+<p>According to NI-VISA, you can configure the hardware to wait for a trigger to do anything.
+ This sends that trigger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assertTrigger</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SwiftVISA22MessageBasedInstrumentPAAE5writeyySSKF"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SwiftVISA22MessageBasedInstrumentPAAE5writeyySSKF">write(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the given message to the instrument.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    One of the following <code><a href="../Enums/VISAError.html">VISAError</a></code> errors:
+
+<ul>
+<li><code>.invalidSession</code></li>
+<li><code>.unsupportedOperation</code></li>
+<li><code>.resourceLocked</code></li>
+<li><code>.timeout</code></li>
+<li><code>.rawWriteViolationProtocolViolation</code></li>
+<li><code>.rawReadViolationProtocolViolation</code></li>
+<li><code>.inputProtocolViolation</code></li>
+<li><code>.busError</code></li>
+<li><code>.invalidSetup</code></li>
+<li><code>.notControllerInCharge</code></li>
+<li><code>.noListeners</code></li>
+<li><code>.ioError</code></li>
+<li><code>.connectionLost</code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to write.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
