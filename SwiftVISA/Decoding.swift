@@ -76,20 +76,26 @@ public protocol VISADecoder {
 ///
 /// This decoder simply returns the ASCII message as a `String`.
 public struct DefaultVISAStringDecoder: VISADecoder {
-	public typealias DecodingType = String
+	public var shouldStripNewline: Bool
 	
 	/// Decodes the NI-VISA ASCII message into a `String`.
 	///
 	/// - Parameter string: The ASCII message returned from the instrument.
 	/// - Returns: The unaltered ASCII message returned from the instrument.
 	public func decode(_ string: String) -> String {
-		return string
+		if shouldStripNewline && string.hasSuffix("\n") {
+			return String(string.dropLast())
+		} else {
+			return string
+		}
+	}
+	
+	init(shouldStripNewline: Bool = false) {
+		self.shouldStripNewline = shouldStripNewline
 	}
 }
 
 extension String: VISADecodable {
-	public typealias DefaultVISADecoder = DefaultVISAStringDecoder
-	
 	public static var defaultVISADecoder: DefaultVISAStringDecoder {
 		return DefaultVISAStringDecoder()
 	}
@@ -100,8 +106,6 @@ extension String: VISADecodable {
 ///
 /// This decoder tries to convert the ASCII message into an integer.
 public struct DefaultVISAIntDecoder: VISADecoder {
-	public typealias DecodingType = Int
-	
 	/// Decodes the NI-VISA ASCII message into an `Int`.
 	///
 	/// - Parameter string: The ASCII message returned from the instrument.
@@ -109,14 +113,21 @@ public struct DefaultVISAIntDecoder: VISADecoder {
 	/// - Throws: If the message could not be converted to an integer.
 	public func decode(_ string: String) throws -> Int {
 		let strippedString = string.filter { !$0.isWhitespace }
-		guard let value = Int(strippedString) else { throw VISAError.couldNotDecode }
-		return value
+		if let value = Int(strippedString) {
+			// The value was an integer, return it
+			return value
+		} else if let doubleValue = Double(strippedString) {
+			// The value was a double, floor it, then return it
+			if doubleValue > Double(Int.min) && doubleValue < Double(Int.max) {
+				return Int(doubleValue)
+			} else {
+				throw VISAError.couldNotDecode
+			}
+		} else { throw VISAError.couldNotDecode }
 	}
 }
 
 extension Int: VISADecodable {
-	public typealias DefaultVISADecoder = DefaultVISAIntDecoder
-	
 	public static var defaultVISADecoder: DefaultVISAIntDecoder {
 		return DefaultVISAIntDecoder()
 	}
@@ -127,8 +138,6 @@ extension Int: VISADecodable {
 ///
 /// This decoder tries to convert the ASCII message into a floating-point number.
 public struct DefaultVISADoubleDecoder: VISADecoder {
-	public typealias DecodingType = Double
-	
 	/// Decodes the NI-VISA ASCII message into a `Double`.
 	///
 	/// - Parameter string: The ASCII message returned from the instrument.
@@ -137,14 +146,35 @@ public struct DefaultVISADoubleDecoder: VISADecoder {
 	public func decode(_ string: String) throws -> Double {
 		let strippedString = string.filter { !$0.isWhitespace }
 		
-		guard let value = Double(strippedString) else { throw VISAError.couldNotDecode }
-		return value
+		switch strippedString {
+		case "INF":
+			return .infinity
+		case "NINF":
+			return -.infinity
+		case "NAN":
+			return .nan
+		default:
+			guard let value = Double(strippedString) else { throw VISAError.couldNotDecode }
+			
+			let tolerance = 9.9e37 / 1000.0
+			
+			if abs(value - 9.9e37) < tolerance {
+				// SCPI syntax defines 9.9e37 to be infinity
+				return .infinity
+			} else if abs(value + 9.9e37) < tolerance {
+				// SCPI syntax defines -9.9e37 to be negative infinity
+				return -.infinity
+			} else if abs(value + 9.91e37) < tolerance {
+				// SCPI syntax defines 9.91e37 to be not a number
+				return .nan
+			} else {
+				return value
+			}
+		}
 	}
 }
 
 extension Double: VISADecodable {
-	public typealias DefaultVISADecoder = DefaultVISADoubleDecoder
-	
 	public static var defaultVISADecoder: DefaultVISADoubleDecoder {
 		return DefaultVISADoubleDecoder()
 	}
@@ -155,24 +185,66 @@ extension Double: VISADecodable {
 ///
 /// This decoder tries to convert the ASCII message into a boolean.
 public struct DefaultVISABoolDecoder: VISADecoder {
-	public typealias DecodingType = Bool
-	
 	/// Decodes the NI-VISA ASCII message into a `Bool`.
 	///
 	/// - Parameter string: The ASCII message returned from the instrument.
 	/// - Returns: The message converted to a boolean.
 	/// - Throws: If the message could not be converted to a boolean.
 	public func decode(_ string: String) throws -> Bool {
-		#warning("Not implemented")
-		fatalError("Not implemented")
+		let strippedString = string.filter { !$0.isWhitespace }
+		
+		switch strippedString {
+		case "0", "OFF":
+			return false
+		case "1", "ON":
+			return true
+		default:
+			throw VISAError.couldNotDecode
+		}
 	}
 }
 
 extension Bool: VISADecodable {
-	public typealias DefaultVISADecoder = DefaultVISABoolDecoder
-	
 	public static var defaultVISADecoder: DefaultVISABoolDecoder {
 		return DefaultVISABoolDecoder()
+	}
+}
+
+// MARK: Data
+/// The default `VISADecoder` for `Data`.
+///
+/// This decoder converts the ascii message into raw data.
+public struct DefaultVISADataDecoder: VISADecoder {
+	public var stringEncoding: String.Encoding
+	public var shouldStripNewline: Bool
+	
+	/// Decodes the NI-VISA ASCII message into a `Bool`.
+	///
+	/// - Parameter string: The ASCII message returned from the instrument.
+	/// - Returns: The message converted to a boolean.
+	/// - Throws: If the message could not be converted to a boolean.
+	public func decode(_ string: String) throws -> Data {
+		let strippedString: String
+		if shouldStripNewline && string.hasSuffix("\n") {
+			strippedString = String(string.dropLast())
+		} else {
+			strippedString = string
+		}
+		guard let data = strippedString.data(using: .ascii) else {
+			throw VISAError.couldNotDecode
+		}
+		return data
+	}
+	
+	public init(stringEncoding: String.Encoding = .ascii, shouldStripNewline: Bool = false) {
+		self.stringEncoding = stringEncoding
+		self.shouldStripNewline = shouldStripNewline
+	}
+}
+
+extension Data: VISADecodable {
+	public static var defaultVISADecoder: DefaultVISADataDecoder {
+		return DefaultVISADataDecoder()
 	}
 }
 
@@ -183,26 +255,27 @@ extension Bool: VISADecodable {
 ///
 /// This decoder tries to convert the ASCII message into an optional.
 public struct DefaultVISAOptionalDecoder<W: VISADecodable>: VISADecoder {
-	public typealias DecodingType = W?
-	
 	/// Decodes the NI-VISA ASCII message into an optional.
 	///
 	/// - Parameter string: The ASCII message returned from the instrument.
 	/// - Returns: The message converted to an optional.
 	/// - Throws: If the message could not be converted to an optional.
 	public func decode(_ string: String) throws -> W? {
-		// FIXME: Replace this with the actual keyword for NULL in the string protocol
-		if string == "NULL" {
-			return nil
+		if W.self == String.self {
+			// If the type is decoding to string, there is no way to differentiate between an empty string and nil, so it will always return a string rather than nil.
+			return try W.defaultVISADecoder.decode(string)
 		}
-		let decoder = W.defaultVISADecoder
-		return try decoder.decode(string)
+		switch string {
+		case "\n", "\r", "":
+			return nil
+		default:
+			let decoder = W.defaultVISADecoder
+			return try decoder.decode(string)
+		}
 	}
 }
 
 extension Optional: VISADecodable where Wrapped: VISADecodable {
-	public typealias DefaultVISADecoder = DefaultVISAOptionalDecoder<Wrapped>
-	
 	public static var defaultVISADecoder: DefaultVISAOptionalDecoder<Wrapped> {
 		return DefaultVISAOptionalDecoder()
 	}
