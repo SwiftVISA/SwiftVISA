@@ -51,7 +51,7 @@
 		DF73A22022AEE95D00FD6004 /* AtnMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73A21F22AEE95D00FD6004 /* AtnMode.swift */; };
 		E1904455228BABC90057934D /* SwiftVISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190444B228BABC90057934D /* SwiftVISA.framework */; };
 		E190445C228BABC90057934D /* SwiftVISA.h in Headers */ = {isa = PBXBuildFile; fileRef = E190444E228BABC90057934D /* SwiftVISA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; };
+		E190446C228BB33A0057934D /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190446B228BB33A0057934D /* VISA.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
