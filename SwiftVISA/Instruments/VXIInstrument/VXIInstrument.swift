@@ -9,7 +9,7 @@
 import CVISA
 
 // TODO: Implement
-public final class VXIInstrument: InstrumentProtocol {
+final class VXIInstrument: InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ,
 																VI_EVENT_TRIG,
 																VI_EVENT_VXI_SIGP,
@@ -23,7 +23,7 @@ public final class VXIInstrument: InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

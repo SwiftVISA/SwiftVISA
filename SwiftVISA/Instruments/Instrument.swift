@@ -20,7 +20,7 @@ public protocol Instrument: class {
 	/// The time in seconds to wait before timing out when performing operations with the instrument.
 	var timeout: TimeInterval { get set }
 	/// The delegate for the instrument – used for managing events.
-	var delegate: InstrumentDelegate? { get }
+//	var delegate: InstrumentDelegate? { get }
 	/// The instrument's dispatch queue that allows for running instrument code on another thread. Each instrument has a unique dispatch queue.
 	///
 	/// It is reccomended to run all code that interfaces with the instrument on this dispatch queue to prevent blocking the main thread when reading/writing data to/from the instrument. Doing so will prevent GUI hangs and also allows for communicating with multiple instruments at the same time. If one or more instruments need to wait on another instrument before doing work, you can run the code for the instruments on a single instrument's dispatch queue.

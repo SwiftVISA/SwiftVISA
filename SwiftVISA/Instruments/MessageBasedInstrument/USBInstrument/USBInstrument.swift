@@ -23,7 +23,7 @@ public final class USBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

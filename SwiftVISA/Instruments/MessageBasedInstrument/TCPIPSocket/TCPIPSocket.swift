@@ -7,7 +7,7 @@
 //
 import CVISA
 // TODO: Implement
-public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
+final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
 	// TODO: What NI-VISA resource does this correspond to?
 	static var _events: [UInt] = []
 	
@@ -23,7 +23,7 @@ public final class TCPIPSocket: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

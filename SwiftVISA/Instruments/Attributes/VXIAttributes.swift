@@ -7,7 +7,7 @@
 //
 import CVISA
 
-public extension VXIInstrument {
+extension VXIInstrument {
 	func getIOProtocol() throws -> IOProtocol {
 		return try IOProtocol(getAttribute(VI_ATTR_IO_PROT, as: UInt16.self))
 	}

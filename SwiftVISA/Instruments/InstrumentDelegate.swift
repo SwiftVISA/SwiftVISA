@@ -8,7 +8,7 @@
 
 import CVISA
 
-public protocol InstrumentDelegate {
+protocol InstrumentDelegate {
 	func willClose()
 	
 	func didReceiveBreakSignal()
@@ -52,7 +52,7 @@ public protocol InstrumentDelegate {
 	func systemResetLineWasAsserted()
 }
 
-public extension InstrumentDelegate {
+extension InstrumentDelegate {
 	func willClose() { }
 	
 	func didReceiveBreakSignal() { }
