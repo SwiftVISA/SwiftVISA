@@ -1,7 +1,8 @@
 //
 //  AtnMode.swift
 //  SwiftVISA
-//
+//  Enumerator representing GPIB ATIN (Attention) interface line states
+//  maps constants relating to VI_ATTR_GPIB_ATN_STATE
 //  Created by visaman on 6/10/19.
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //

@@ -1,7 +1,8 @@
 //
 //  InterfaceType.swift
-//	Enum that handles mapping VI_INTF_.* C constants to an enumerator
 //  SwiftVISA
+//	Enum that represents signal state for any signal related attributes
+//  handles mapping VI_STATE_.* C constants
 //
 //  Created by visaman on 6/10/19.
 //  Copyright © 2019 SwiftVISA. All rights reserved.

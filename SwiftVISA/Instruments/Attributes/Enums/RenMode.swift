@@ -1,7 +1,8 @@
 //
 //  RenState.swift
 //  SwiftVISA
-//
+//  An enumerator representing GPIB REN (Remote Enable) interface line states
+//  Maps constants relating to VI_ATTR_GPIB_REN_STATE
 //  Created by visaman on 6/10/19.
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
