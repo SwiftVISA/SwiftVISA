@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class VXIMemory: RegisterBasedInstrument, InstrumentProtocol {
+final class VXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	// FIXME: What NI-VISA resoruce does this correspond to?
 	static var _events: [UInt] = []
 	
@@ -19,7 +19,7 @@ public final class VXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

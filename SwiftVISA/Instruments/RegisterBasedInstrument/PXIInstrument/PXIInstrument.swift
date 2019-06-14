@@ -9,7 +9,7 @@
 import CVISA
 
 // TODO: Implement
-public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
+final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_PXI_INTR]
 	
 	var _lockState: LockState
@@ -20,7 +20,7 @@ public final class PXIInstrument: RegisterBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

@@ -7,6 +7,6 @@
 //
 
 // TODO: Implement
-public protocol RegisterBasedInstrument: Instrument {
+protocol RegisterBasedInstrument: Instrument {
 	
 }

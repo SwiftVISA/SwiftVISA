@@ -7,7 +7,7 @@
 //
 import CVISA
 
-public extension VXIInstrument {
+extension VXIInstrument {
 	/// Gets the IO protocol in use by the serial instrument (VI_ATTR_IO_PROT)
 	///
 	/// - Returns: The IO protocol in use

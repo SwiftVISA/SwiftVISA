@@ -26,7 +26,7 @@ public class InstrumentManager {
 	private static var _default: InstrumentManager?
 
 	/// The shared instrument manager. If the instrument manager could not be created, this returns `nil`.
-	static var `default`: InstrumentManager? {
+	public static var `default`: InstrumentManager? {
 		if let saved = _default {
 			// If a instrument manager object has already been created, use that one rather than creating a new instrument manager
 			return saved

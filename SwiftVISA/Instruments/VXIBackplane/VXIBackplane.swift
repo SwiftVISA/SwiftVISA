@@ -9,7 +9,7 @@
 import CVISA
 
 // TODO: Implement
-public final class VXIBackplane: InstrumentProtocol {
+final class VXIBackplane: InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_TRIG,
 																VI_EVENT_VXI_VME_SYSFAIL,
 																VI_EVENT_VXI_VME_SYSRESET]
@@ -22,7 +22,7 @@ public final class VXIBackplane: InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

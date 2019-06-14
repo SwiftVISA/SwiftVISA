@@ -9,7 +9,7 @@
 import CVISA
 
 // TODO: Implement
-public final class GPIBInterface: InstrumentProtocol {
+final class GPIBInterface: InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_CLEAR,
 																VI_EVENT_GPIB_CIC,
 																VI_EVENT_GPIB_LISTEN,
@@ -25,7 +25,7 @@ public final class GPIBInterface: InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

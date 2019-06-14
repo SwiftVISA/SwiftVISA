@@ -8,7 +8,7 @@
 import CVISA
 
 // TODO: Implement
-public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
+final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_SERVICE_REQ]
 	
 	var _lockState: LockState
@@ -23,7 +23,7 @@ public final class GPIBInstrument: MessageBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

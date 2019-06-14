@@ -9,7 +9,7 @@
 import CVISA
 
 // TODO: Implement
-public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol {
+final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol {
 	static var _events: [UInt] = [VI_EVENT_ASRL_BREAK,
 																VI_EVENT_ASRL_CHAR,
 																VI_EVENT_ASRL_CTS,
@@ -30,7 +30,7 @@ public final class SerialInstrument: MessageBasedInstrument, InstrumentProtocol 
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

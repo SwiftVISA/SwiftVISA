@@ -7,7 +7,7 @@
 //
 
 // TODO: Implement
-public final class PXIMemory: RegisterBasedInstrument, InstrumentProtocol {
+final class PXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	// TODO: What NI-VISA resource does this correspond to?
 	static var _events: [UInt] = []
 	
@@ -19,7 +19,7 @@ public final class PXIMemory: RegisterBasedInstrument, InstrumentProtocol {
 	
 	public var timeout: TimeInterval
 	
-	public var delegate: InstrumentDelegate?
+//	public var delegate: InstrumentDelegate?
 	
 	public var dispatchQueue: DispatchQueue
 	

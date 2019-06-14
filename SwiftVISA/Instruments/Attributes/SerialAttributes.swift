@@ -8,7 +8,7 @@
 
 import CVISA
 
-public extension SerialInstrument {
+extension SerialInstrument {
 	
 	/// Gets the IO protocol in use by the serial instrument (VI_ATTR_IO_PROT)
 	///
