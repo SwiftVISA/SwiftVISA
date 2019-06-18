@@ -36,7 +36,7 @@ class MessageBasedInstrumentTests : XCTestCase {
 	func testSetWaveformCharacteristics() {
 		// Write DC Function, and the voltage to set to
 		try? waveformGeneratorInstrument?.write("SOURCE1:FUNCTION DC")
-		try? waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE:OFFSET 2.5");
+		try? waveformGeneratorInstrument?.write("SOURCE1:VOLTAGE:OFFSET 2.5")
 		
 		// Turn the output on
 		try? waveformGeneratorInstrument?.write("OUTPUT1 ON")
