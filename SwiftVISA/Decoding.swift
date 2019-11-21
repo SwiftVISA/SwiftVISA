@@ -13,7 +13,7 @@
 ///  An Edit on local machine by Owen
 
 func myFunc() -> Int {
-    return 22
+    return 55
 }
 
 /// A type that can be decoded from a NI-VISA ASCII message.
