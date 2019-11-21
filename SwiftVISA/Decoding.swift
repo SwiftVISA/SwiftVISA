@@ -6,15 +6,6 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
-/// A Direct Edit by Owen
-/// A second edit.
-
-
-///  An Edit on local machine by Owen
-
-func myFunc() -> Int {
-    return 55
-}
 
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
