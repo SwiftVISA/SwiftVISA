@@ -7,6 +7,7 @@
 //
 
 /// A Direct Edit by Owen
+/// A second edit.
 
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
