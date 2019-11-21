@@ -8,6 +8,10 @@
 
 /// A Direct Edit by Owen
 
+
+///  An Edit on local machine by Owen
+
+
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
 	/// The default decoder type to use when decoding.
