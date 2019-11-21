@@ -6,6 +6,8 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+/// A Direct Edit by Owen
+
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
 	/// The default decoder type to use when decoding.
