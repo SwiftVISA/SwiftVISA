@@ -6,6 +6,10 @@
 //  Copyright © 2019 SwiftVISA. All rights reserved.
 //
 
+func test() {
+    print("Test")
+}
+
 
 /// A type that can be decoded from a NI-VISA ASCII message.
 public protocol VISADecodable {
