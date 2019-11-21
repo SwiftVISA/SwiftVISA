@@ -15,6 +15,12 @@ public protocol VISADecodable {
 	static var defaultVISADecoder: DefaultVISADecoder { get }
 }
 
+
+
+
+
+
+
 // MARK: Decoding
 extension VISADecodable {
 	/// Decodes the NI-VISA ASCII message using the given decoder.
