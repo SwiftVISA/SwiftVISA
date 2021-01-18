@@ -3,7 +3,7 @@
 # SwiftVISA
 A Swift wrapper for National Instruments VISA.
 
-**Note: This framework is deprecated./** Use the newer [NISwiftVISA](https://github.com/SwiftVISA/NISwiftVISA) to communicate to USB instruments or [SwiftVISASwift](https://github.com/SwiftVISA/SwiftVISASwift) to communicate to instruments over TCPIP.
+**Note: This framework is deprecated.** Use the newer [NISwiftVISA](https://github.com/SwiftVISA/NISwiftVISA) to communicate to USB instruments or [SwiftVISASwift](https://github.com/SwiftVISA/SwiftVISASwift) to communicate to instruments over TCPIP.
 
 # Documentation
 Open the [wiki](https://github.com/HildrethCSMFieldSession/SwiftVISA/wiki) to view documentation.
