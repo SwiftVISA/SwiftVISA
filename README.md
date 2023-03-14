@@ -23,7 +23,7 @@ ivankrukov - Ivan Krukov (who did all of his work under the HildrethCSMFieldSess
 MIT
 
 ## Contributions and Comments
-This project is a slow-moving "labor-of-love" for our group and intended additional features, such as USB support, are worked on sporatically based upon need, time, and our ability to deal with Apple's poor documentation.  We would love help and please e-mail me (or to reply to the relevant issue or open a new one).
+This project is a slow-moving "labor-of-love" for our group and intended additional features are worked on sporadically based upon need, time, and our ability to deal with Apple's poor documentation.  Currently, the bulk of our efforts are put into SwiftVISASwift (https://github.com/SwiftVISA/SwiftVISASwift).  We would love help and please e-mail me (or to reply to the relevant issue or open a new one).
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owner of this repository before making a change.
 
